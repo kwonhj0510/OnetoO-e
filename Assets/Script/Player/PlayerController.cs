@@ -7,11 +7,21 @@ public class PlayerController : MonoBehaviour
 {
     [Header("Input KeyCodes")]
     [SerializeField]
-    private KeyCode keyCodeRun = KeyCode.LeftShift;   // 달리기 키
+    private KeyCode keyCodeRun  = KeyCode.LeftShift;   // 달리기 키
+    [SerializeField]
+    private KeyCode keyCodeJump = KeyCode.Space;       // 점프 키 
 
-    private RotateToMouse   rotateToMouse;              // 마우스 이동으로 카메라 회전
-    private PlayerMovement  movement;                   // 키보드 입력으로 플레이어 이동, 점프
-    private Status          status;                     // 이동속도 등의 플레이어 정보
+    [Header("Audio Clips")]
+    [SerializeField]
+    private AudioClip audioClipWalk;        // 걷기 사운드
+    [SerializeField]
+    private AudioClip audioClipRun;         // 달리기 사운드
+
+    private RotateToMouse               rotateToMouse;              // 마우스 이동으로 카메라 회전
+    private PlayerMovement              movement;                   // 키보드 입력으로 플레이어 이동, 점프
+    private Status                      status;                     // 이동속도 등의 플레이어 정보
+    private PlayerAnimatorController    animator;                   // 애니메이션 재생 제어
+    private AudioSource                 audioSource;                // 사운드 재생 제어
            
     void Awake()
     {
@@ -22,12 +32,15 @@ public class PlayerController : MonoBehaviour
         rotateToMouse       = GetComponent<RotateToMouse>();
         movement            = GetComponent<PlayerMovement>();
         status              = GetComponent<Status>();
+        animator            = GetComponent<PlayerAnimatorController>();    
+        audioSource         = GetComponent<AudioSource>();
     }
 
     void Update()
     {
         UpdateRotate();
         UpdateMove();
+        UpdateJump();
     }
 
     private void UpdateRotate()
@@ -53,7 +66,35 @@ public class PlayerController : MonoBehaviour
             if (z > 0) isRun = Input.GetKey(keyCodeRun);
 
             movement.MoveSpeed = isRun == true ? status.RunSpeed : status.WalkSpeed;
+            animator.MoveSpeed = isRun == true ? 1 : 0.5f;
+            audioSource.clip   = isRun == true ? audioClipRun : audioClipWalk;
+
+            // 방향키 입력 여부는 매 프레임 확인하기 때문에
+            // 재생 중일때는 다시 재생하지 않도록 isPlaying으로 체크해서 재생
+            if ( audioSource.isPlaying == false )
+            {
+                audioSource.loop = true;
+                audioSource .Play();
+            }
+        }
+       else
+        {
+            movement.MoveSpeed = 0;
+            animator.MoveSpeed = 0;
+
+            // 멈췄을 때 사운드가 재생중이면 정지
+            if ( audioSource.isPlaying == true )
+            {
+                audioSource.Stop();
+            }
         }
         movement.MoveTo(new Vector3(x, 0, z));
+    }
+    private void UpdateJump()
+    {
+        if( Input.GetKey(keyCodeJump) )
+        {
+            movement.Jump();
+        }
     }
 }

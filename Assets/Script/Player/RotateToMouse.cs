@@ -5,14 +5,14 @@ using UnityEngine;
 public class RotateToMouse : MonoBehaviour
 {
     [SerializeField]
-    private float mouseXSpeed = 5f;     // 카메라 x축 회전속도
+    private float       mouseXSpeed = 5f;     // 카메라 x축 회전속도
     [SerializeField]
-    private float mouseYSpeed = 3f;     // 카메라 y축 회전속도
+    private float       mouseYSpeed = 3f;     // 카메라 y축 회전속도
 
-    private float limitMinX = -80f;     // 카메라 x축 회전 범위 (최소)
-    private float limitMaxX = 50f;      // 카메라 x축 회전 범위 (최대)
-    private float eulerAngleX;
-    private float eulerAngleY;
+    private float       limitMinX = -90f;     // 카메라 x축 회전 범위 (최소)
+    private float       limitMaxX = 80f;      // 카메라 x축 회전 범위 (최대)
+    private float       eulerAngleX;
+    private float       eulerAngleY;
 
     public void UpdateRotate(float mouseX, float mouseY)
     {
@@ -28,7 +28,7 @@ public class RotateToMouse : MonoBehaviour
     public float ClamAngle(float angle, float min, float max)
     {
         if (angle < -360) angle += 360;
-        if (angle >  360) angle -= 360;
+        if (angle > 360) angle -= 360;
 
         return Mathf.Clamp(angle, min, max);
 

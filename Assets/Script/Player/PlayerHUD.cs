@@ -16,11 +16,15 @@ public class PlayerHUD : MonoBehaviour
     [SerializeField]
     private Image               imageWeaponIcon;            // 무기 아이콘
     [SerializeField]
+    private Image               imageAmmoIcon;              // 총알 아이콘
+    [SerializeField]
     private Sprite[]            spriteWeaponIcons;          // 무기 아이콘에 사용되는 sprite 배열
 
     [Header("Ammo")]
     [SerializeField]
-    private TextMeshProUGUI     textAmmo;                   // 현재/최대 탄 수 출력 Text    
+    private TextMeshProUGUI     textCurrentAmmo;            // 현재 탄약 수 출력
+    [SerializeField]
+    private TextMeshProUGUI     textMaxAmmo;                // 최대 탄약 수 출력
 
     private void Awake()
     {
@@ -39,6 +43,7 @@ public class PlayerHUD : MonoBehaviour
 
     private void UpdateAmmoHUD(int currentAmmo, int maxAmmo)
     {
-        textAmmo.text = $"<size=40>{currentAmmo}/</size>{maxAmmo}";
+        textCurrentAmmo.text = $"<size=50>{currentAmmo}</size>";
+        textMaxAmmo.text = $"{maxAmmo}";
     }
 }

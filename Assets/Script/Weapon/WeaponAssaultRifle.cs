@@ -39,7 +39,7 @@ public class WeaponAssaultRifle : MonoBehaviour
         animator = GetComponentInParent<PlayerAnimatorController>();
 
         // 처음 탄 수는 최대로 설정
-        weaponSetting.currentAmmo = weaponSetting.maxAmmo;
+        weaponSetting.currentAmmo = weaponSetting.currentMaxAmmo;
     }
 
     private void OnEnable()
@@ -122,9 +122,11 @@ public class WeaponAssaultRifle : MonoBehaviour
             // 공격주기가 되어야 공격할 수 있도록 하기 위해 현재 시간 설정
             lastAttackTime = Time.time;
 
-            // 탄 수가 없으면 공격 불가능
+            // 탄 수가 없으면 자동으로 재장전
             if (weaponSetting.currentAmmo <= 0)
             {
+                StartCoroutine("OnReload");
+
                 return;
             }
             // 공격 시 currentAmmo 1 감소, 탄 수 UI 업데이트
@@ -166,7 +168,9 @@ public class WeaponAssaultRifle : MonoBehaviour
                 isReload = false;
                 
                 // 현재 탄 수를 최대로 설정하고, 바뀐 탄수 정보를 Text UI에 업데이트
-                weaponSetting.currentAmmo = weaponSetting.maxAmmo;
+                weaponSetting.maxAmmo -= weaponSetting.currentMaxAmmo - weaponSetting.currentAmmo;
+                weaponSetting.currentAmmo = weaponSetting.currentMaxAmmo;
+
                 onAmmoEvent.Invoke(weaponSetting.currentAmmo, weaponSetting.maxAmmo);
                 yield break;
             }

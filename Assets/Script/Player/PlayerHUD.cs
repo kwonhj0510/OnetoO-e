@@ -39,6 +39,6 @@ public class PlayerHUD : MonoBehaviour
 
     private void UpdateAmmoHUD(int currentAmmo, int maxAmmo)
     {
-        textAmmo.text = $"<size=40>{currentAmmo}/<size>{maxAmmo}";
+        textAmmo.text = $"<size=40>{currentAmmo}/</size>{maxAmmo}";
     }
 }

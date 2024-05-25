@@ -1356,12 +1356,12 @@ GameObject:
   m_Component:
   - component: {fileID: 1412715929}
   - component: {fileID: 1412715933}
+  - component: {fileID: 1412715935}
   - component: {fileID: 1412715932}
   - component: {fileID: 1412715931}
   - component: {fileID: 1412715930}
   - component: {fileID: 1412715934}
   - component: {fileID: 1412715936}
-  - component: {fileID: 1412715935}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -1415,6 +1415,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   keyCodeRun: 304
   keyCodeJump: 32
+  keyCodeReload: 114
   audioClipWalk: {fileID: 8300000, guid: 6597a368cd74a924eaedb0171d5b28d3, type: 3}
   audioClipRun: {fileID: 8300000, guid: 0c58744c3b6fdd844b8348066c3f703e, type: 3}
 --- !u!114 &1412715932
@@ -1981,6 +1982,7 @@ MonoBehaviour:
       m_Calls: []
   muzzleFlashEffect: {fileID: 1962495326}
   audioClipFire: {fileID: 8300000, guid: 7dc19f0cafdeb3c42b6728a1c5c700fa, type: 3}
+  audioClipReload: {fileID: 8300000, guid: 5b907074256e36d41b92e89fb0790633, type: 3}
   weaponSetting:
     WeaponName: 0
     currentAmmo: 0

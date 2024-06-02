@@ -153,7 +153,7 @@ public class WeaponAssaultRifle : MonoBehaviour
 
     private IEnumerator OnReload()
     {
-        if( weaponSetting.maxAmmo > 0 )
+        if (weaponSetting.maxAmmo > 0)
         {
             isReload = true;
 
@@ -169,17 +169,23 @@ public class WeaponAssaultRifle : MonoBehaviour
                 {
                     isReload = false;
 
-                    // 현재 탄 수를 최대로 설정하고, 바뀐 탄수 정보를 Text UI에 업데이트
-                    weaponSetting.maxAmmo -= weaponSetting.currentMaxAmmo - weaponSetting.currentAmmo;
-                    weaponSetting.currentAmmo = weaponSetting.currentMaxAmmo;
+                    // 장전되는 탄환 수 계산
+                    weaponSetting.reloadAmount = Mathf.Min(weaponSetting.currentMaxAmmo - weaponSetting.currentAmmo, weaponSetting.maxAmmo);
 
+                    // 현재 탄환 수에 장전되는 탄환 수를 더함
+                    weaponSetting.currentAmmo += weaponSetting.reloadAmount;
+
+                    // 최대 탄환 수에서 장전되는 탄환 수를 뺌
+                    weaponSetting.maxAmmo -= weaponSetting.reloadAmount;
+
+                    // 바뀐 탄환 수 정보를 Text UI에 업데이트
                     onAmmoEvent.Invoke(weaponSetting.currentAmmo, weaponSetting.maxAmmo);
                     yield break;
                 }
                 yield return null;
             }
         }
-        
     }
+
 
 }

@@ -113,7 +113,7 @@ public class PlayerController : MonoBehaviour
             weapon.StopWeaponAction();
         }
 
-        if (Input.GetKey(keyCodeReload))
+        if (Input.GetKeyDown(keyCodeReload))
         {
             weapon.StartReload();
         }

@@ -25,7 +25,7 @@ public class WeaponAssaultRifle : MonoBehaviour
     private WeaponSetting weaponSetting;          // 무기 설정
 
     private float lastAttackTime = 0;     // 마지막 발사시간 체크용
-    private bool isReload = false;       // 재장전 중인지 체크
+    [SerializeField] private bool isReload = false;       // 재장전 중인지 체크
 
     private AudioSource audioSource;       // 사운드 재생 컴포넌트
     private PlayerAnimatorController animator;          // 애니메이션 재생 제어
@@ -125,7 +125,7 @@ public class WeaponAssaultRifle : MonoBehaviour
             // 탄 수가 없으면 자동으로 재장전
             if (weaponSetting.currentAmmo <= 0)
             {
-                StartCoroutine("OnReload");
+                StartReload();
 
                 return;
             }
@@ -153,29 +153,33 @@ public class WeaponAssaultRifle : MonoBehaviour
 
     private IEnumerator OnReload()
     {
-        isReload = true;
-
-        // 재장전 애니메이션, 사운드
-        animator.OnReload();
-        PlaySound(audioClipReload);
-
-        while ( true )
+        if( weaponSetting.maxAmmo > 0 )
         {
-            // 사운드가 재생 중이 아니고, 현재 애니메이션이 Movement이면
-            // 재장전 애니메이션, 사운드 재생이 종료 되었다는 뜻
-            if (audioSource.isPlaying == false && animator.CurrentAnimationIs("Movement"))
-            {
-                isReload = false;
-                
-                // 현재 탄 수를 최대로 설정하고, 바뀐 탄수 정보를 Text UI에 업데이트
-                weaponSetting.maxAmmo -= weaponSetting.currentMaxAmmo - weaponSetting.currentAmmo;
-                weaponSetting.currentAmmo = weaponSetting.currentMaxAmmo;
+            isReload = true;
 
-                onAmmoEvent.Invoke(weaponSetting.currentAmmo, weaponSetting.maxAmmo);
-                yield break;
+            // 재장전 애니메이션, 사운드
+            animator.OnReload();
+            PlaySound(audioClipReload);
+
+            while (true)
+            {
+                // 사운드가 재생 중이 아니고, 현재 애니메이션이 Movement이면
+                // 재장전 애니메이션, 사운드 재생이 종료 되었다는 뜻
+                if (audioSource.isPlaying == false && animator.CurrentAnimationIs("Movement"))
+                {
+                    isReload = false;
+
+                    // 현재 탄 수를 최대로 설정하고, 바뀐 탄수 정보를 Text UI에 업데이트
+                    weaponSetting.maxAmmo -= weaponSetting.currentMaxAmmo - weaponSetting.currentAmmo;
+                    weaponSetting.currentAmmo = weaponSetting.currentMaxAmmo;
+
+                    onAmmoEvent.Invoke(weaponSetting.currentAmmo, weaponSetting.maxAmmo);
+                    yield break;
+                }
+                yield return null;
             }
-            yield return null;
         }
+        
     }
 
 }

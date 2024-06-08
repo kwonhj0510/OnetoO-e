@@ -9,6 +9,8 @@ public class PlayerHUD : MonoBehaviour
     [Header("Component")]
     [SerializeField]
     private WeaponAssaultRifle  weapon;                     // 현재 정보가 출력되는 무기
+    [SerializeField]
+    private PlayerController    player;                     // 현재 정보가 출력되는 플레이어
 
     [Header("Weapon Base")]
     [SerializeField]
@@ -26,6 +28,10 @@ public class PlayerHUD : MonoBehaviour
     [SerializeField]
     private TextMeshProUGUI     textMaxAmmo;                // 최대 탄약 수 출력
 
+    [Header("Player HP")]
+    [SerializeField]
+    private TextMeshProUGUI     textPlayerHp;               // 플레이어 체력
+
     private void Awake()
     {
         SetupWeapon();
@@ -33,6 +39,7 @@ public class PlayerHUD : MonoBehaviour
         // 메소드가 등록되어 있는 이벤트 클래스의(weapon.xx)의
         // Invoke() 메소드가 호출될 때 등록된 메소드(매개변수)가 실행된다
         weapon.onAmmoEvent.AddListener(UpdateAmmoHUD);
+        player.onPlayerHpEvent.AddListener(UpdateHpHUD);
     }
 
     private void SetupWeapon()
@@ -45,5 +52,10 @@ public class PlayerHUD : MonoBehaviour
     {
         textCurrentAmmo.text = $"<size=50>{currentAmmo}</size>";
         textMaxAmmo.text = $"{maxAmmo}";
+    }
+
+    private void UpdateHpHUD(int playerHp)
+    {
+        textPlayerHp.text = $"{playerHp}";
     }
 }

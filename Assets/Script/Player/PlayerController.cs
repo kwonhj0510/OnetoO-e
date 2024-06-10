@@ -3,15 +3,11 @@ using System.Collections.Generic;
 using System.Threading;
 using UnityEngine;
 
-[System.Serializable]
-public class PlayerHpEvent : UnityEngine.Events.UnityEvent<int> { }
+
 
 [RequireComponent(typeof(CharacterController))]
 public class PlayerController : MonoBehaviour
 {
-    [HideInInspector]
-    public PlayerHpEvent onPlayerHpEvent = new PlayerHpEvent();
-
     [SerializeField]
     private float moveSpeed;        // 이동속도
     private Vector3 moveForce;      // 이동 힘 (x, z와 y축을 별도로 계산해 실제 이동에 적용)

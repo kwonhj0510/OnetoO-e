@@ -9,9 +9,6 @@ public class Status : MonoBehaviour
     private float walkSpeed;
     [SerializeField]
     private float runSpeed;
-    [Header("Player HP")]
-    [SerializeField]
-    private float playerHp;    
 
     public float WalkSpeed => walkSpeed;
     public float RunSpeed => runSpeed;

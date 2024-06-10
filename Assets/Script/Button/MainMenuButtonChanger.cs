@@ -31,6 +31,6 @@ public class MainMenuButtonChanger : MonoBehaviour, IPointerEnterHandler, IPoint
     // 버튼에서 손을 뗐을 때 호출
     public void OnPointerUp(PointerEventData eventData)
     {
-        buttonText.color = highlightedTextColor;
+        buttonText.color = normalTextColor;
     }
 }

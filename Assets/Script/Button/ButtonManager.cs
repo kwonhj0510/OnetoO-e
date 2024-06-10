@@ -6,6 +6,10 @@ using UnityEngine.UI;
 
 public class ButtonManager : MonoBehaviour
 {
+    public GameObject mainMenu;         // 메인 메뉴 창
+    public GameObject settingsPopUp;    // 설정 창
+    public GameObject creditsPopUp;     // 크레딧 창
+
     public Button[] buttons;
 
     void Start()
@@ -23,7 +27,7 @@ public class ButtonManager : MonoBehaviour
                 case "TUTORIAL":
                     button.onClick.AddListener(OpenTutorial);
                     break;
-                case "SETTING":
+                case "SETTINGS":
                     button.onClick.AddListener(OpenSettings);
                     break;
                 case "CREDITS":
@@ -51,11 +55,13 @@ public class ButtonManager : MonoBehaviour
     }
     private void OpenSettings() // Settings 버튼을 누르면 설정 창으로 넘어간다.
     {
-        SceneManager.LoadScene("Settings");
+        mainMenu.SetActive(false);
+        settingsPopUp.SetActive(true);
     }
     private void ShowCredits()  // Credits 버튼을 누르면 크레딧 창으로 넘어간다.
     {
-        SceneManager.LoadScene("Credits");
+        mainMenu.SetActive(false);
+        creditsPopUp.SetActive(true);
     }
     private void QuitGame()     // Quit 버튼을 누르면 게임이 종료된다.
     {
@@ -63,6 +69,14 @@ public class ButtonManager : MonoBehaviour
     }
     private void CloseWindow()  // Close 버튼을 ( X ) 누르면 창이 닫히고 메인 화면으로 돌아간다.
     {
-        SceneManager.LoadScene("MainMenu");
+        if (settingsPopUp.activeSelf)
+        {
+            settingsPopUp.SetActive(false);
+        }
+        if (creditsPopUp.activeSelf)
+        {
+            creditsPopUp.SetActive(false);
+        }
+        mainMenu.SetActive(true);
     }
 }

@@ -12,31 +12,39 @@ public class WeaponAssaultRifle : MonoBehaviour
 
     [Header("Fire Effects")]
     [SerializeField]
-    private GameObject muzzleFlashEffect;      // 총구 이펙트 (On/Off)
+    private GameObject          muzzleFlashEffect;                 // 총구 이펙트 (On/Off)
+
+    [Header("Spawn Points")]
+    [SerializeField]
+    private Transform           bulletSpawnPoint;                  // 총알 생성 위치
 
     [Header("Audio Clips")]
     [SerializeField]
-    private AudioClip audioClipFire;          // 공격 사운드
+    private AudioClip           audioClipFire;                     // 공격 사운드
     [SerializeField]
-    private AudioClip audioClipReload;        // 재장전 사운드
+    private AudioClip           audioClipReload;                   // 재장전 사운드
 
     [Header("Weapon Setting")]
     [SerializeField]
-    private WeaponSetting weaponSetting;          // 무기 설정
+    private WeaponSetting       weaponSetting;                     // 무기 설정
 
-    private float lastAttackTime = 0;     // 마지막 발사시간 체크용
-    [SerializeField] private bool isReload = false;       // 재장전 중인지 체크
+    private float               lastAttackTime = 0;                // 마지막 발사시간 체크용
+    private bool                isReload = false;                  // 재장전 중인지 체크
 
-    private AudioSource audioSource;       // 사운드 재생 컴포넌트
-    private PlayerAnimatorController animator;          // 애니메이션 재생 제어
+    private AudioSource                 audioSource;               // 사운드 재생 컴포넌트
+    private PlayerAnimatorController    animator;                  // 애니메이션 재생 제어
+    private ImpactMemoryPool            impactMemoryPool;          // 공격 효과 생성 후 활성/비활성 관리
+    private Camera                      mainCamera;                // 광선 발사
 
     // 외부에서 필요한 정보를 열람하기 위해 정의한 Get Property's
     public WeaponName WeaponName => weaponSetting.WeaponName;
 
     private void Awake()
     {
-        audioSource = GetComponent<AudioSource>();
-        animator = GetComponentInParent<PlayerAnimatorController>();
+        audioSource         = GetComponent<AudioSource>();
+        animator            = GetComponentInParent<PlayerAnimatorController>();
+        impactMemoryPool    = GetComponent<ImpactMemoryPool>();
+        mainCamera          = Camera.main;
 
         // 처음 탄 수는 최대로 설정
         weaponSetting.currentAmmo = weaponSetting.currentMaxAmmo;
@@ -139,6 +147,9 @@ public class WeaponAssaultRifle : MonoBehaviour
             StartCoroutine("OnMuzzleFlashEffect");
             // 공격 사운드 재생
             PlaySound(audioClipFire);
+
+            // 광선을 발사해 원하는 위치 공격 (+Impact Effect)
+            TwoStepRaycast();
         }
     }
 
@@ -187,5 +198,33 @@ public class WeaponAssaultRifle : MonoBehaviour
         }
     }
 
+    private void TwoStepRaycast()
+    {
+        Ray ray;
+        RaycastHit hit;
+        Vector3 targetPoint = Vector3.zero;
 
+        // 화면의 중앙 좌표 (Aim 기준으로 Raycast 연산)
+        ray = mainCamera.ViewportPointToRay(Vector2.one * 0.5f);
+        // 공격 사거리 (attackDistance) 안에 부딪히는 오브젝트가 있으면 targetPoint는 광선에 부딪힌 위치
+        if ( Physics.Raycast(ray, out hit, weaponSetting.attackDistance))
+        {
+            targetPoint = hit.point;
+        }
+        // 공격 사거리 안에 부딪히는 오브젝트가 없으면 targetPoint는 최대 사거리 위치
+        else
+        {
+            targetPoint = ray.origin + ray.direction * weaponSetting.attackDistance;
+        }
+        Debug.DrawRay(ray.origin, ray.direction * weaponSetting.attackDistance, Color.red);
+
+        // 첫번째 Raycast연산으로 얻어진 targetPoint를 목표지점으로 설정하고, 
+        // 총구를 시작지점으로 하여 Raycast 연산
+        Vector3 attackDirection = (targetPoint - bulletSpawnPoint.position).normalized;
+        if ( Physics.Raycast(bulletSpawnPoint.position, attackDirection, out hit, weaponSetting.attackDistance))
+        {
+            impactMemoryPool.SpawnImpact(hit);
+        }
+        Debug.DrawRay(bulletSpawnPoint.position, attackDirection * weaponSetting.attackDistance, Color.blue);
+    }
 }

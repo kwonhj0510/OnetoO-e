@@ -29,6 +29,7 @@ public class PlayerController : MonoBehaviour
     private AudioClip audioClipWalk;                                // 걷기 사운드
     [SerializeField]
     private AudioClip audioClipRun;                                 // 달리기 사운드
+     
 
     private CharacterController           characterController;      // 플레이어 이동 제어를 위한 컴포넌트
     private RotateToMouse                 rotateToMouse;            // 마우스 이동으로 카메라 회전
@@ -63,6 +64,8 @@ public class PlayerController : MonoBehaviour
         {
             moveForce.y += gravity * Time.deltaTime;
         }
+        // 1초마다 moveForce 속력으로 이동
+        characterController.Move(moveForce * Time.deltaTime);
 
         UpdateRotate();
         UpdateMove();
@@ -82,7 +85,7 @@ public class PlayerController : MonoBehaviour
     private void UpdateMove()
     {
         float x = Input.GetAxisRaw("Horizontal");
-        float z = Input.GetAxisRaw("Vertical");        
+        float z = Input.GetAxisRaw("Vertical");
 
         // 이동 중일때 (걷기, 뛰기)
         if ( x != 0 || z != 0 )
@@ -115,11 +118,16 @@ public class PlayerController : MonoBehaviour
                 audioSource.Stop();
             }
         }
-        //Vector3 direction = new Vector3(x, 0, z);
-        //direction.Normalize();  // 정규화
-        //direction = Camera.main.transform.TransformDirection(direction);
-        //characterController.Move(direction * moveSpeed * Time.deltaTime);
+        Moveto(new Vector3(x ,0, z));
     }
+    private void Moveto(Vector3 dir)
+    {
+        // 이동 방향 = 캐릭터 회전 값 * 방향 값
+        dir = transform.rotation * new Vector3(dir.x, 0, dir.z);
+        // 이동 힘 = 이동 방향 * 속도
+        moveForce = new Vector3(dir.x * moveSpeed, moveForce.y, dir.z * moveSpeed);
+    }
+
     private void UpdateJump()
     {
         if (Input.GetKey(keyCodeJump))

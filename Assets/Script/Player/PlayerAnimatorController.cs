@@ -21,6 +21,7 @@ public class PlayerAnimatorController : MonoBehaviour
     {
         animator.SetTrigger("onReload");
     }
+   
 
     public void Play(string stateName, int layer, float normalizedTime)
     {

@@ -28,6 +28,9 @@ public class WeaponAssaultRifle : MonoBehaviour
     [SerializeField]
     private WeaponSetting       weaponSetting;                     // 무기 설정
 
+    [SerializeField]
+    private GameObject          bulletLaser;                       // 총알(투사체)
+
     private float               lastAttackTime = 0;                // 마지막 발사시간 체크용
     private bool                isReload = false;                  // 재장전 중인지 체크
 
@@ -35,6 +38,9 @@ public class WeaponAssaultRifle : MonoBehaviour
     private PlayerAnimatorController    animator;                  // 애니메이션 재생 제어
     private ImpactMemoryPool            impactMemoryPool;          // 공격 효과 생성 후 활성/비활성 관리
     private Camera                      mainCamera;                // 광선 발사
+
+    [SerializeField]
+    private Animator bulletLaserAnimator;
 
     // 외부에서 필요한 정보를 열람하기 위해 정의한 Get Property's
     public WeaponName WeaponName => weaponSetting.WeaponName;
@@ -112,7 +118,6 @@ public class WeaponAssaultRifle : MonoBehaviour
         while (true)
         {
             OnAttack();
-
             yield return null;
         }
     }
@@ -143,7 +148,9 @@ public class WeaponAssaultRifle : MonoBehaviour
 
             // 무기 애니메이션 재생
             animator.Play("Fire", -1, 0);
-            //총구 이펙트 재생
+            // 총알(투사체) 발사
+            bulletLaserAnimator.SetTrigger("Attack");
+            // 총구 이펙트 재생
             StartCoroutine("OnMuzzleFlashEffect");
             // 공격 사운드 재생
             PlaySound(audioClipFire);
@@ -220,11 +227,13 @@ public class WeaponAssaultRifle : MonoBehaviour
 
         // 첫번째 Raycast연산으로 얻어진 targetPoint를 목표지점으로 설정하고, 
         // 총구를 시작지점으로 하여 Raycast 연산
-        Vector3 attackDirection = (targetPoint - bulletSpawnPoint.position).normalized;
+        Vector3 attackDirection = (targetPoint - bulletSpawnPoint.position).normalized;        
         if ( Physics.Raycast(bulletSpawnPoint.position, attackDirection, out hit, weaponSetting.attackDistance))
         {
             impactMemoryPool.SpawnImpact(hit);
         }
         Debug.DrawRay(bulletSpawnPoint.position, attackDirection * weaponSetting.attackDistance, Color.blue);
     }
+
+    
 }

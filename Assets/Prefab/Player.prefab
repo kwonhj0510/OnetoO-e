@@ -1733,6 +1733,20 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &6161050440476624902
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7696616272165727686}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d99440c6cdda92942b431964d74b4a21, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  impactPrefab:
+  - {fileID: 4213065486319537217, guid: 5d2287460629cf04080a317abd72d45f, type: 3}
 --- !u!114 &7696616272133203778
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1763,17 +1777,3 @@ MonoBehaviour:
     isAutomaticAttack: 1
   bulletLaser: {fileID: 8119585125995894523}
   bulletLaserAnimator: {fileID: 8119585125995894518}
---- !u!114 &6161050440476624902
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7696616272165727686}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d99440c6cdda92942b431964d74b4a21, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  impactPrefab:
-  - {fileID: 4213065486319537217, guid: 5d2287460629cf04080a317abd72d45f, type: 3}

@@ -8,7 +8,7 @@ public class PlayerHUD : MonoBehaviour
 {
     [Header("Component")]
     [SerializeField]
-    private WeaponAssaultRifle  weapon;                     // 현재 정보가 출력되는 무기
+    private WeaponRifle  weapon;                     // 현재 정보가 출력되는 무기
     [SerializeField]
     private PlayerController    player;                     // 현재 정보가 출력되는 플레이어
 

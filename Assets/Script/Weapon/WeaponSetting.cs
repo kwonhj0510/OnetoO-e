@@ -14,5 +14,6 @@ public struct WeaponSetting
     public int reloadAmount;            // 장전되는 탄환 수
     public float attackRate;            // 공격 속도
     public float attackDistance;        // 공격 사거리
+    public int  damage;                 // 피해량
     public bool isAutomaticAttack;      // 연속 공격 여부
 }

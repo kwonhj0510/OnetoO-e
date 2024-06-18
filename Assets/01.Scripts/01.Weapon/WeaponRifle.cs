@@ -174,7 +174,7 @@ public class WeaponRifle : MonoBehaviour
 
     private IEnumerator OnReload()
     {
-        if (weaponSetting.maxAmmo > 0)
+        if (weaponSetting.maxAmmo > 0 && weaponSetting.currentAmmo != weaponSetting.currentMaxAmmo)
         {
             isReload = true;
 

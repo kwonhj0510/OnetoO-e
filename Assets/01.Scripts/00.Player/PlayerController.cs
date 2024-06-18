@@ -24,6 +24,8 @@ public class PlayerController : MonoBehaviour
     private KeyCode keyCodeJump     = KeyCode.Space;                // 점프 키 
     [SerializeField]
     private KeyCode keyCodeReload   = KeyCode.R;                    // 재장전 키
+    [SerializeField]
+    private KeyCode keyCodeSit      = KeyCode.LeftControl;          // 앉기 키
     [Header("Audio Clips")]
     [SerializeField]
     private AudioClip audioClipWalk;                                // 걷기 사운드
@@ -36,7 +38,7 @@ public class PlayerController : MonoBehaviour
     private Status                        status;                   // 이동속도 등의 플레이어 정보
     private PlayerAnimatorController      animator;                 // 애니메이션 재생 제어
     private AudioSource                   audioSource;              // 사운드 재생 제어
-    private WeaponRifle            weapon;                   // 무기를 이용한 공격 제어
+    private WeaponRifle                   weapon;                   // 무기를 이용한 공격 제어
     public float MoveSpeed
     {
         set => moveSpeed = Mathf.Max(0, value);
@@ -51,6 +53,10 @@ public class PlayerController : MonoBehaviour
         animator            = GetComponent<PlayerAnimatorController>();
         audioSource         = GetComponent<AudioSource>();
         weapon              = GetComponentInChildren<WeaponRifle>();
+
+        // 마우스 커서를 보이지 않게하고 현재 위치에 고정시킨다.
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
     }
 
     void Update()
@@ -66,6 +72,7 @@ public class PlayerController : MonoBehaviour
         UpdateRotate();
         UpdateMove();
         UpdateJump();
+        UpdateSit();
         UpdateWeaponAction();
 
     }
@@ -133,6 +140,24 @@ public class PlayerController : MonoBehaviour
             if (characterController.isGrounded)
             {
                 moveForce.y = jumpForce;
+            }
+        }
+    }
+
+    private void UpdateSit()
+    {
+        if (Input.GetKey(keyCodeSit))
+        {
+            if (characterController.isGrounded)
+            {
+                Camera.main.transform.position = new Vector3(transform.position.x, 1f, transform.position.z);
+            }
+        }
+        else if (Input.GetKeyUp(keyCodeSit))
+        {
+            if (characterController.isGrounded)
+            {
+                Camera.main.transform.position = new Vector3(transform.position.x, 1.5f, transform.position.z);
             }
         }
     }

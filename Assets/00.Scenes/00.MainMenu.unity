@@ -1510,7 +1510,7 @@ MonoBehaviour:
   buttonText: {fileID: 1948680236}
   normalTextColor: {r: 1, g: 1, b: 1, a: 1}
   highlightedTextColor: {r: 0, g: 0, b: 0, a: 1}
-  pressedTextColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+  pressedTextColor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!114 &760617790
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1731,7 +1731,7 @@ MonoBehaviour:
   buttonText: {fileID: 1875363729}
   normalTextColor: {r: 1, g: 1, b: 1, a: 1}
   highlightedTextColor: {r: 0, g: 0, b: 0, a: 1}
-  pressedTextColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+  pressedTextColor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &854942253
 GameObject:
   m_ObjectHideFlags: 0
@@ -1767,7 +1767,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: -13, y: -12}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &854942255
@@ -1818,8 +1818,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 55.88
-  m_fontSizeBase: 55.88
+  m_fontSize: 70
+  m_fontSizeBase: 70
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -2183,7 +2183,7 @@ MonoBehaviour:
   buttonText: {fileID: 1969810685}
   normalTextColor: {r: 1, g: 1, b: 1, a: 1}
   highlightedTextColor: {r: 0, g: 0, b: 0, a: 1}
-  pressedTextColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+  pressedTextColor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &977141742
 GameObject:
   m_ObjectHideFlags: 0
@@ -2718,7 +2718,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: -13, y: -12}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1107784875
@@ -2769,8 +2769,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 55.88
-  m_fontSizeBase: 55.88
+  m_fontSize: 70
+  m_fontSizeBase: 70
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -2831,6 +2831,7 @@ GameObject:
   - component: {fileID: 1139233269}
   - component: {fileID: 1139233268}
   - component: {fileID: 1139233267}
+  - component: {fileID: 1139233270}
   m_Layer: 5
   m_Name: CLOSE
   m_TagString: Untagged
@@ -2941,6 +2942,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1139233265}
   m_CullTransparentMesh: 1
+--- !u!114 &1139233270
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1139233265}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05ed0577fadda1f44a078c795f805513, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buttonText: {fileID: 854942255}
+  normalTextColor: {r: 1, g: 1, b: 1, a: 1}
+  highlightedTextColor: {r: 0.54901963, g: 0.54901963, b: 0.54901963, a: 1}
+  pressedTextColor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &1171688467
 GameObject:
   m_ObjectHideFlags: 0
@@ -3406,6 +3423,7 @@ GameObject:
   - component: {fileID: 1640060754}
   - component: {fileID: 1640060753}
   - component: {fileID: 1640060752}
+  - component: {fileID: 1640060755}
   m_Layer: 5
   m_Name: CLOSE
   m_TagString: Untagged
@@ -3516,6 +3534,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1640060750}
   m_CullTransparentMesh: 1
+--- !u!114 &1640060755
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1640060750}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05ed0577fadda1f44a078c795f805513, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buttonText: {fileID: 1107784875}
+  normalTextColor: {r: 1, g: 1, b: 1, a: 1}
+  highlightedTextColor: {r: 0.5471698, g: 0.5471698, b: 0.5471698, a: 1}
+  pressedTextColor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &1648816764
 GameObject:
   m_ObjectHideFlags: 0
@@ -3654,7 +3688,7 @@ MonoBehaviour:
   buttonText: {fileID: 65253377}
   normalTextColor: {r: 1, g: 1, b: 1, a: 1}
   highlightedTextColor: {r: 0, g: 0, b: 0, a: 1}
-  pressedTextColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+  pressedTextColor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &1652800420
 GameObject:
   m_ObjectHideFlags: 0
@@ -5075,7 +5109,7 @@ MonoBehaviour:
   buttonText: {fileID: 862759430}
   normalTextColor: {r: 1, g: 1, b: 1, a: 1}
   highlightedTextColor: {r: 0, g: 0, b: 0, a: 1}
-  pressedTextColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+  pressedTextColor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &2007365663
 GameObject:
   m_ObjectHideFlags: 0

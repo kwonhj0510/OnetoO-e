@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Analytics;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
@@ -42,8 +43,8 @@ public class ButtonManager : MonoBehaviour
                 case "CLOSE":
                     button.onClick.AddListener(CloseWindow);
                     break;
-                case "RETURN":
-                    button.onClick.AddListener(TutorialReturn);
+                case "RESTART":
+                    button.onClick.AddListener(TutorialRestart);
                     break;
                 case "MENU":
                     button.onClick.AddListener(OpenMainMenu);
@@ -60,11 +61,8 @@ public class ButtonManager : MonoBehaviour
     }
     private void OpenTutorial() //Tutorial 버튼을 누르면 튜토리얼 창으로 넘어간다.
     {
-        SceneManager.LoadScene("02.Tutorial");
-
-        // 마우스 커서를 보이지 않게하고 현재 위치에 고정시킨다.
-        Cursor.visible = false;
-        Cursor.lockState = CursorLockMode.Locked;
+        
+        SceneManager.LoadScene("02.Tutorial");        
     }
     private void OpenSettings() // Settings 버튼을 누르면 설정 창으로 넘어간다.
     {
@@ -92,8 +90,11 @@ public class ButtonManager : MonoBehaviour
         }
         mainMenu.SetActive(true);
     }
-    private void TutorialReturn()
+    private void TutorialRestart()
     {
+        // 마우스 커서를 보이지 않게하고 현재 위치에 고정시킨다.
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
         SceneManager.LoadScene("02.Tutorial");
     }
     private void OpenMainMenu()

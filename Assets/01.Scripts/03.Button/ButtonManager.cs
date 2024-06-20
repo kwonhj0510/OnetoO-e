@@ -13,6 +13,8 @@ public class ButtonManager : MonoBehaviour
     private GameObject settingsPopUp;    // 설정 창
     [SerializeField]
     private GameObject creditsPopUp;     // 크레딧 창
+    [SerializeField]
+    private GameObject escPopUp;     // 크레딧 창
 
     public Button[] buttons;
 
@@ -58,11 +60,13 @@ public class ButtonManager : MonoBehaviour
     private void StartGame()    // Start 버튼을 누르면 인게임 화면으로 넘어간다.
     {
         SceneManager.LoadScene("01.InGame");
+        SoundManager.instance.musicSource.Stop();
     }
     private void OpenTutorial() //Tutorial 버튼을 누르면 튜토리얼 창으로 넘어간다.
     {
         
-        SceneManager.LoadScene("02.Tutorial");        
+        SceneManager.LoadScene("02.Tutorial");
+        SoundManager.instance.musicSource.Stop();
     }
     private void OpenSettings() // Settings 버튼을 누르면 설정 창으로 넘어간다.
     {
@@ -83,12 +87,23 @@ public class ButtonManager : MonoBehaviour
         if (settingsPopUp.activeSelf)
         {
             settingsPopUp.SetActive(false);
+            mainMenu.SetActive(true);
+
         }
         if (creditsPopUp.activeSelf)
         {
             creditsPopUp.SetActive(false);
+            mainMenu.SetActive(true);
+
         }
-        mainMenu.SetActive(true);
+        if (escPopUp.activeSelf)
+        {
+            Cursor.visible = false;
+            Cursor.lockState = CursorLockMode.Locked;
+            escPopUp.SetActive(false);
+            Time.timeScale = 1;
+        }
+        
     }
     private void TutorialRestart()
     {
@@ -100,5 +115,6 @@ public class ButtonManager : MonoBehaviour
     private void OpenMainMenu()
     {
         SceneManager.LoadScene("00.MainMenu");
+        SoundManager.instance.musicSource.Play();
     }
 }

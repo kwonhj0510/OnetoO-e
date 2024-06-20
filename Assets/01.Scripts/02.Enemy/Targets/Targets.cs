@@ -2,11 +2,10 @@ using System.Collections;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using static UnityEngine.GraphicsBuffer;
 
 public class Targets : MonoBehaviour
 {
-    static public Targets instance;
+    public static Targets instance;
      
     public int numberOfTargets = 10; // 생성할 과녁 개수
     private int currentTargetCount;   // 현재 생성된 과녁 개수
@@ -18,7 +17,6 @@ public class Targets : MonoBehaviour
     [SerializeField]
     private GameObject explanationPanel;
 
-    private TargetHealth targetHealth;
     [SerializeField]
     private TextMeshPro textCurScore;
     [SerializeField]
@@ -27,8 +25,11 @@ public class Targets : MonoBehaviour
     private void Awake()
     {
         instance = this;    // 싱글톤
-        targetHealth.onScoreEvent.AddListener(UpdateScore);
+    }
 
+    private void Start()
+    {
+        UpdateScore(0, numberOfTargets); // 초기 점수 설정
     }
 
     private void Update()
@@ -64,6 +65,10 @@ public class Targets : MonoBehaviour
                 // 타겟 생성
                 GameObject newTarget = Instantiate(targetPrefab, spawnPosition, spawnRotation);
                 newTarget.transform.SetParent(transform); // 자식으로 설정
+
+                // TargetHealth 컴포넌트를 가져와서 이벤트 리스너 등록
+                TargetHealth targetHealth = newTarget.GetComponent<TargetHealth>();
+                targetHealth.onScoreEvent.AddListener(UpdateScore);
 
                 currentTargetCount++;
                 isSpawningAllowed = false; // 생성 후 다음 생성을 막음

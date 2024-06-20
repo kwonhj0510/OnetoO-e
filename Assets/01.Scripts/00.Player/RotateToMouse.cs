@@ -5,14 +5,29 @@ using UnityEngine;
 public class RotateToMouse : MonoBehaviour
 {
     [SerializeField]
-    private float       mouseXSpeed = 5f;     // 카메라 x축 회전속도
+    private float       mouseXSpeed;     // 카메라 x축 회전속도
     [SerializeField]
-    private float       mouseYSpeed = 3f;     // 카메라 y축 회전속도
+    private float       mouseYSpeed;     // 카메라 y축 회전속도
 
     private float       limitMinX = -80f;     // 카메라 x축 회전 범위 (최소)
     private float       limitMaxX = 80f;      // 카메라 x축 회전 범위 (최대)
     private float       eulerAngleX;
     private float       eulerAngleY;
+
+    
+
+    private void Start()
+    {
+        // 초기 마우스 스피드를 감도 값으로 설정
+        mouseXSpeed = SensitivityManager.instance.sensitivity;
+        mouseYSpeed = SensitivityManager.instance.sensitivity;
+    }
+    private void Update()
+    {
+        // 감도가 변경될 경우 마우스 스피드 값도 업데이트
+        mouseXSpeed = SensitivityManager.instance.sensitivitySlider.value;
+        mouseYSpeed = SensitivityManager.instance.sensitivitySlider.value;
+    }
 
     public void UpdateRotate(float mouseX, float mouseY)
     {

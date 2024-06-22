@@ -233,10 +233,15 @@ public class WeaponRifle : MonoBehaviour
         Vector3 attackDirection = (targetPoint - bulletSpawnPoint.position).normalized;        
         if ( Physics.Raycast(bulletSpawnPoint.position, attackDirection, out hit, weaponSetting.attackDistance, ~ignoreLayer))
         {            
-            TargetHealth enemyHealth = hit.collider.GetComponent<TargetHealth>();
-            if ( enemyHealth != null)
+            TargetHealth targetyHealth = hit.collider.GetComponent<TargetHealth>();
+            if (targetyHealth != null)
             {
-                enemyHealth.TakeDamage(weaponSetting.damage);
+                targetyHealth.TakeDamage(weaponSetting.damage);
+            }
+            Enemy enemyHealth = hit.collider.GetComponent<Enemy>();
+            if (enemyHealth != null)
+            {
+                StartCoroutine(enemyHealth.TakeDamage(weaponSetting.damage));
             }
             impactMemoryPool.SpawnImpact(hit);
         }

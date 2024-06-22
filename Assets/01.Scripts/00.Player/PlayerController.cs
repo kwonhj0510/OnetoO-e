@@ -26,8 +26,8 @@ public class PlayerController : MonoBehaviour
     private KeyCode keyCodeReload   = KeyCode.R;                    // 재장전 키
     [SerializeField]
     private KeyCode keyCodeSit      = KeyCode.LeftControl;          // 앉기 키
-    [SerializeField]
-    private KeyCode keyCodeEsc      = KeyCode.Backspace;               // 설정 키
+    //[SerializeField]
+    //private KeyCode keyCodeEsc      = KeyCode.Backspace;               // 설정 키
 
     [Header("Audio Clips")]
     [SerializeField]
@@ -80,7 +80,7 @@ public class PlayerController : MonoBehaviour
         UpdateJump();
         UpdateSit();
         UpdateWeaponAction();
-        UpdateEsc();
+        //UpdateEsc();
     }
 
     private void UpdateRotate()
@@ -168,29 +168,29 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    private void UpdateEsc()
-    {
-        if (Input.GetKeyDown(keyCodeEsc))
-        {
-            Time.timeScale = 0;
-            escPopUp.SetActive(true);
-            Cursor.visible = true;
-            Cursor.lockState = CursorLockMode.None;
+    //private void UpdateEsc()
+    //{
+    //    if (Input.GetKeyDown(keyCodeEsc))
+    //    {
+    //        Time.timeScale = 0;
+    //        escPopUp.SetActive(true);
+    //        Cursor.visible = true;
+    //        Cursor.lockState = CursorLockMode.None;
                            
             
-            if (escPopUp == null)
-            {
-                Debug.LogError("ESC 팝업 UI가 할당되지 않았습니다.");
-                return;
-            }
-        }
+    //        if (escPopUp == null)
+    //        {
+    //            Debug.LogError("ESC 팝업 UI가 할당되지 않았습니다.");
+    //            return;
+    //        }
+    //    }
         
-    }
+    //}
 
     private void UpdateWeaponAction()
     {
         if (Input.GetMouseButtonDown(0))
-        {
+        { 
             weapon.StartWeaponAction();
         }
         else if (Input.GetMouseButtonUp(0))

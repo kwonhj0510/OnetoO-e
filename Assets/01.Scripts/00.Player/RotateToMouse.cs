@@ -18,15 +18,15 @@ public class RotateToMouse : MonoBehaviour
 
     private void Start()
     {
-        // 초기 마우스 스피드를 감도 값으로 설정
-        mouseXSpeed = SensitivityManager.instance.sensitivity;
-        mouseYSpeed = SensitivityManager.instance.sensitivity;
+        //// 초기 마우스 스피드를 감도 값으로 설정
+        //mouseXSpeed = SensitivityManager.instance.sensitivity;
+        //mouseYSpeed = SensitivityManager.instance.sensitivity;
     }
     private void Update()
     {
-        // 감도가 변경될 경우 마우스 스피드 값도 업데이트
-        mouseXSpeed = SensitivityManager.instance.sensitivitySlider.value;
-        mouseYSpeed = SensitivityManager.instance.sensitivitySlider.value;
+        //// 감도가 변경될 경우 마우스 스피드 값도 업데이트
+        //mouseXSpeed = SensitivityManager.instance.sensitivitySlider.value;
+        //mouseYSpeed = SensitivityManager.instance.sensitivitySlider.value;
     }
 
     public void UpdateRotate(float mouseX, float mouseY)

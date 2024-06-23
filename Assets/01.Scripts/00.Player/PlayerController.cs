@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Threading;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 
 
 [RequireComponent(typeof(CharacterController))]
@@ -210,7 +210,10 @@ public class PlayerController : MonoBehaviour
 
         if(isDie == true)
         {
-            Debug.Log("Game Over");
+            Cursor.visible = true;
+            Cursor.lockState = CursorLockMode.None;
+            SceneManager.LoadScene("07.GameOver");
+            //Debug.Log("Game Over");
         }
     }
     

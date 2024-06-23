@@ -232,18 +232,18 @@ public class WeaponRifle : MonoBehaviour
         // 총구를 시작지점으로 하여 Raycast 연산
         Vector3 attackDirection = (targetPoint - bulletSpawnPoint.position).normalized;        
         if ( Physics.Raycast(bulletSpawnPoint.position, attackDirection, out hit, weaponSetting.attackDistance, ~ignoreLayer))
-        {            
+        {
+            impactMemoryPool.SpawnImpact(hit);
+
             TargetHealth targetyHealth = hit.collider.GetComponent<TargetHealth>();
             if (targetyHealth != null)
             {
                 targetyHealth.TakeDamage(weaponSetting.damage);
             }
-            Enemy enemyHealth = hit.collider.GetComponent<Enemy>();
-            if (enemyHealth != null)
+            if (hit.transform.CompareTag("ImpactEnemy"))
             {
-                StartCoroutine(enemyHealth.TakeDamage(weaponSetting.damage));
+                hit.transform.GetComponent<EnemyFSM>().TakeDamage(weaponSetting.damage);
             }
-            impactMemoryPool.SpawnImpact(hit);
         }
         Debug.DrawRay(bulletSpawnPoint.position, attackDirection * weaponSetting.attackDistance, Color.blue);
     }

@@ -1,7 +1,7 @@
 using System.Collections;
 using UnityEngine;
 
-public class Zone : MonoBehaviour
+public class PanelZone : MonoBehaviour
 {
     [SerializeField]
     private GameObject explanationPanel;   // 설명패널

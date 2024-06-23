@@ -10,7 +10,7 @@ public class PlayerHUD : MonoBehaviour
     [SerializeField]
     private WeaponRifle  weapon;                     // 현재 정보가 출력되는 무기
     [SerializeField]
-    private PlayerController    player;                     // 현재 정보가 출력되는 플레이어
+    private Status status;
 
     [Header("Weapon Base")]
     [SerializeField]
@@ -28,6 +28,14 @@ public class PlayerHUD : MonoBehaviour
     [SerializeField]
     private TextMeshProUGUI     textMaxAmmo;                // 최대 탄약 수 출력    
 
+    [Header("HP & Blood Screen")]
+    [SerializeField]
+    private TextMeshProUGUI textHP;
+    [SerializeField]
+    private Image imageBloodScreen;
+    [SerializeField]
+    private AnimationCurve curveBloodScreen;
+
     private void Awake()
     {
         SetupWeapon();
@@ -35,6 +43,7 @@ public class PlayerHUD : MonoBehaviour
         // 메소드가 등록되어 있는 이벤트 클래스의(weapon.xx)의
         // Invoke() 메소드가 호출될 때 등록된 메소드(매개변수)가 실행된다
         weapon.onAmmoEvent.AddListener(UpdateAmmoHUD);
+        status.onHPEvent.AddListener(UpdateHPHUD);
     }
 
     private void SetupWeapon()
@@ -47,5 +56,34 @@ public class PlayerHUD : MonoBehaviour
     {
         textCurrentAmmo.text = $"<size=50>{currentAmmo}</size>";
         textMaxAmmo.text = $"{maxAmmo}";
-    }      
+    }
+
+    private void UpdateHPHUD(int previous, int current)
+    {
+        textHP.text = $"{current}";
+
+        if (previous - current > 0 )
+        {
+            StopCoroutine("OnBloodScreen");
+            StartCoroutine("OnBloodScreen");
+        }
+
+    }
+
+    private IEnumerator OnBloodScreen()
+    {
+        float percent = 0;
+        float maxAlpha = 47f / 255f;
+
+        while (percent < 1)
+        {
+            percent += Time.deltaTime;
+
+            Color color = imageBloodScreen.color;
+            color.a = Mathf.Lerp(maxAlpha, 0, curveBloodScreen.Evaluate(percent));
+            imageBloodScreen.color = color;
+
+            yield return null;
+        }
+    }
 }

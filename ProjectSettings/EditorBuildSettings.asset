@@ -12,7 +12,7 @@ EditorBuildSettings:
     path: Assets/00.Scenes/00.MainMenu.unity
     guid: ade479d87db974f42b0ff86e33a5f211
   - enabled: 1
-    path: Assets/00.Scenes/01.InGame.unity
+    path: Assets/00.Scenes/01.Stage1.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
   - enabled: 0
     path: Assets/Scenes/Credits.unity
@@ -26,6 +26,15 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/00.Scenes/03.ClearTutorial.unity
     guid: fb49178893383984b90bc91f1638ada1
+  - enabled: 1
+    path: Assets/00.Scenes/04.Stage2.unity
+    guid: dc4cfc48ee570404881f62a70fe38303
+  - enabled: 1
+    path: Assets/00.Scenes/05.Stage3.unity
+    guid: 5f831e34d6c1f5b4d92ea3558992eb61
+  - enabled: 1
+    path: Assets/00.Scenes/06.Clear.unity
+    guid: 33889b73183821b47a9b27107c10b7ff
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 9eb07e2d669e9c94e9d7d3c782a916f7,
       type: 2}

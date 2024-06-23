@@ -51,6 +51,9 @@ public class ButtonManager : MonoBehaviour
                 case "MENU":
                     button.onClick.AddListener(OpenMainMenu);
                     break;
+                case "GAMERESTART":
+                    button.onClick.AddListener(StartGame);
+                    break;
                 default:
                     break;
             }
@@ -59,7 +62,10 @@ public class ButtonManager : MonoBehaviour
 
     private void StartGame()    // Start 버튼을 누르면 인게임 화면으로 넘어간다.
     {
-        SceneManager.LoadScene("01.InGame");
+        // 마우스 커서를 보이지 않게하고 현재 위치에 고정시킨다.
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
+        SceneManager.LoadScene("01.Stage1");
         SoundManager.instance.musicSource.Stop();
     }
     private void OpenTutorial() //Tutorial 버튼을 누르면 튜토리얼 창으로 넘어간다.
@@ -114,6 +120,8 @@ public class ButtonManager : MonoBehaviour
     }
     private void OpenMainMenu()
     {
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
         SceneManager.LoadScene("00.MainMenu");
         SoundManager.instance.musicSource.Play();
     }

@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum ImpactType { Target, Enemy, Boss}
+public enum ImpactType { Target, Enemy, Boss, Turret}
 public class ImpactMemoryPool : MonoBehaviour
 {
     [SerializeField]
@@ -26,10 +26,15 @@ public class ImpactMemoryPool : MonoBehaviour
         {
             OnSpawnImpact(ImpactType.Target, hit.point, Quaternion.LookRotation(hit.normal));
         }
-        if (hit.transform.CompareTag("ImpactEnemy"))
+        else if (hit.transform.CompareTag("ImpactEnemy"))
         {
             OnSpawnImpact(ImpactType.Enemy, hit.point, Quaternion.LookRotation(hit.normal));
         }
+        else if (hit.transform.CompareTag("ImpactTurret"))
+        {
+            OnSpawnImpact(ImpactType.Turret, hit.point, Quaternion.LookRotation(hit.normal));
+        }
+
     }
 
     public void OnSpawnImpact(ImpactType type, Vector3 position, Quaternion rootation)

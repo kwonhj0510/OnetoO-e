@@ -204,5 +204,14 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    public void TakeDamage(int damage)
+    {
+        bool isDie = status.DecreaseHP(damage);
+
+        if(isDie == true)
+        {
+            Debug.Log("Game Over");
+        }
+    }
     
 }

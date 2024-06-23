@@ -15,9 +15,9 @@ TagManager:
   - Metal (Static)
   - Wood (Static)
   - Dirt (Static)
-  - Wood
   - ImpactTarget
   - ImpactEnemy
+  - ImpactTurret
   layers:
   - Default
   - TransparentFX

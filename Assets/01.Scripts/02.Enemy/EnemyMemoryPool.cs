@@ -47,6 +47,7 @@ public class EnemyMemoryPool : MonoBehaviour
             {
                 GameObject item = spawnPointMemoryPool.ActivatePoolItem();
 
+                
                 item.transform.position = new Vector3(Random.Range(-mapSize.x * 0.09f, mapSize.x * 0.09f), 1,
                                                      Random.Range(-mapSize.y * 0f, mapSize.y * 0.24f));
 

@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 7222924315197920045}
   - component: {fileID: 4170076621592456284}
   - component: {fileID: -8502618326104084977}
-  m_Layer: 0
+  m_Layer: 21
   m_Name: Boss
   m_TagString: ImpactEnemy
   m_Icon: {fileID: 0}
@@ -28,8 +28,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 469189183472477086}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 3, z: 0}
-  m_LocalScale: {x: 3, y: 3, z: 3}
+  m_LocalPosition: {x: 0, y: 1, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 5954409347536983949}
@@ -124,7 +124,7 @@ GameObject:
   - component: {fileID: 2109269848230705546}
   - component: {fileID: 2857295242715059428}
   - component: {fileID: 5227044792512755449}
-  m_Layer: 0
+  m_Layer: 21
   m_Name: EnemyBody
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -139,8 +139,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4164275053346678637}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: 2, z: 0}
+  m_LocalScale: {x: 3, y: 3, z: 3}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4493786452411394169}
@@ -222,7 +222,7 @@ GameObject:
   - component: {fileID: 7518696221748690007}
   - component: {fileID: 742990778379920589}
   - component: {fileID: 9082427275357953198}
-  m_Layer: 0
+  m_Layer: 21
   m_Name: EnemyGun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -237,8 +237,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7802942057335075308}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.2, z: 0.7}
-  m_LocalScale: {x: 0.2, y: 0.2, z: 0.5}
+  m_LocalPosition: {x: 0, y: 2, z: 2.1}
+  m_LocalScale: {x: 0.6, y: 0.6, z: 1.5}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4493786452411394169}

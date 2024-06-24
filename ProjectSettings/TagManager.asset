@@ -18,6 +18,7 @@ TagManager:
   - ImpactTarget
   - ImpactEnemy
   - ImpactTurret
+  - ImpactBoss
   layers:
   - Default
   - TransparentFX
@@ -40,7 +41,7 @@ TagManager:
   - Enemy
   - EnemyDead
   - Player
-  - 
+  - Boss
   - 
   - 
   - 

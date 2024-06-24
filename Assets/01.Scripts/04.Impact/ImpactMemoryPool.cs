@@ -34,6 +34,7 @@ public class ImpactMemoryPool : MonoBehaviour
         {
             OnSpawnImpact(ImpactType.Turret, hit.point, Quaternion.LookRotation(hit.normal));
         }
+       
 
     }
 

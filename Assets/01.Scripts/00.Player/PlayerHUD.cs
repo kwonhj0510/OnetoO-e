@@ -38,13 +38,26 @@ public class PlayerHUD : MonoBehaviour
 
     private void Awake()
     {
-        SetupWeapon();
+        if (weapon == null)
+        {
+            Debug.LogError("Weapon is not assigned in the inspector!");
+        }
+        else
+        {
+            SetupWeapon();
+            weapon.onAmmoEvent.AddListener(UpdateAmmoHUD);
+        }
 
-        // 메소드가 등록되어 있는 이벤트 클래스의(weapon.xx)의
-        // Invoke() 메소드가 호출될 때 등록된 메소드(매개변수)가 실행된다
-        weapon.onAmmoEvent.AddListener(UpdateAmmoHUD);
-        status.onHPEvent.AddListener(UpdateHPHUD);
+        if (status == null)
+        {
+            Debug.LogError("Status is not assigned in the inspector!");
+        }
+        else
+        {
+            status.onHPEvent.AddListener(UpdateHPHUD);
+        }
     }
+
 
     private void SetupWeapon()
     {

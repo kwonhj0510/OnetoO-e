@@ -18,6 +18,7 @@ public class SensitivityManager : MonoBehaviour
         if (instance == null)
         {
             instance = this;
+            DontDestroyOnLoad(gameObject);
         }
         else
         {
@@ -38,8 +39,8 @@ public class SensitivityManager : MonoBehaviour
 
     private void OnDestroy()
     {
-        // 메모리 누수를 방지하기 위해 객체가 파괴될 때 리스너 제거
-        sensitivitySlider.onValueChanged.RemoveListener(OnSensitivityChanged);
+        //// 메모리 누수를 방지하기 위해 객체가 파괴될 때 리스너 제거
+        //sensitivitySlider.onValueChanged.RemoveListener(OnSensitivityChanged);
     }
 
     public void OnSensitivityChanged(float newSensitivity)

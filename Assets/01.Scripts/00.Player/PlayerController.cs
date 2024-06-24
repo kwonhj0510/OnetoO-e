@@ -26,8 +26,7 @@ public class PlayerController : MonoBehaviour
     private KeyCode keyCodeReload   = KeyCode.R;                    // 재장전 키
     [SerializeField]
     private KeyCode keyCodeSit      = KeyCode.LeftControl;          // 앉기 키
-    //[SerializeField]
-    //private KeyCode keyCodeEsc      = KeyCode.Backspace;               // 설정 키
+    
 
     [Header("Audio Clips")]
     [SerializeField]
@@ -35,8 +34,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     private AudioClip audioClipRun;                                 // 달리기 사운드
 
-    [SerializeField]
-    private GameObject escPopUp;     
+    
 
     private CharacterController           characterController;      // 플레이어 이동 제어를 위한 컴포넌트
     private RotateToMouse                 rotateToMouse;            // 마우스 이동으로 카메라 회전
@@ -168,24 +166,7 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    //private void UpdateEsc()
-    //{
-    //    if (Input.GetKeyDown(keyCodeEsc))
-    //    {
-    //        Time.timeScale = 0;
-    //        escPopUp.SetActive(true);
-    //        Cursor.visible = true;
-    //        Cursor.lockState = CursorLockMode.None;
-                           
-            
-    //        if (escPopUp == null)
-    //        {
-    //            Debug.LogError("ESC 팝업 UI가 할당되지 않았습니다.");
-    //            return;
-    //        }
-    //    }
-        
-    //}
+    
 
     private void UpdateWeaponAction()
     {

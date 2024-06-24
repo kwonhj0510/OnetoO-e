@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 7222924315197920045}
   - component: {fileID: 4170076621592456284}
   - component: {fileID: -8502618326104084977}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: Enemy
   m_TagString: ImpactEnemy
   m_Icon: {fileID: 0}
@@ -124,7 +124,7 @@ GameObject:
   - component: {fileID: 2109269848230705546}
   - component: {fileID: 2857295242715059428}
   - component: {fileID: 5227044792512755449}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: EnemyBody
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -222,7 +222,7 @@ GameObject:
   - component: {fileID: 7518696221748690007}
   - component: {fileID: 742990778379920589}
   - component: {fileID: 9082427275357953198}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: EnemyGun
   m_TagString: Untagged
   m_Icon: {fileID: 0}

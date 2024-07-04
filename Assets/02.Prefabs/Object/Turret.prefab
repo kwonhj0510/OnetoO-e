@@ -1469,11 +1469,13 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 1048576
   isTurret0: 1
-  projectilePrefab: {fileID: 0}
-  projectileSpawnPoint: {fileID: 0}
+  projectilePrefab: {fileID: 1911880121232950259, guid: 772aaadc78a6302449591e49badc5a51,
+    type: 3}
+  projectileSpawnPoint: {fileID: 2618855008881617764}
   attackRange: 5
   attackRate: 1
-  muzzleFlashEffect: {fileID: 0}
+  muzzleFlashEffect: {fileID: 2618855008881588036}
+  audioClipFire: {fileID: 8300000, guid: 2cc6c6aebec9fd343aab9a4451b7e5e8, type: 3}
 --- !u!1 &8665677083953742053
 GameObject:
   m_ObjectHideFlags: 0

@@ -30,9 +30,9 @@ public class ImpactMemoryPool : MonoBehaviour
         {
             OnSpawnImpact(ImpactType.Enemy, hit.point, Quaternion.LookRotation(hit.normal));
         }
-        else if (hit.transform.CompareTag("ImpactTurret"))
+        else if (hit.transform.CompareTag("ImpactBoss"))
         {
-            OnSpawnImpact(ImpactType.Turret, hit.point, Quaternion.LookRotation(hit.normal));
+            OnSpawnImpact(ImpactType.Boss, hit.point, Quaternion.LookRotation(hit.normal));
         }
        
 

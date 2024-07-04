@@ -355,13 +355,19 @@ PrefabInstance:
     - target: {fileID: 228696560129698153, guid: 49c08f8f4ed3ebc4bac7c2ac4836e2fb,
         type: 3}
       propertyPath: impactPrefab.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 228696560129698153, guid: 49c08f8f4ed3ebc4bac7c2ac4836e2fb,
         type: 3}
       propertyPath: impactPrefab.Array.data[1]
       value: 
       objectReference: {fileID: 4213065486319537217, guid: 213377c17c05c8547af4590a281841f4,
+        type: 3}
+    - target: {fileID: 228696560129698153, guid: 49c08f8f4ed3ebc4bac7c2ac4836e2fb,
+        type: 3}
+      propertyPath: impactPrefab.Array.data[2]
+      value: 
+      objectReference: {fileID: 4213065486319537217, guid: 58ae0ddd85da1df4588203db96e17d78,
         type: 3}
     - target: {fileID: 2738895920173823892, guid: 49c08f8f4ed3ebc4bac7c2ac4836e2fb,
         type: 3}
@@ -1972,6 +1978,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   potalDestination: {fileID: 1980905988}
   potalCollider: {fileID: 1980905990}
+  fadeSpeed: 1
 --- !u!1 &2039969677
 GameObject:
   m_ObjectHideFlags: 0

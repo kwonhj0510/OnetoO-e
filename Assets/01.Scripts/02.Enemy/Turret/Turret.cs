@@ -26,7 +26,7 @@ public class Turret : MonoBehaviour
     [SerializeField]
     private Transform projectileSpawnPoint;
     [SerializeField]
-    private float attackRange = 5;
+    private float attackRange = 0.4f;
     [SerializeField]
     private float attackRate = 1;
     [SerializeField]

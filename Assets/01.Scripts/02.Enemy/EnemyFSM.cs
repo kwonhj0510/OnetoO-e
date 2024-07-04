@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.UI;
 
 public enum EnemyState { None = -1, Idle = 0, Wander, Pursuit, Attack, }
 
@@ -23,6 +24,7 @@ public class EnemyFSM : MonoBehaviour
     private float attackRange = 5;
     [SerializeField]
     private float attackRate = 1;
+    
 
     [Header("Audio Clip")]
     [SerializeField]

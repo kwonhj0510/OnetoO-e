@@ -22,7 +22,6 @@ public class TargetHealth : MonoBehaviour
         if (curHealth <= 0)
         {
             Targets.instance.TargetDestroyed();
-            Debug.Log(Targets.instance.targetCount);
             onScoreEvent.Invoke(Targets.instance.targetCount, Targets.instance.numberOfTargets);
             Destroy(gameObject);
         }

@@ -244,6 +244,10 @@ public class WeaponRifle : MonoBehaviour
             {
                 hit.transform.GetComponent<EnemyFSM>().TakeDamage(weaponSetting.damage);
             }
+            if (hit.transform.CompareTag("ImpactBoss"))
+            {
+                hit.transform.GetComponent<EnemyFSM>().TakeDamage(weaponSetting.damage);
+            }
         }
         Debug.DrawRay(bulletSpawnPoint.position, attackDirection * weaponSetting.attackDistance, Color.blue);
     }

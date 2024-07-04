@@ -96,7 +96,6 @@ public class Targets : MonoBehaviour
     public IEnumerator RemoveTarget()
     {
         yield return new WaitForSeconds(2f);
-        Debug.Log("모든 과녁을 제거했습니다.");
         SceneManager.LoadScene("03.ClearTutorial");
         Cursor.visible = true;
         Cursor.lockState = CursorLockMode.None;

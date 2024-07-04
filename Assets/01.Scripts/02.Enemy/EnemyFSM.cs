@@ -1,7 +1,6 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -23,7 +22,11 @@ public class EnemyFSM : MonoBehaviour
     [SerializeField]
     private float attackRange = 5;
     [SerializeField]
-    private float atttackRate = 1;
+    private float attackRate = 1;
+
+    [Header("Audio Clip")]
+    [SerializeField]
+    private AudioClip audioClipFire;  // 총 쏘는 사운드
 
     private EnemyState enemyState = EnemyState.None; // 현재 적 행동
     private float lastAttackTime = 0;
@@ -33,13 +36,15 @@ public class EnemyFSM : MonoBehaviour
     private Transform target;   // 적의 공격 대상 (플레이어)
     private EnemyMemoryPool enemyMemoryPool;
     private PotalZone potalZone;
+    private AudioSource audioSource;  // 사운드 재생 컴포넌트
 
-    //private void Awake()
+
     public void SetUp(Transform target, EnemyMemoryPool enemyMemoryPool)
     {
         status = GetComponent<Status>();
         navMeshAgent = GetComponent<NavMeshAgent>();
         potalZone = GetComponent<PotalZone>();
+        audioSource = GetComponent<AudioSource>();
         this.target = target;
         this.enemyMemoryPool = enemyMemoryPool;
 
@@ -57,6 +62,13 @@ public class EnemyFSM : MonoBehaviour
         StopCoroutine(enemyState.ToString());
 
         enemyState = EnemyState.None;
+    }
+
+    private void PlaySound(AudioClip clip)
+    {
+        audioSource.Stop();                     // 기존에 재생중인 사운드를 정지하고
+        audioSource.clip = clip;                // 새로운 사운드 clip으로 교체 후,
+        audioSource.Play();                     // 사운드 재생
     }
 
     public void ChangeState(EnemyState newState)
@@ -197,7 +209,7 @@ public class EnemyFSM : MonoBehaviour
             // 타겟과의 거리에 따라 행동 선택 (배회, 추격, 원거리 공격)
             CalculateDistanceToTargetAndSelectState();
             
-            if(Time.time - lastAttackTime > atttackRate)
+            if(Time.time - lastAttackTime > attackRate)
             {
                 // 공격주기가 되어야 공격할 수 있도록 하기 위해 현재 시간 저장
                 lastAttackTime = Time.time;
@@ -205,6 +217,8 @@ public class EnemyFSM : MonoBehaviour
                 // 발사체 생성
                 GameObject clone = Instantiate(projectilePrefab, projectileSpawnPoint.position, projectileSpawnPoint.rotation);
                 clone.GetComponent<EnemyProjectile>().SetUp(target.position);
+
+                PlaySound(audioClipFire);
             }
 
             yield return null;

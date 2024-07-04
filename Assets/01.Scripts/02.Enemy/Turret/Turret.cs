@@ -1,16 +1,24 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using static UnityEngine.GraphicsBuffer;
 
-public enum TurretState { None = -1, Idle = 0, Attack, Pursuit }
 public class Turret : MonoBehaviour
 {
-    [Header("Pursuit")]
+    [Header("Rotate")]
     [SerializeField]
-    private float targetRecognitionRange = 8; // 인식 범위
-
+    private Transform turretHead = null;    // 회전할 터렛의 머리부분
+    [SerializeField]
+    private float range = 5f;               // 터렛의 사정거리
+    [SerializeField]
+    private float idleRotateSpeed = 0f;   // 평소에 회전하는 속도
+    [SerializeField]
+    private float targetRotateSpeed = 0f;   // 타겟을 향할 때 회전하는 속도
+    [SerializeField]
+    private LayerMask layerMask;            // 특정 레이어를 가진 대상만 검출
+    [SerializeField]
+    private bool isTurret0 = true;          // true이면 turret0, false이면 turret1
 
     [Header("Attack")]
     [SerializeField]
@@ -20,165 +28,135 @@ public class Turret : MonoBehaviour
     [SerializeField]
     private float attackRange = 5;
     [SerializeField]
-    private float atttackRate = 1;
+    private float attackRate = 1;
+    [SerializeField]
+    private GameObject muzzleFlashEffect;                 // 총구 이펙트 (On/Off)
 
-    private TurretState turretState = TurretState.None; // 현재 적 행동
+    [Header("Audio Clips")]
+    [SerializeField]
+    private AudioClip audioClipFire;        // 발사 소리
+
+    private Transform tfTarget = null;      // 공격할 대상
+    private float idleRotationAngle;        // 터렛이 좌우로 회전할 각도
+    private float rotationDirection = 1f;   // 회전 방향
+
     private float lastAttackTime = 0;
 
-    private Status status;  // 이동속도 등의 정보
-    private Transform target;   // 적의 공격 대상 (플레이어)
-    private EnemyMemoryPool enemyMemoryPool;
-    private PotalZone potalZone;
+    private AudioSource audioSource;  // 사운드 재생 컴포넌트
 
-    //private void Awake()
-    public void SetUp(Transform target, EnemyMemoryPool enemyMemoryPool)
+    private void Awake()
     {
-        status = GetComponent<Status>();
-        potalZone = GetComponent<PotalZone>();
-        this.target = target;
-        this.enemyMemoryPool = enemyMemoryPool;
+        audioSource = GetComponent<AudioSource>();
+    }
+    private void Start()
+    {
+        InvokeRepeating("SearchTarget", 0f, 0.5f);
+    }
 
+    private void Update()
+    {
+        if (tfTarget == null)
+        {
+            Idle();
+        }
+        else
+        {
+            LookAtTarget();
+        }
     }
 
     private void OnEnable()
     {
-        // 적이 활성화 될 때 적의 상태를 "대기"로 설정
-        ChangeState(TurretState.Idle);
+        // 총구 이펙트 오브젝트 비활성화
+        muzzleFlashEffect.SetActive(false);
     }
 
-    private void OnDisable()
+    private void SearchTarget()
     {
-        StopCoroutine(turretState.ToString());
+        Collider[] cols = Physics.OverlapSphere(transform.position, range, layerMask);
+        Transform shortestTarget = null;
 
-        turretState = TurretState.None;
-    }
-
-    public void ChangeState(TurretState newState)
-    {
-        // 현재 재생중인 상태와 바꾸려고 하는 상태가 같으면 바꿀 필요가 없기 때문에 return
-        if (turretState == newState) return;
-
-        // 이전에 재생중이던 상태 종료
-        StopCoroutine(turretState.ToString());
-        // 현재 적의 상태를 newState로 설정
-        turretState = newState;
-        // 새로운 상태 재생
-    }
-
-    private IEnumerator Idle()
-    {
-        // n초 후 "배회" 상태로 변경되는 코루틴 실행
-        StartCoroutine("ChangeToWander");
-
-        while (true)
+        if (cols.Length > 0)
         {
-            // "대기" 상태일 때하는 행동
-            // 타겟과의 거리에 따라 행동 선택 (배회, 추격, 원거리 공격)
-            CalculateDistanceToTargetAndSelectState();
-            yield return null;
-        }
-
-    }
-
-    private Vector3 SetAngle(float radius, int angle)
-    {
-        Vector3 position = Vector3.zero;
-
-        position.x = MathF.Cos(angle) * radius;
-        position.z = MathF.Sin(angle) * radius;
-
-        return position;
-    }
-
-    private IEnumerator Pursuit()
-    {
-        while (true)
-        {
-            // 타겟 방향을 계속 주시
-            LookRotationToTarget();
-
-            // 타겟과의 거리에 따라 행동 선택 (배회, 추격, 원거리 공격)
-            CalculateDistanceToTargetAndSelectState();
-
-            yield return null;
-        }
-    }
-    private IEnumerator Attack()
-    {
-
-
-        while (true)
-        {
-            // 타겟 방향 주시
-            LookRotationToTarget();
-
-            // 타겟과의 거리에 따라 행동 선택 (배회, 추격, 원거리 공격)
-            CalculateDistanceToTargetAndSelectState();
-
-            if (Time.time - lastAttackTime > atttackRate)
+            float shortestDistance = Mathf.Infinity;
+            foreach (Collider coltarget in cols)
             {
-                // 공격주기가 되어야 공격할 수 있도록 하기 위해 현재 시간 저장
-                lastAttackTime = Time.time;
-
-                // 발사체 생성
-                GameObject clone = Instantiate(projectilePrefab, projectileSpawnPoint.position, projectileSpawnPoint.rotation);
-                clone.GetComponent<EnemyProjectile>().SetUp(target.position);
+                float distance = Vector3.SqrMagnitude(transform.position - coltarget.transform.position);
+                if (shortestDistance > distance)
+                {
+                    shortestDistance = distance;
+                    shortestTarget = coltarget.transform;
+                }
             }
 
-            yield return null;
         }
+        tfTarget = shortestTarget;
     }
-
-
-    private void LookRotationToTarget()
+    private void Idle()
     {
-        // 목표 위치
-        Vector3 to = new Vector3(target.position.x, 0, target.position.z);
-        // 내 위치
-        Vector3 from = new Vector3(transform.position.x, 0, transform.position.z);
-
-        // 바로 돌기
-        transform.rotation = Quaternion.LookRotation(to - from);
-        // 서서히 돌기
-        //Quaternion rotation = Quaternion.LookRotation(to - from);
-        //transform.rotation = Quaternion.Slerp(transform.rotation, rotation, 0.01f);
-    }
-
-    private void CalculateDistanceToTargetAndSelectState()
-    {
-        if (target == null) return;
-
-        // 플레이어와 적의 거리 계산 후 거리에 따라 행동 선택
-        float distance = Vector3.Distance(transform.position, target.position);
-        if (distance <= attackRange)
+        if (isTurret0)
         {
-            ChangeState(TurretState.Attack);
+            // turret0 일 때는 -180 간격으로 움직임
+            idleRotationAngle = -180;
+            float rotationAngle = Mathf.Lerp(0, idleRotationAngle, Mathf.PingPong(Time.time * -idleRotateSpeed, 1f));
+            turretHead.localRotation = Quaternion.Euler(0, rotationAngle, 0);
         }
-        else if (distance <= targetRecognitionRange)
+        else
         {
-            ChangeState(TurretState.Pursuit);
+            // turret1 일 때는 180 간격으로 움직임
+            idleRotationAngle = 180;
+            float rotationAngle = Mathf.Lerp(0, idleRotationAngle, Mathf.PingPong(Time.time * -idleRotateSpeed, 1f));
+            turretHead.localRotation = Quaternion.Euler(0, rotationAngle, 0);
+        }
+    }
+    private void LookAtTarget()
+    {
+        Vector3 targetDirection = tfTarget.position - turretHead.position;
+        Quaternion lookRotation = Quaternion.LookRotation(targetDirection);
+
+        // 현재 회전과 목표 회전 사이를 보간
+        Quaternion targetRotation = Quaternion.Lerp(turretHead.rotation, lookRotation, targetRotateSpeed * Time.deltaTime);
+
+        // 터렛의 머리를 새로운 회전 값으로 설정
+        turretHead.rotation = Quaternion.Euler(targetRotation.eulerAngles.x, targetRotation.eulerAngles.y, 0);
+
+        // 총알 발사
+        StartCoroutine("Attack");
+        
+    }
+
+    private IEnumerator Attack()
+    {
+        yield return new WaitForSeconds(0.1f);
+        if (Time.time - lastAttackTime > attackRate)
+        {
+            // 공격주기가 되어야 공격할 수 있도록 하기 위해 현재 시간 저장
+            lastAttackTime = Time.time;
+
+            // 발사체 생성
+            GameObject clone = Instantiate(projectilePrefab, projectileSpawnPoint.position, projectileSpawnPoint.rotation);
+            clone.GetComponent<EnemyProjectile>().SetUp(tfTarget.position);
+            // 총구 이펙트 재생
+            StartCoroutine("OnMuzzleFlashEffect");
+            // 발사 소리
+            PlaySound(audioClipFire);
         }
 
     }
 
-    private void OnDrawGizmos()
+    private IEnumerator OnMuzzleFlashEffect()
     {
-        // 목표 인식 범위
-        Gizmos.color = Color.red;
-        Gizmos.DrawWireSphere(transform.position, targetRecognitionRange);
+        muzzleFlashEffect.SetActive(true);
 
-        // 공격 범위
-        Gizmos.color = new Color(0.39f, 0.04f, 0.04f);
-        Gizmos.DrawSphere(transform.position, attackRange);
+        yield return new WaitForSeconds(0.1f);
+
+        muzzleFlashEffect.SetActive(false);
     }
 
-    public void TakeDamage(int damage)
+    private void PlaySound(AudioClip clip)
     {
-        bool isDie = status.DecreaseHP(damage);
-
-        if (isDie == true)
-        {
-            enemyMemoryPool.DeactivateEnemy(gameObject);
-        }
+        audioSource.Stop();                     // 기존에 재생중인 사운드를 정지하고
+        audioSource.clip = clip;                // 새로운 사운드 clip으로 교체 후,
+        audioSource.Play();                     // 사운드 재생
     }
 }

@@ -1141,7 +1141,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 98b014acfc3aea3409fed4aacdde336a, type: 3}
+  m_Sprite: {fileID: 21300000, guid: d5bc5da9bfd830b44b69990e4a851a01, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2888,8 +2888,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sensitivitySlider: {fileID: 128570981}
-  sensitivityMin: 1
-  sensitivityMax: 3
   sensitivity: 3
 --- !u!4 &765850235
 Transform:
@@ -3974,7 +3972,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 98b014acfc3aea3409fed4aacdde336a, type: 3}
+  m_Sprite: {fileID: 21300000, guid: d5bc5da9bfd830b44b69990e4a851a01, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

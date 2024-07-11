@@ -56,7 +56,7 @@ public class Targets : MonoBehaviour
             {
                 // 랜덤한 위치 생성
                 float randomX = Random.Range(-8f, 8f);
-                float randomY = Random.Range(1f, 6f);
+                float randomY = Random.Range(1f, 4f);
                 float fixedZ = transform.position.z; // 현재 오브젝트의 z 위치 사용
 
                 Vector3 spawnPosition = new Vector3(randomX, randomY, fixedZ);
@@ -95,6 +95,7 @@ public class Targets : MonoBehaviour
 
     public IEnumerator RemoveTarget()
     {
+        StartCoroutine(FadeScript.instance.FadeOut());
         yield return new WaitForSeconds(2f);
         SceneManager.LoadScene("03.ClearTutorial");
         Cursor.visible = true;

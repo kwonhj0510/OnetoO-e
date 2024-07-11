@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Threading;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 
@@ -26,7 +27,8 @@ public class PlayerController : MonoBehaviour
     private KeyCode keyCodeReload   = KeyCode.R;                    // 재장전 키
     [SerializeField]
     private KeyCode keyCodeSit      = KeyCode.LeftControl;          // 앉기 키
-    
+    [SerializeField]
+    private KeyCode keyCodeEsc      = KeyCode.Escape;               // Esc창 키
 
     [Header("Audio Clips")]
     [SerializeField]
@@ -34,7 +36,9 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     private AudioClip audioClipRun;                                 // 달리기 사운드
 
-    
+    [Header("Panel")]
+    [SerializeField]
+    private GameObject escPanel;     // esc창
 
     private CharacterController           characterController;      // 플레이어 이동 제어를 위한 컴포넌트
     private RotateToMouse                 rotateToMouse;            // 마우스 이동으로 카메라 회전
@@ -42,6 +46,8 @@ public class PlayerController : MonoBehaviour
     private PlayerAnimatorController      animator;                 // 애니메이션 재생 제어
     private AudioSource                   audioSource;              // 사운드 재생 제어
     private WeaponRifle                   weapon;                   // 무기를 이용한 공격 제어
+    public bool isGameStart = false;
+
     public float MoveSpeed
     {
         set => moveSpeed = Mathf.Max(0, value);
@@ -60,8 +66,17 @@ public class PlayerController : MonoBehaviour
         // 마우스 커서를 보이지 않게하고 현재 위치에 고정시킨다.
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
+
+        escPanel.SetActive(false);
     }
-        
+
+    private void Start()
+    {
+        if(isGameStart == false)
+        {
+            StartCoroutine(FadeInWhileFreezingTime());
+        }
+    }
 
     void Update()
     {
@@ -72,26 +87,29 @@ public class PlayerController : MonoBehaviour
         }
         // 1초마다 moveForce 속력으로 이동
         characterController.Move(moveForce * Time.deltaTime);
-                
+
+        OpenEscPanel();
+
+        if (isGameStart == false) return;
         UpdateRotate();
         UpdateMove();
         UpdateJump();
         UpdateSit();
-        UpdateWeaponAction();
-        //UpdateEsc();
+        UpdateWeaponAction();        
     }
 
     private void UpdateRotate()
     {
+
         float mouseX = Input.GetAxis("Mouse X");
         float mouseY = Input.GetAxis("Mouse Y");
 
         rotateToMouse.UpdateRotate(mouseX, mouseY);
-
     }
 
     private void UpdateMove()
     {
+
         float x = Input.GetAxisRaw("Horizontal");
         float z = Input.GetAxisRaw("Vertical");
 
@@ -138,6 +156,7 @@ public class PlayerController : MonoBehaviour
 
     private void UpdateJump()
     {
+
         if (Input.GetKey(keyCodeJump))
         {
             // 플레이어가 바닥에 있을 때만 점프 가능
@@ -150,11 +169,13 @@ public class PlayerController : MonoBehaviour
 
     private void UpdateSit()
     {
+
         if (Input.GetKey(keyCodeSit))
         {
             if (characterController.isGrounded)
             {
                 Camera.main.transform.position = new Vector3(transform.position.x, 1f, transform.position.z);
+                characterController.height = 1.5f; 
             }
         }
         else if (Input.GetKeyUp(keyCodeSit))
@@ -162,6 +183,8 @@ public class PlayerController : MonoBehaviour
             if (characterController.isGrounded)
             {
                 Camera.main.transform.position = new Vector3(transform.position.x, 1.5f, transform.position.z);
+                characterController.height = 2f;
+
             }
         }
     }
@@ -170,6 +193,7 @@ public class PlayerController : MonoBehaviour
 
     private void UpdateWeaponAction()
     {
+
         if (Input.GetMouseButtonDown(0))
         { 
             weapon.StartWeaponAction();
@@ -197,5 +221,37 @@ public class PlayerController : MonoBehaviour
             //Debug.Log("Game Over");
         }
     }
-    
+
+    private IEnumerator FadeInWhileFreezingTime()
+    {
+        yield return StartCoroutine(FadeScript.instance.FadeIn());
+        if(isGameStart == false) isGameStart = true;
+    }
+
+    private void OpenEscPanel()
+    {
+        if(Input.GetKeyDown(keyCodeEsc))
+        {
+            // 모든 동작 정지
+            if (isGameStart == true)
+            {
+                isGameStart = false;
+                Time.timeScale = 0f;
+                // Esc창 보이게 하기
+                escPanel.SetActive(true);
+                // 마우스 커서 보이게 하기
+                Cursor.visible = true;
+                Cursor.lockState = CursorLockMode.None;
+            }            
+            else
+            {
+                isGameStart = true;
+                Time.timeScale = 1f;
+                escPanel.SetActive(false);
+                Cursor.visible = false;
+                Cursor.lockState = CursorLockMode.Locked;
+            }
+        }
+    }
+
 }

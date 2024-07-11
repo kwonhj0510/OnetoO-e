@@ -36,7 +36,7 @@ public class Turret : MonoBehaviour
     [SerializeField]
     private AudioClip audioClipFire;        // 발사 소리
 
-    private Transform tfTarget = null;      // 공격할 대상
+    private Transform tfTarget;      // 공격할 대상
     private float idleRotationAngle;        // 터렛이 좌우로 회전할 각도
     private float rotationDirection = 1f;   // 회전 방향
 

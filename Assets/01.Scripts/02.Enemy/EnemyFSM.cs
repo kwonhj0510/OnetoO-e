@@ -11,9 +11,9 @@ public class EnemyFSM : MonoBehaviour
 {
     [Header("Pursuit")]
     [SerializeField]
-    private float targetRecognitionRange = 8; // 인식 범위
+    private float targetRecognitionRange = 20; // 인식 범위
     [SerializeField]
-    private float pursuitLimitRange = 10;   //추적 범위
+    private float pursuitLimitRange = 22;   //추적 범위
 
     [Header("Attack")]
     [SerializeField]

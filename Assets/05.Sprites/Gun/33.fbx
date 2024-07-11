@@ -1,0 +1,3357 @@
+; FBX 7.2.0 project file
+; ----------------------------------------------------
+
+FBXHeaderExtension:  {
+	FBXHeaderVersion: 1003
+	FBXVersion: 7200
+	CreationTimeStamp:  {
+		Version: 1000
+		Year: 2024
+		Month: 7
+		Day: 11
+		Hour: 19
+		Minute: 44
+		Second: 48
+		Millisecond: 366
+	}
+	Creator: "FBX SDK/FBX Plugins version 2020.3.1"
+	SceneInfo: "SceneInfo::GlobalInfo", "UserData" {
+		Type: "UserData"
+		Version: 100
+		MetaData:  {
+			Version: 100
+			Title: ""
+			Subject: ""
+			Author: ""
+			Keywords: ""
+			Revision: ""
+			Comment: ""
+		}
+		Properties70:  {
+			P: "DocumentUrl", "KString", "Url", "", "C:\Users\yeonkyu\Documents\3ds Max 2023\export\33.fbx"
+			P: "SrcDocumentUrl", "KString", "Url", "", "C:\Users\yeonkyu\Documents\3ds Max 2023\export\33.fbx"
+			P: "Original", "Compound", "", ""
+			P: "Original|ApplicationVendor", "KString", "", "", "Autodesk"
+			P: "Original|ApplicationName", "KString", "", "", "3ds Max"
+			P: "Original|ApplicationVersion", "KString", "", "", "2023"
+			P: "Original|DateTime_GMT", "DateTime", "", "", "11/07/2024 10:44:48.363"
+			P: "Original|FileName", "KString", "", "", "C:\Users\yeonkyu\Documents\3ds Max 2023\export\33.fbx"
+			P: "LastSaved", "Compound", "", ""
+			P: "LastSaved|ApplicationVendor", "KString", "", "", "Autodesk"
+			P: "LastSaved|ApplicationName", "KString", "", "", "3ds Max"
+			P: "LastSaved|ApplicationVersion", "KString", "", "", "2023"
+			P: "LastSaved|DateTime_GMT", "DateTime", "", "", "11/07/2024 10:44:48.363"
+			P: "Original|ApplicationActiveProject", "KString", "", "", "C:\Users\yeonkyu\Documents\3ds Max 2023"
+			P: "Original|ApplicationNativeFile", "KString", "", "", "C:\Users\yeonkyu\Documents\3ds Max 2023\scenes\(학교기업) 메인총기 에니메이션 재장전.max"
+		}
+	}
+}
+GlobalSettings:  {
+	Version: 1000
+	Properties70:  {
+		P: "UpAxis", "int", "Integer", "",1
+		P: "UpAxisSign", "int", "Integer", "",1
+		P: "FrontAxis", "int", "Integer", "",2
+		P: "FrontAxisSign", "int", "Integer", "",1
+		P: "CoordAxis", "int", "Integer", "",0
+		P: "CoordAxisSign", "int", "Integer", "",1
+		P: "OriginalUpAxis", "int", "Integer", "",2
+		P: "OriginalUpAxisSign", "int", "Integer", "",1
+		P: "UnitScaleFactor", "double", "Number", "",0.1
+		P: "OriginalUnitScaleFactor", "double", "Number", "",0.1
+		P: "AmbientColor", "ColorRGB", "Color", "",0,0,0
+		P: "DefaultCamera", "KString", "", "", "Producer Perspective"
+		P: "TimeMode", "enum", "", "",6
+		P: "TimeProtocol", "enum", "", "",2
+		P: "SnapOnFrameMode", "enum", "", "",0
+		P: "TimeSpanStart", "KTime", "Time", "",0
+		P: "TimeSpanStop", "KTime", "Time", "",153953860000
+		P: "CustomFrameRate", "double", "Number", "",-1
+		P: "TimeMarker", "Compound", "", ""
+		P: "CurrentTimeMarker", "int", "Integer", "",-1
+	}
+}
+
+; Documents Description
+;------------------------------------------------------------------
+
+Documents:  {
+	Count: 1
+	Document: 2429614968976, "", "Scene" {
+		Properties70:  {
+			P: "SourceObject", "object", "", ""
+			P: "ActiveAnimStackName", "KString", "", "", ""
+		}
+		RootNode: 0
+	}
+}
+
+; Document References
+;------------------------------------------------------------------
+
+References:  {
+}
+
+; Object definitions
+;------------------------------------------------------------------
+
+Definitions:  {
+	Version: 100
+	Count: 175
+	ObjectType: "GlobalSettings" {
+		Count: 1
+	}
+	ObjectType: "AnimationStack" {
+		Count: 1
+		PropertyTemplate: "FbxAnimStack" {
+			Properties70:  {
+				P: "Description", "KString", "", "", ""
+				P: "LocalStart", "KTime", "Time", "",0
+				P: "LocalStop", "KTime", "Time", "",0
+				P: "ReferenceStart", "KTime", "Time", "",0
+				P: "ReferenceStop", "KTime", "Time", "",0
+			}
+		}
+	}
+	ObjectType: "AnimationLayer" {
+		Count: 1
+		PropertyTemplate: "FbxAnimLayer" {
+			Properties70:  {
+				P: "Weight", "Number", "", "A",100
+				P: "Mute", "bool", "", "",0
+				P: "Solo", "bool", "", "",0
+				P: "Lock", "bool", "", "",0
+				P: "Color", "ColorRGB", "Color", "",0.8,0.8,0.8
+				P: "BlendMode", "enum", "", "",0
+				P: "RotationAccumulationMode", "enum", "", "",0
+				P: "ScaleAccumulationMode", "enum", "", "",0
+				P: "BlendModeBypass", "ULongLong", "", "",0
+			}
+		}
+	}
+	ObjectType: "Model" {
+		Count: 15
+		PropertyTemplate: "FbxNode" {
+			Properties70:  {
+				P: "QuaternionInterpolate", "enum", "", "",0
+				P: "RotationOffset", "Vector3D", "Vector", "",0,0,0
+				P: "RotationPivot", "Vector3D", "Vector", "",0,0,0
+				P: "ScalingOffset", "Vector3D", "Vector", "",0,0,0
+				P: "ScalingPivot", "Vector3D", "Vector", "",0,0,0
+				P: "TranslationActive", "bool", "", "",0
+				P: "TranslationMin", "Vector3D", "Vector", "",0,0,0
+				P: "TranslationMax", "Vector3D", "Vector", "",0,0,0
+				P: "TranslationMinX", "bool", "", "",0
+				P: "TranslationMinY", "bool", "", "",0
+				P: "TranslationMinZ", "bool", "", "",0
+				P: "TranslationMaxX", "bool", "", "",0
+				P: "TranslationMaxY", "bool", "", "",0
+				P: "TranslationMaxZ", "bool", "", "",0
+				P: "RotationOrder", "enum", "", "",0
+				P: "RotationSpaceForLimitOnly", "bool", "", "",0
+				P: "RotationStiffnessX", "double", "Number", "",0
+				P: "RotationStiffnessY", "double", "Number", "",0
+				P: "RotationStiffnessZ", "double", "Number", "",0
+				P: "AxisLen", "double", "Number", "",10
+				P: "PreRotation", "Vector3D", "Vector", "",0,0,0
+				P: "PostRotation", "Vector3D", "Vector", "",0,0,0
+				P: "RotationActive", "bool", "", "",0
+				P: "RotationMin", "Vector3D", "Vector", "",0,0,0
+				P: "RotationMax", "Vector3D", "Vector", "",0,0,0
+				P: "RotationMinX", "bool", "", "",0
+				P: "RotationMinY", "bool", "", "",0
+				P: "RotationMinZ", "bool", "", "",0
+				P: "RotationMaxX", "bool", "", "",0
+				P: "RotationMaxY", "bool", "", "",0
+				P: "RotationMaxZ", "bool", "", "",0
+				P: "InheritType", "enum", "", "",0
+				P: "ScalingActive", "bool", "", "",0
+				P: "ScalingMin", "Vector3D", "Vector", "",0,0,0
+				P: "ScalingMax", "Vector3D", "Vector", "",1,1,1
+				P: "ScalingMinX", "bool", "", "",0
+				P: "ScalingMinY", "bool", "", "",0
+				P: "ScalingMinZ", "bool", "", "",0
+				P: "ScalingMaxX", "bool", "", "",0
+				P: "ScalingMaxY", "bool", "", "",0
+				P: "ScalingMaxZ", "bool", "", "",0
+				P: "GeometricTranslation", "Vector3D", "Vector", "",0,0,0
+				P: "GeometricRotation", "Vector3D", "Vector", "",0,0,0
+				P: "GeometricScaling", "Vector3D", "Vector", "",1,1,1
+				P: "MinDampRangeX", "double", "Number", "",0
+				P: "MinDampRangeY", "double", "Number", "",0
+				P: "MinDampRangeZ", "double", "Number", "",0
+				P: "MaxDampRangeX", "double", "Number", "",0
+				P: "MaxDampRangeY", "double", "Number", "",0
+				P: "MaxDampRangeZ", "double", "Number", "",0
+				P: "MinDampStrengthX", "double", "Number", "",0
+				P: "MinDampStrengthY", "double", "Number", "",0
+				P: "MinDampStrengthZ", "double", "Number", "",0
+				P: "MaxDampStrengthX", "double", "Number", "",0
+				P: "MaxDampStrengthY", "double", "Number", "",0
+				P: "MaxDampStrengthZ", "double", "Number", "",0
+				P: "PreferedAngleX", "double", "Number", "",0
+				P: "PreferedAngleY", "double", "Number", "",0
+				P: "PreferedAngleZ", "double", "Number", "",0
+				P: "LookAtProperty", "object", "", ""
+				P: "UpVectorProperty", "object", "", ""
+				P: "Show", "bool", "", "",1
+				P: "NegativePercentShapeSupport", "bool", "", "",1
+				P: "DefaultAttributeIndex", "int", "Integer", "",-1
+				P: "Freeze", "bool", "", "",0
+				P: "LODBox", "bool", "", "",0
+				P: "Lcl Translation", "Lcl Translation", "", "A",0,0,0
+				P: "Lcl Rotation", "Lcl Rotation", "", "A",0,0,0
+				P: "Lcl Scaling", "Lcl Scaling", "", "A",1,1,1
+				P: "Visibility", "Visibility", "", "A",1
+				P: "Visibility Inheritance", "Visibility Inheritance", "", "",1
+			}
+		}
+	}
+	ObjectType: "Geometry" {
+		Count: 14
+		PropertyTemplate: "FbxMesh" {
+			Properties70:  {
+				P: "Color", "ColorRGB", "Color", "",0.8,0.8,0.8
+				P: "BBoxMin", "Vector3D", "Vector", "",0,0,0
+				P: "BBoxMax", "Vector3D", "Vector", "",0,0,0
+				P: "Primary Visibility", "bool", "", "",1
+				P: "Casts Shadows", "bool", "", "",1
+				P: "Receive Shadows", "bool", "", "",1
+			}
+		}
+	}
+	ObjectType: "Material" {
+		Count: 14
+		PropertyTemplate: "FbxSurfaceMaterial" {
+			Properties70:  {
+				P: "ShadingModel", "KString", "", "", "Unknown"
+				P: "MultiLayer", "bool", "", "",0
+			}
+		}
+	}
+	ObjectType: "Texture" {
+		Count: 56
+		PropertyTemplate: "FbxFileTexture" {
+			Properties70:  {
+				P: "TextureTypeUse", "enum", "", "",0
+				P: "Texture alpha", "Number", "", "A",1
+				P: "CurrentMappingType", "enum", "", "",0
+				P: "WrapModeU", "enum", "", "",0
+				P: "WrapModeV", "enum", "", "",0
+				P: "UVSwap", "bool", "", "",0
+				P: "PremultiplyAlpha", "bool", "", "",1
+				P: "Translation", "Vector", "", "A",0,0,0
+				P: "Rotation", "Vector", "", "A",0,0,0
+				P: "Scaling", "Vector", "", "A",1,1,1
+				P: "TextureRotationPivot", "Vector3D", "Vector", "",0,0,0
+				P: "TextureScalingPivot", "Vector3D", "Vector", "",0,0,0
+				P: "CurrentTextureBlendMode", "enum", "", "",1
+				P: "UVSet", "KString", "", "", "default"
+				P: "UseMaterial", "bool", "", "",0
+				P: "UseMipMap", "bool", "", "",0
+			}
+		}
+	}
+	ObjectType: "NodeAttribute" {
+		Count: 1
+		PropertyTemplate: "FbxNull" {
+			Properties70:  {
+				P: "Color", "ColorRGB", "Color", "",0.8,0.8,0.8
+				P: "Size", "double", "Number", "",100
+				P: "Look", "enum", "", "",1
+			}
+		}
+	}
+	ObjectType: "AnimationCurve" {
+		Count: 12
+	}
+	ObjectType: "AnimationCurveNode" {
+		Count: 4
+		PropertyTemplate: "FbxAnimCurveNode" {
+			Properties70:  {
+				P: "d", "Compound", "", ""
+			}
+		}
+	}
+	ObjectType: "Video" {
+		Count: 56
+		PropertyTemplate: "FbxVideo" {
+			Properties70:  {
+				P: "Path", "KString", "XRefUrl", "", ""
+				P: "RelPath", "KString", "XRefUrl", "", ""
+				P: "Color", "ColorRGB", "Color", "",0.8,0.8,0.8
+				P: "ClipIn", "KTime", "Time", "",0
+				P: "ClipOut", "KTime", "Time", "",0
+				P: "Offset", "KTime", "Time", "",0
+				P: "PlaySpeed", "double", "Number", "",0
+				P: "FreeRunning", "bool", "", "",0
+				P: "Loop", "bool", "", "",0
+				P: "Mute", "bool", "", "",0
+				P: "AccessMode", "enum", "", "",0
+				P: "ImageSequence", "bool", "", "",0
+				P: "ImageSequenceOffset", "int", "Integer", "",0
+				P: "FrameRate", "double", "Number", "",0
+				P: "LastFrame", "int", "Integer", "",0
+				P: "Width", "int", "Integer", "",0
+				P: "Height", "int", "Integer", "",0
+				P: "StartFrame", "int", "Integer", "",0
+				P: "StopFrame", "int", "Integer", "",0
+				P: "InterlaceMode", "enum", "", "",0
+			}
+		}
+	}
+}
+
+; Object properties
+;------------------------------------------------------------------
+
+Objects:  {
+	Model: 2430119027520, "Model::Object003", "Mesh" {
+		Version: 232
+		Properties70:  {
+			P: "PreRotation", "Vector3D", "Vector", "",-90,-0,0
+			P: "RotationActive", "bool", "", "",1
+			P: "InheritType", "enum", "", "",1
+			P: "ScalingMax", "Vector3D", "Vector", "",0,0,0
+			P: "GeometricTranslation", "Vector3D", "Vector", "",64.4419555664062,28.4709568023682,6.66116693537333e-06
+			P: "DefaultAttributeIndex", "int", "Integer", "",0
+			P: "Lcl Translation", "Lcl Translation", "", "A+",-99.805549621582,-173.916564941406,578.111328125
+			P: "Lcl Rotation", "Lcl Rotation", "", "A+",-89.9998513210169,-2.42320857162715e-05,179.999883969864
+			P: "Lcl Scaling", "Lcl Scaling", "", "A",-1.16108,-0.976208,-0.976207
+			P: "MaxHandle", "int", "Integer", "UH",170
+		}
+		Shading: T
+		Culling: "CullingOff"
+	}
+	Model: 2430119029712, "Model::Gun", "Null" {
+		Version: 232
+		Properties70:  {
+			P: "PreRotation", "Vector3D", "Vector", "",-90,-0,0
+			P: "RotationActive", "bool", "", "",1
+			P: "InheritType", "enum", "", "",1
+			P: "ScalingMax", "Vector3D", "Vector", "",0,0,0
+			P: "GeometricTranslation", "Vector3D", "Vector", "",-1.70752900885418e-06,-3.09678071062081e-05,4.38519818999339e-05
+			P: "DefaultAttributeIndex", "int", "Integer", "",0
+			P: "Lcl Translation", "Lcl Translation", "", "A+",-127.677848815918,-71.9781723022461,578.159484863281
+			P: "Lcl Rotation", "Lcl Rotation", "", "A+",-0.429038318907965,-5.74659152393121,-0.114160206465303
+			P: "MaxHandle", "int", "Integer", "UH",68660
+		}
+		Shading: T
+		Culling: "CullingOff"
+	}
+	Model: 2430119018752, "Model::Box001", "Mesh" {
+		Version: 232
+		Properties70:  {
+			P: "InheritType", "enum", "", "",1
+			P: "ScalingMax", "Vector3D", "Vector", "",0,0,0
+			P: "GeometricTranslation", "Vector3D", "Vector", "",-6.0022601246601e-05,-11.6624765396118,-23.1645355224609
+			P: "DefaultAttributeIndex", "int", "Integer", "",0
+			P: "Lcl Translation", "Lcl Translation", "", "A",-24.8032684326172,1.71160888671875,-7.57461547851562
+			P: "Lcl Rotation", "Lcl Rotation", "", "A",90.0000529339945,9.04466564318476e-06,90.0000288682249
+			P: "Lcl Scaling", "Lcl Scaling", "", "A",1,1.000001,0.999999
+			P: "MaxHandle", "int", "Integer", "UH",68588
+		}
+		Shading: T
+		Culling: "CullingOff"
+	}
+	Model: 2430119020944, "Model::Cylinder001", "Mesh" {
+		Version: 232
+		Properties70:  {
+			P: "InheritType", "enum", "", "",1
+			P: "ScalingMax", "Vector3D", "Vector", "",0,0,0
+			P: "GeometricTranslation", "Vector3D", "Vector", "",-4.60020382888615e-05,-0.00025479678879492,59.2245025634766
+			P: "DefaultAttributeIndex", "int", "Integer", "",0
+			P: "Lcl Translation", "Lcl Translation", "", "A",81.7225952148438,2.072265625,18.1933288574219
+			P: "Lcl Rotation", "Lcl Rotation", "", "A",90.0000492837527,6.81150086877696e-07,-90.0000084413957
+			P: "Lcl Scaling", "Lcl Scaling", "", "A",1.096751,1.096751,1.247302
+			P: "MaxHandle", "int", "Integer", "UH",26
+		}
+		Shading: T
+		Culling: "CullingOff"
+	}
+	Model: 2430113810752, "Model::Cylinder011", "Mesh" {
+		Version: 232
+		Properties70:  {
+			P: "InheritType", "enum", "", "",1
+			P: "ScalingMax", "Vector3D", "Vector", "",0,0,0
+			P: "GeometricTranslation", "Vector3D", "Vector", "",187.631622314453,371.771331787109,62.3600540161133
+			P: "DefaultAttributeIndex", "int", "Integer", "",0
+			P: "Lcl Translation", "Lcl Translation", "", "A",117.658378601074,1.26007080078125,53.5350036621094
+			P: "Lcl Rotation", "Lcl Rotation", "", "A",139.999977027775,1.28198844161825e-06,3.33851156671419e-09
+			P: "Lcl Scaling", "Lcl Scaling", "", "A",-0.062435,-0.054899,-0.083637
+			P: "MaxHandle", "int", "Integer", "UH",116
+		}
+		Shading: T
+		Culling: "CullingOff"
+	}
+	Model: 2430113808560, "Model::Cylinder014", "Mesh" {
+		Version: 232
+		Properties70:  {
+			P: "InheritType", "enum", "", "",1
+			P: "ScalingMax", "Vector3D", "Vector", "",0,0,0
+			P: "GeometricTranslation", "Vector3D", "Vector", "",-3.09647730318829e-05,-0.000255060789640993,107.859710693359
+			P: "DefaultAttributeIndex", "int", "Integer", "",0
+			P: "Lcl Translation", "Lcl Translation", "", "A",-30.2110290527344,1.9267578125,23.4961547851562
+			P: "Lcl Rotation", "Lcl Rotation", "", "A",90.0000359360903,-4.22402590304807e-08,-90.0000093166171
+			P: "Lcl Scaling", "Lcl Scaling", "", "A",1.26327,1.143515,1.247301
+			P: "MaxHandle", "int", "Integer", "UH",68538
+		}
+		Shading: T
+		Culling: "CullingOff"
+	}
+	Model: 2430113812944, "Model::Cylinder015", "Mesh" {
+		Version: 232
+		Properties70:  {
+			P: "InheritType", "enum", "", "",1
+			P: "ScalingMax", "Vector3D", "Vector", "",0,0,0
+			P: "GeometricTranslation", "Vector3D", "Vector", "",7.35452340450138e-06,-0.000237694126553833,45.1417007446289
+			P: "DefaultAttributeIndex", "int", "Integer", "",0
+			P: "Lcl Translation", "Lcl Translation", "", "A",172.336395263672,2.0723876953125,-29.7912902832031
+			P: "Lcl Rotation", "Lcl Rotation", "", "A",90.0000346352569,-1.05065571711669e-05,-90.0000213910211
+			P: "Lcl Scaling", "Lcl Scaling", "", "A",0.445666,0.445666,0.949041
+			P: "MaxHandle", "int", "Integer", "UH",68593
+		}
+		Shading: T
+		Culling: "CullingOff"
+	}
+	Model: 2430113815136, "Model::Cylinder017", "Mesh" {
+		Version: 232
+		Properties70:  {
+			P: "InheritType", "enum", "", "",1
+			P: "ScalingMax", "Vector3D", "Vector", "",0,0,0
+			P: "GeometricTranslation", "Vector3D", "Vector", "",-1.18215293696267e-05,4.45769092038972e-06,-72.5600509643555
+			P: "DefaultAttributeIndex", "int", "Integer", "",0
+			P: "Lcl Translation", "Lcl Translation", "", "A",-137.776428222656,1.71142578125,7.08270645141602
+			P: "Lcl Rotation", "Lcl Rotation", "", "A",90.0000503552675,2.24115501991093e-06,-90.0000046857482
+			P: "Lcl Scaling", "Lcl Scaling", "", "A",1,1,1.237715
+			P: "MaxHandle", "int", "Integer", "UH",68607
+		}
+		Shading: T
+		Culling: "CullingOff"
+	}
+	Model: 2430113817328, "Model::Line013", "Mesh" {
+		Version: 232
+		Properties70:  {
+			P: "InheritType", "enum", "", "",1
+			P: "ScalingMax", "Vector3D", "Vector", "",0,0,0
+			P: "GeometricTranslation", "Vector3D", "Vector", "",19.8104591369629,-21.7845268249512,9.52232028339495e-07
+			P: "DefaultAttributeIndex", "int", "Integer", "",0
+			P: "Lcl Translation", "Lcl Translation", "", "A",78.4945678710938,2.07220458984375,-53.1618270874023
+			P: "Lcl Rotation", "Lcl Rotation", "", "A",89.9999877011848,1.47065353966135e-06,-2.55640947323945e-06
+			P: "Lcl Scaling", "Lcl Scaling", "", "A",1.161081,0.976208,0.976207
+			P: "MaxHandle", "int", "Integer", "UH",151
+		}
+		Shading: T
+		Culling: "CullingOff"
+	}
+	Model: 2430113819520, "Model::Line015", "Mesh" {
+		Version: 232
+		Properties70:  {
+			P: "InheritType", "enum", "", "",1
+			P: "ScalingMax", "Vector3D", "Vector", "",0,0,0
+			P: "GeometricTranslation", "Vector3D", "Vector", "",2.98873496055603,0.495782434940338,-6.11183547973633
+			P: "DefaultAttributeIndex", "int", "Integer", "",0
+			P: "Lcl Translation", "Lcl Translation", "", "A",70.0196838378906,2.07220458984375,-45.4754409790039
+			P: "Lcl Rotation", "Lcl Rotation", "", "A",-89.9998627086927,-5.59554578657308e-05,179.999831072505
+			P: "Lcl Scaling", "Lcl Scaling", "", "A",-0.446299,-0.61259,-0.524994
+			P: "MaxHandle", "int", "Integer", "UH",168
+		}
+		Shading: T
+		Culling: "CullingOff"
+	}
+	Model: 2430113821712, "Model::Line017", "Mesh" {
+		Version: 232
+		Properties70:  {
+			P: "InheritType", "enum", "", "",1
+			P: "ScalingMax", "Vector3D", "Vector", "",0,0,0
+			P: "GeometricTranslation", "Vector3D", "Vector", "",-38.4119491577148,-64.3696136474609,20.878942489624
+			P: "DefaultAttributeIndex", "int", "Integer", "",0
+			P: "Lcl Translation", "Lcl Translation", "", "A",-10.8458557128906,-0.000732421875,36.0216064453125
+			P: "Lcl Rotation", "Lcl Rotation", "", "A",-89.9998500102635,-2.87197029385019e-05,179.999858366446
+			P: "Lcl Scaling", "Lcl Scaling", "", "A",-0.981017,-0.981018,-0.981017
+			P: "MaxHandle", "int", "Integer", "UH",68587
+		}
+		Shading: T
+		Culling: "CullingOff"
+	}
+	Model: 2430109030560, "Model::Line018", "Mesh" {
+		Version: 232
+		Properties70:  {
+			P: "InheritType", "enum", "", "",1
+			P: "ScalingMax", "Vector3D", "Vector", "",0,0,0
+			P: "GeometricTranslation", "Vector3D", "Vector", "",-51.36767578125,7.72630405426025,20.7321166992188
+			P: "DefaultAttributeIndex", "int", "Integer", "",0
+			P: "Lcl Translation", "Lcl Translation", "", "A",-68.6258850097656,0.048583984375,-6.85003662109375
+			P: "Lcl Rotation", "Lcl Rotation", "", "A",89.99998212411,2.2198121418096e-05,-1.22396492795097e-06
+			P: "MaxHandle", "int", "Integer", "UH",68612
+		}
+		Shading: T
+		Culling: "CullingOff"
+	}
+	Model: 2430109019600, "Model::Object005", "Mesh" {
+		Version: 232
+		Properties70:  {
+			P: "InheritType", "enum", "", "",1
+			P: "ScalingMax", "Vector3D", "Vector", "",0,0,0
+			P: "GeometricTranslation", "Vector3D", "Vector", "",-3.98003212467302e-05,-42.8559951782227,130.177871704102
+			P: "DefaultAttributeIndex", "int", "Integer", "",0
+			P: "Lcl Translation", "Lcl Translation", "", "A",-129.544006347656,1.49285888671875,-38.4858093261719
+			P: "Lcl Rotation", "Lcl Rotation", "", "A",-89.9999780801507,2.23169883804385e-05,-90.0000043158306
+			P: "Lcl Scaling", "Lcl Scaling", "", "A",1.319855,0.909339,0.895845
+			P: "MaxHandle", "int", "Integer", "UH",68597
+		}
+		Shading: T
+		Culling: "CullingOff"
+	}
+	Model: 2430109028368, "Model::Object007", "Mesh" {
+		Version: 232
+		Properties70:  {
+			P: "InheritType", "enum", "", "",1
+			P: "ScalingMax", "Vector3D", "Vector", "",0,0,0
+			P: "GeometricTranslation", "Vector3D", "Vector", "",-2.2493679523468,-33.071403503418,120.955787658691
+			P: "DefaultAttributeIndex", "int", "Integer", "",0
+			P: "Lcl Translation", "Lcl Translation", "", "A",-129.871459960938,1.535400390625,-29.5882263183594
+			P: "Lcl Rotation", "Lcl Rotation", "", "A",-89.9999771271168,8.69230682705138e-06,-89.9999769906552
+			P: "Lcl Scaling", "Lcl Scaling", "", "A",1.319855,0.909339,0.895845
+			P: "MaxHandle", "int", "Integer", "UH",68603
+		}
+		Shading: T
+		Culling: "CullingOff"
+	}
+	Model: 2430109045904, "Model::Plane012", "Mesh" {
+		Version: 232
+		Properties70:  {
+			P: "InheritType", "enum", "", "",1
+			P: "ScalingMax", "Vector3D", "Vector", "",0,0,0
+			P: "GeometricTranslation", "Vector3D", "Vector", "",-38.3202514648438,12.9879732131958,29.9782028198242
+			P: "DefaultAttributeIndex", "int", "Integer", "",0
+			P: "Lcl Translation", "Lcl Translation", "", "A",58.4862823486328,1.58660888671875,-1.27529907226562
+			P: "Lcl Rotation", "Lcl Rotation", "", "A",89.9999980523287,6.01487103709823e-06,5.35177327519593e-07
+			P: "Lcl Scaling", "Lcl Scaling", "", "A",1.277494,1,1
+			P: "MaxHandle", "int", "Integer", "UH",181
+		}
+		Shading: T
+		Culling: "CullingOff"
+	}
+	Material: 2429729510416, "Material::Magazine", "" {
+		Version: 102
+		ShadingModel: "unknown"
+		MultiLayer: 0
+		Properties70:  {
+			P: "ShadingModel", "KString", "", "", "unknown"
+			P: "AmbientColor", "ColorRGB", "Color", "",1,1,1
+			P: "DiffuseColor", "ColorRGB", "Color", "",1,1,1
+			P: "SpecularColor", "ColorRGB", "Color", "",1,1,1
+			P: "SpecularFactor", "double", "Number", "",2
+			P: "ShininessExponent", "double", "Number", "",1024
+			P: "TransparencyFactor", "double", "Number", "",0
+			P: "EmissiveColor", "ColorRGB", "Color", "",0,0,0
+			P: "EmissiveFactor", "double", "Number", "",0
+			P: "3dsMax", "Compound", "", ""
+			P: "3dsMax|ClassIDa", "int", "Integer", "",-804315648
+			P: "3dsMax|ClassIDb", "int", "Integer", "",-1099438848
+			P: "3dsMax|SuperClassID", "int", "Integer", "",3072
+			P: "3dsMax|settings", "Compound", "", ""
+			P: "3dsMax|settings|ao_affects_diffuse", "Bool", "", "A",1
+			P: "3dsMax|settings|ao_affects_reflection", "Bool", "", "A",1
+			P: "3dsMax|settings|normal_flip_red", "Bool", "", "A",0
+			P: "3dsMax|settings|normal_flip_green", "Bool", "", "A",0
+			P: "3dsMax|main", "Compound", "", ""
+			P: "3dsMax|main|baseColor", "ColorAndAlpha", "", "A",1,1,1,1
+			P: "3dsMax|main|base_color_map", "Reference", "", "A"
+			P: "3dsMax|main|metalness", "Float", "", "A",0
+			P: "3dsMax|main|metalness_map", "Reference", "", "A"
+			P: "3dsMax|main|roughness", "Float", "", "A",0
+			P: "3dsMax|main|Roughness_Map", "Reference", "", "A"
+			P: "3dsMax|main|useGlossiness", "Integer", "", "A",2
+			P: "3dsMax|main|ao_map", "Reference", "", "A"
+			P: "3dsMax|main|bump_map_amt", "Float", "", "A",1
+			P: "3dsMax|main|norm_map", "Reference", "", "A"
+			P: "3dsMax|main|emit_color", "ColorAndAlpha", "", "A",0,0,0,1
+			P: "3dsMax|main|emit_color_map", "Reference", "", "A"
+			P: "3dsMax|main|opacity_map", "Reference", "", "A"
+			P: "3dsMax|main|displacement_amt", "Float", "", "A",1
+			P: "3dsMax|main|displacement_map", "Reference", "", "A"
+		}
+	}
+	Material: 2429729511376, "Material::Handle_2", "" {
+		Version: 102
+		ShadingModel: "unknown"
+		MultiLayer: 0
+		Properties70:  {
+			P: "ShadingModel", "KString", "", "", "unknown"
+			P: "AmbientColor", "ColorRGB", "Color", "",1,1,1
+			P: "DiffuseColor", "ColorRGB", "Color", "",1,1,1
+			P: "SpecularColor", "ColorRGB", "Color", "",1,1,1
+			P: "SpecularFactor", "double", "Number", "",2
+			P: "ShininessExponent", "double", "Number", "",1024
+			P: "TransparencyFactor", "double", "Number", "",0
+			P: "EmissiveColor", "ColorRGB", "Color", "",0,0,0
+			P: "EmissiveFactor", "double", "Number", "",0
+			P: "3dsMax", "Compound", "", ""
+			P: "3dsMax|ClassIDa", "int", "Integer", "",-804315648
+			P: "3dsMax|ClassIDb", "int", "Integer", "",-1099438848
+			P: "3dsMax|SuperClassID", "int", "Integer", "",3072
+			P: "3dsMax|settings", "Compound", "", ""
+			P: "3dsMax|settings|ao_affects_diffuse", "Bool", "", "A",1
+			P: "3dsMax|settings|ao_affects_reflection", "Bool", "", "A",1
+			P: "3dsMax|settings|normal_flip_red", "Bool", "", "A",0
+			P: "3dsMax|settings|normal_flip_green", "Bool", "", "A",0
+			P: "3dsMax|main", "Compound", "", ""
+			P: "3dsMax|main|baseColor", "ColorAndAlpha", "", "A",1,1,1,1
+			P: "3dsMax|main|base_color_map", "Reference", "", "A"
+			P: "3dsMax|main|metalness", "Float", "", "A",0
+			P: "3dsMax|main|metalness_map", "Reference", "", "A"
+			P: "3dsMax|main|roughness", "Float", "", "A",0
+			P: "3dsMax|main|Roughness_Map", "Reference", "", "A"
+			P: "3dsMax|main|useGlossiness", "Integer", "", "A",2
+			P: "3dsMax|main|ao_map", "Reference", "", "A"
+			P: "3dsMax|main|bump_map_amt", "Float", "", "A",1
+			P: "3dsMax|main|norm_map", "Reference", "", "A"
+			P: "3dsMax|main|emit_color", "ColorAndAlpha", "", "A",0,0,0,1
+			P: "3dsMax|main|emit_color_map", "Reference", "", "A"
+			P: "3dsMax|main|opacity_map", "Reference", "", "A"
+			P: "3dsMax|main|displacement_amt", "Float", "", "A",1
+			P: "3dsMax|main|displacement_map", "Reference", "", "A"
+		}
+	}
+	Material: 2429729511536, "Material::Engine_1", "" {
+		Version: 102
+		ShadingModel: "unknown"
+		MultiLayer: 0
+		Properties70:  {
+			P: "ShadingModel", "KString", "", "", "unknown"
+			P: "AmbientColor", "ColorRGB", "Color", "",1,1,1
+			P: "DiffuseColor", "ColorRGB", "Color", "",1,1,1
+			P: "SpecularColor", "ColorRGB", "Color", "",1,1,1
+			P: "SpecularFactor", "double", "Number", "",2
+			P: "ShininessExponent", "double", "Number", "",1024
+			P: "TransparencyFactor", "double", "Number", "",0
+			P: "EmissiveColor", "ColorRGB", "Color", "",0,0,0
+			P: "EmissiveFactor", "double", "Number", "",0
+			P: "3dsMax", "Compound", "", ""
+			P: "3dsMax|ClassIDa", "int", "Integer", "",-804315648
+			P: "3dsMax|ClassIDb", "int", "Integer", "",-1099438848
+			P: "3dsMax|SuperClassID", "int", "Integer", "",3072
+			P: "3dsMax|settings", "Compound", "", ""
+			P: "3dsMax|settings|ao_affects_diffuse", "Bool", "", "A",1
+			P: "3dsMax|settings|ao_affects_reflection", "Bool", "", "A",1
+			P: "3dsMax|settings|normal_flip_red", "Bool", "", "A",0
+			P: "3dsMax|settings|normal_flip_green", "Bool", "", "A",0
+			P: "3dsMax|main", "Compound", "", ""
+			P: "3dsMax|main|baseColor", "ColorAndAlpha", "", "A",1,1,1,1
+			P: "3dsMax|main|base_color_map", "Reference", "", "A"
+			P: "3dsMax|main|metalness", "Float", "", "A",0
+			P: "3dsMax|main|metalness_map", "Reference", "", "A"
+			P: "3dsMax|main|roughness", "Float", "", "A",0
+			P: "3dsMax|main|Roughness_Map", "Reference", "", "A"
+			P: "3dsMax|main|useGlossiness", "Integer", "", "A",2
+			P: "3dsMax|main|ao_map", "Reference", "", "A"
+			P: "3dsMax|main|bump_map_amt", "Float", "", "A",1
+			P: "3dsMax|main|norm_map", "Reference", "", "A"
+			P: "3dsMax|main|emit_color", "ColorAndAlpha", "", "A",0,0,0,1
+			P: "3dsMax|main|emit_color_map", "Reference", "", "A"
+			P: "3dsMax|main|opacity_map", "Reference", "", "A"
+			P: "3dsMax|main|displacement_amt", "Float", "", "A",1
+			P: "3dsMax|main|displacement_map", "Reference", "", "A"
+		}
+	}
+	Material: 2429729511696, "Material::Engine_3", "" {
+		Version: 102
+		ShadingModel: "unknown"
+		MultiLayer: 0
+		Properties70:  {
+			P: "ShadingModel", "KString", "", "", "unknown"
+			P: "AmbientColor", "ColorRGB", "Color", "",1,1,1
+			P: "DiffuseColor", "ColorRGB", "Color", "",1,1,1
+			P: "SpecularColor", "ColorRGB", "Color", "",1,1,1
+			P: "SpecularFactor", "double", "Number", "",2
+			P: "ShininessExponent", "double", "Number", "",1024
+			P: "TransparencyFactor", "double", "Number", "",0
+			P: "EmissiveColor", "ColorRGB", "Color", "",0,0,0
+			P: "EmissiveFactor", "double", "Number", "",0
+			P: "3dsMax", "Compound", "", ""
+			P: "3dsMax|ClassIDa", "int", "Integer", "",-804315648
+			P: "3dsMax|ClassIDb", "int", "Integer", "",-1099438848
+			P: "3dsMax|SuperClassID", "int", "Integer", "",3072
+			P: "3dsMax|settings", "Compound", "", ""
+			P: "3dsMax|settings|ao_affects_diffuse", "Bool", "", "A",1
+			P: "3dsMax|settings|ao_affects_reflection", "Bool", "", "A",1
+			P: "3dsMax|settings|normal_flip_red", "Bool", "", "A",0
+			P: "3dsMax|settings|normal_flip_green", "Bool", "", "A",0
+			P: "3dsMax|main", "Compound", "", ""
+			P: "3dsMax|main|baseColor", "ColorAndAlpha", "", "A",1,1,1,1
+			P: "3dsMax|main|base_color_map", "Reference", "", "A"
+			P: "3dsMax|main|metalness", "Float", "", "A",0
+			P: "3dsMax|main|metalness_map", "Reference", "", "A"
+			P: "3dsMax|main|roughness", "Float", "", "A",0
+			P: "3dsMax|main|Roughness_Map", "Reference", "", "A"
+			P: "3dsMax|main|useGlossiness", "Integer", "", "A",2
+			P: "3dsMax|main|ao_map", "Reference", "", "A"
+			P: "3dsMax|main|bump_map_amt", "Float", "", "A",1
+			P: "3dsMax|main|norm_map", "Reference", "", "A"
+			P: "3dsMax|main|emit_color", "ColorAndAlpha", "", "A",0,0,0,1
+			P: "3dsMax|main|emit_color_map", "Reference", "", "A"
+			P: "3dsMax|main|opacity_map", "Reference", "", "A"
+			P: "3dsMax|main|displacement_amt", "Float", "", "A",1
+			P: "3dsMax|main|displacement_map", "Reference", "", "A"
+		}
+	}
+	Material: 2429729510576, "Material::Engine_2", "" {
+		Version: 102
+		ShadingModel: "unknown"
+		MultiLayer: 0
+		Properties70:  {
+			P: "ShadingModel", "KString", "", "", "unknown"
+			P: "AmbientColor", "ColorRGB", "Color", "",1,1,1
+			P: "DiffuseColor", "ColorRGB", "Color", "",1,1,1
+			P: "SpecularColor", "ColorRGB", "Color", "",1,1,1
+			P: "SpecularFactor", "double", "Number", "",2
+			P: "ShininessExponent", "double", "Number", "",1024
+			P: "TransparencyFactor", "double", "Number", "",0
+			P: "EmissiveColor", "ColorRGB", "Color", "",0,0,0
+			P: "EmissiveFactor", "double", "Number", "",0
+			P: "3dsMax", "Compound", "", ""
+			P: "3dsMax|ClassIDa", "int", "Integer", "",-804315648
+			P: "3dsMax|ClassIDb", "int", "Integer", "",-1099438848
+			P: "3dsMax|SuperClassID", "int", "Integer", "",3072
+			P: "3dsMax|settings", "Compound", "", ""
+			P: "3dsMax|settings|ao_affects_diffuse", "Bool", "", "A",1
+			P: "3dsMax|settings|ao_affects_reflection", "Bool", "", "A",1
+			P: "3dsMax|settings|normal_flip_red", "Bool", "", "A",0
+			P: "3dsMax|settings|normal_flip_green", "Bool", "", "A",0
+			P: "3dsMax|main", "Compound", "", ""
+			P: "3dsMax|main|baseColor", "ColorAndAlpha", "", "A",1,1,1,1
+			P: "3dsMax|main|base_color_map", "Reference", "", "A"
+			P: "3dsMax|main|metalness", "Float", "", "A",0
+			P: "3dsMax|main|metalness_map", "Reference", "", "A"
+			P: "3dsMax|main|roughness", "Float", "", "A",0
+			P: "3dsMax|main|Roughness_Map", "Reference", "", "A"
+			P: "3dsMax|main|useGlossiness", "Integer", "", "A",2
+			P: "3dsMax|main|ao_map", "Reference", "", "A"
+			P: "3dsMax|main|bump_map_amt", "Float", "", "A",1
+			P: "3dsMax|main|norm_map", "Reference", "", "A"
+			P: "3dsMax|main|emit_color", "ColorAndAlpha", "", "A",0,0,0,1
+			P: "3dsMax|main|emit_color_map", "Reference", "", "A"
+			P: "3dsMax|main|opacity_map", "Reference", "", "A"
+			P: "3dsMax|main|displacement_amt", "Float", "", "A",1
+			P: "3dsMax|main|displacement_map", "Reference", "", "A"
+		}
+	}
+	Material: 2429729511216, "Material::Gun_Part", "" {
+		Version: 102
+		ShadingModel: "unknown"
+		MultiLayer: 0
+		Properties70:  {
+			P: "ShadingModel", "KString", "", "", "unknown"
+			P: "AmbientColor", "ColorRGB", "Color", "",1,1,1
+			P: "DiffuseColor", "ColorRGB", "Color", "",1,1,1
+			P: "SpecularColor", "ColorRGB", "Color", "",1,1,1
+			P: "SpecularFactor", "double", "Number", "",2
+			P: "ShininessExponent", "double", "Number", "",1024
+			P: "TransparencyFactor", "double", "Number", "",0
+			P: "EmissiveColor", "ColorRGB", "Color", "",0,0,0
+			P: "EmissiveFactor", "double", "Number", "",0
+			P: "3dsMax", "Compound", "", ""
+			P: "3dsMax|ClassIDa", "int", "Integer", "",-804315648
+			P: "3dsMax|ClassIDb", "int", "Integer", "",-1099438848
+			P: "3dsMax|SuperClassID", "int", "Integer", "",3072
+			P: "3dsMax|settings", "Compound", "", ""
+			P: "3dsMax|settings|ao_affects_diffuse", "Bool", "", "A",1
+			P: "3dsMax|settings|ao_affects_reflection", "Bool", "", "A",1
+			P: "3dsMax|settings|normal_flip_red", "Bool", "", "A",0
+			P: "3dsMax|settings|normal_flip_green", "Bool", "", "A",0
+			P: "3dsMax|main", "Compound", "", ""
+			P: "3dsMax|main|baseColor", "ColorAndAlpha", "", "A",1,1,1,1
+			P: "3dsMax|main|base_color_map", "Reference", "", "A"
+			P: "3dsMax|main|metalness", "Float", "", "A",0
+			P: "3dsMax|main|metalness_map", "Reference", "", "A"
+			P: "3dsMax|main|roughness", "Float", "", "A",0
+			P: "3dsMax|main|Roughness_Map", "Reference", "", "A"
+			P: "3dsMax|main|useGlossiness", "Integer", "", "A",2
+			P: "3dsMax|main|ao_map", "Reference", "", "A"
+			P: "3dsMax|main|bump_map_amt", "Float", "", "A",1
+			P: "3dsMax|main|norm_map", "Reference", "", "A"
+			P: "3dsMax|main|emit_color", "ColorAndAlpha", "", "A",0,0,0,1
+			P: "3dsMax|main|emit_color_map", "Reference", "", "A"
+			P: "3dsMax|main|opacity_map", "Reference", "", "A"
+			P: "3dsMax|main|displacement_amt", "Float", "", "A",1
+			P: "3dsMax|main|displacement_map", "Reference", "", "A"
+		}
+	}
+	Material: 2429729513296, "Material::Muzzle", "" {
+		Version: 102
+		ShadingModel: "unknown"
+		MultiLayer: 0
+		Properties70:  {
+			P: "ShadingModel", "KString", "", "", "unknown"
+			P: "AmbientColor", "ColorRGB", "Color", "",1,1,1
+			P: "DiffuseColor", "ColorRGB", "Color", "",1,1,1
+			P: "SpecularColor", "ColorRGB", "Color", "",1,1,1
+			P: "SpecularFactor", "double", "Number", "",2
+			P: "ShininessExponent", "double", "Number", "",1024
+			P: "TransparencyFactor", "double", "Number", "",0
+			P: "EmissiveColor", "ColorRGB", "Color", "",0,0,0
+			P: "EmissiveFactor", "double", "Number", "",0
+			P: "3dsMax", "Compound", "", ""
+			P: "3dsMax|ClassIDa", "int", "Integer", "",-804315648
+			P: "3dsMax|ClassIDb", "int", "Integer", "",-1099438848
+			P: "3dsMax|SuperClassID", "int", "Integer", "",3072
+			P: "3dsMax|settings", "Compound", "", ""
+			P: "3dsMax|settings|ao_affects_diffuse", "Bool", "", "A",1
+			P: "3dsMax|settings|ao_affects_reflection", "Bool", "", "A",1
+			P: "3dsMax|settings|normal_flip_red", "Bool", "", "A",0
+			P: "3dsMax|settings|normal_flip_green", "Bool", "", "A",0
+			P: "3dsMax|main", "Compound", "", ""
+			P: "3dsMax|main|baseColor", "ColorAndAlpha", "", "A",1,1,1,1
+			P: "3dsMax|main|base_color_map", "Reference", "", "A"
+			P: "3dsMax|main|metalness", "Float", "", "A",0
+			P: "3dsMax|main|metalness_map", "Reference", "", "A"
+			P: "3dsMax|main|roughness", "Float", "", "A",0
+			P: "3dsMax|main|Roughness_Map", "Reference", "", "A"
+			P: "3dsMax|main|useGlossiness", "Integer", "", "A",2
+			P: "3dsMax|main|ao_map", "Reference", "", "A"
+			P: "3dsMax|main|bump_map_amt", "Float", "", "A",1
+			P: "3dsMax|main|norm_map", "Reference", "", "A"
+			P: "3dsMax|main|emit_color", "ColorAndAlpha", "", "A",0,0,0,1
+			P: "3dsMax|main|emit_color_map", "Reference", "", "A"
+			P: "3dsMax|main|opacity_map", "Reference", "", "A"
+			P: "3dsMax|main|displacement_amt", "Float", "", "A",1
+			P: "3dsMax|main|displacement_map", "Reference", "", "A"
+		}
+	}
+	Material: 2429729512016, "Material::Handle_1", "" {
+		Version: 102
+		ShadingModel: "unknown"
+		MultiLayer: 0
+		Properties70:  {
+			P: "ShadingModel", "KString", "", "", "unknown"
+			P: "AmbientColor", "ColorRGB", "Color", "",1,1,1
+			P: "DiffuseColor", "ColorRGB", "Color", "",1,1,1
+			P: "SpecularColor", "ColorRGB", "Color", "",1,1,1
+			P: "SpecularFactor", "double", "Number", "",2
+			P: "ShininessExponent", "double", "Number", "",1024
+			P: "TransparencyFactor", "double", "Number", "",0
+			P: "EmissiveColor", "ColorRGB", "Color", "",0,0,0
+			P: "EmissiveFactor", "double", "Number", "",0
+			P: "3dsMax", "Compound", "", ""
+			P: "3dsMax|ClassIDa", "int", "Integer", "",-804315648
+			P: "3dsMax|ClassIDb", "int", "Integer", "",-1099438848
+			P: "3dsMax|SuperClassID", "int", "Integer", "",3072
+			P: "3dsMax|settings", "Compound", "", ""
+			P: "3dsMax|settings|ao_affects_diffuse", "Bool", "", "A",1
+			P: "3dsMax|settings|ao_affects_reflection", "Bool", "", "A",1
+			P: "3dsMax|settings|normal_flip_red", "Bool", "", "A",0
+			P: "3dsMax|settings|normal_flip_green", "Bool", "", "A",0
+			P: "3dsMax|main", "Compound", "", ""
+			P: "3dsMax|main|baseColor", "ColorAndAlpha", "", "A",1,1,1,1
+			P: "3dsMax|main|base_color_map", "Reference", "", "A"
+			P: "3dsMax|main|metalness", "Float", "", "A",0
+			P: "3dsMax|main|metalness_map", "Reference", "", "A"
+			P: "3dsMax|main|roughness", "Float", "", "A",0
+			P: "3dsMax|main|Roughness_Map", "Reference", "", "A"
+			P: "3dsMax|main|useGlossiness", "Integer", "", "A",2
+			P: "3dsMax|main|ao_map", "Reference", "", "A"
+			P: "3dsMax|main|bump_map_amt", "Float", "", "A",1
+			P: "3dsMax|main|norm_map", "Reference", "", "A"
+			P: "3dsMax|main|emit_color", "ColorAndAlpha", "", "A",0,0,0,1
+			P: "3dsMax|main|emit_color_map", "Reference", "", "A"
+			P: "3dsMax|main|opacity_map", "Reference", "", "A"
+			P: "3dsMax|main|displacement_amt", "Float", "", "A",1
+			P: "3dsMax|main|displacement_map", "Reference", "", "A"
+		}
+	}
+	Material: 2429729512656, "Material::Trigger", "" {
+		Version: 102
+		ShadingModel: "unknown"
+		MultiLayer: 0
+		Properties70:  {
+			P: "ShadingModel", "KString", "", "", "unknown"
+			P: "AmbientColor", "ColorRGB", "Color", "",1,1,1
+			P: "DiffuseColor", "ColorRGB", "Color", "",1,1,1
+			P: "SpecularColor", "ColorRGB", "Color", "",1,1,1
+			P: "SpecularFactor", "double", "Number", "",2
+			P: "ShininessExponent", "double", "Number", "",1024
+			P: "TransparencyFactor", "double", "Number", "",0
+			P: "EmissiveColor", "ColorRGB", "Color", "",0,0,0
+			P: "EmissiveFactor", "double", "Number", "",0
+			P: "3dsMax", "Compound", "", ""
+			P: "3dsMax|ClassIDa", "int", "Integer", "",-804315648
+			P: "3dsMax|ClassIDb", "int", "Integer", "",-1099438848
+			P: "3dsMax|SuperClassID", "int", "Integer", "",3072
+			P: "3dsMax|settings", "Compound", "", ""
+			P: "3dsMax|settings|ao_affects_diffuse", "Bool", "", "A",1
+			P: "3dsMax|settings|ao_affects_reflection", "Bool", "", "A",1
+			P: "3dsMax|settings|normal_flip_red", "Bool", "", "A",0
+			P: "3dsMax|settings|normal_flip_green", "Bool", "", "A",0
+			P: "3dsMax|main", "Compound", "", ""
+			P: "3dsMax|main|baseColor", "ColorAndAlpha", "", "A",1,1,1,1
+			P: "3dsMax|main|base_color_map", "Reference", "", "A"
+			P: "3dsMax|main|metalness", "Float", "", "A",0
+			P: "3dsMax|main|metalness_map", "Reference", "", "A"
+			P: "3dsMax|main|roughness", "Float", "", "A",0
+			P: "3dsMax|main|Roughness_Map", "Reference", "", "A"
+			P: "3dsMax|main|useGlossiness", "Integer", "", "A",2
+			P: "3dsMax|main|ao_map", "Reference", "", "A"
+			P: "3dsMax|main|bump_map_amt", "Float", "", "A",1
+			P: "3dsMax|main|norm_map", "Reference", "", "A"
+			P: "3dsMax|main|emit_color", "ColorAndAlpha", "", "A",0,0,0,1
+			P: "3dsMax|main|emit_color_map", "Reference", "", "A"
+			P: "3dsMax|main|opacity_map", "Reference", "", "A"
+			P: "3dsMax|main|displacement_amt", "Float", "", "A",1
+			P: "3dsMax|main|displacement_map", "Reference", "", "A"
+		}
+	}
+	Material: 2429729513936, "Material::Pipe_2", "" {
+		Version: 102
+		ShadingModel: "unknown"
+		MultiLayer: 0
+		Properties70:  {
+			P: "ShadingModel", "KString", "", "", "unknown"
+			P: "AmbientColor", "ColorRGB", "Color", "",1,1,1
+			P: "DiffuseColor", "ColorRGB", "Color", "",1,1,1
+			P: "SpecularColor", "ColorRGB", "Color", "",1,1,1
+			P: "SpecularFactor", "double", "Number", "",2
+			P: "ShininessExponent", "double", "Number", "",1024
+			P: "TransparencyFactor", "double", "Number", "",0
+			P: "EmissiveColor", "ColorRGB", "Color", "",0,0,0
+			P: "EmissiveFactor", "double", "Number", "",0
+			P: "3dsMax", "Compound", "", ""
+			P: "3dsMax|ClassIDa", "int", "Integer", "",-804315648
+			P: "3dsMax|ClassIDb", "int", "Integer", "",-1099438848
+			P: "3dsMax|SuperClassID", "int", "Integer", "",3072
+			P: "3dsMax|settings", "Compound", "", ""
+			P: "3dsMax|settings|ao_affects_diffuse", "Bool", "", "A",1
+			P: "3dsMax|settings|ao_affects_reflection", "Bool", "", "A",1
+			P: "3dsMax|settings|normal_flip_red", "Bool", "", "A",0
+			P: "3dsMax|settings|normal_flip_green", "Bool", "", "A",0
+			P: "3dsMax|main", "Compound", "", ""
+			P: "3dsMax|main|baseColor", "ColorAndAlpha", "", "A",1,1,1,1
+			P: "3dsMax|main|base_color_map", "Reference", "", "A"
+			P: "3dsMax|main|metalness", "Float", "", "A",0
+			P: "3dsMax|main|metalness_map", "Reference", "", "A"
+			P: "3dsMax|main|roughness", "Float", "", "A",0
+			P: "3dsMax|main|Roughness_Map", "Reference", "", "A"
+			P: "3dsMax|main|useGlossiness", "Integer", "", "A",2
+			P: "3dsMax|main|ao_map", "Reference", "", "A"
+			P: "3dsMax|main|bump_map_amt", "Float", "", "A",1
+			P: "3dsMax|main|norm_map", "Reference", "", "A"
+			P: "3dsMax|main|emit_color", "ColorAndAlpha", "", "A",0,0,0,1
+			P: "3dsMax|main|emit_color_map", "Reference", "", "A"
+			P: "3dsMax|main|opacity_map", "Reference", "", "A"
+			P: "3dsMax|main|displacement_amt", "Float", "", "A",1
+			P: "3dsMax|main|displacement_map", "Reference", "", "A"
+		}
+	}
+	Material: 2429729512336, "Material::Pipe_1", "" {
+		Version: 102
+		ShadingModel: "unknown"
+		MultiLayer: 0
+		Properties70:  {
+			P: "ShadingModel", "KString", "", "", "unknown"
+			P: "AmbientColor", "ColorRGB", "Color", "",1,1,1
+			P: "DiffuseColor", "ColorRGB", "Color", "",1,1,1
+			P: "SpecularColor", "ColorRGB", "Color", "",1,1,1
+			P: "SpecularFactor", "double", "Number", "",2
+			P: "ShininessExponent", "double", "Number", "",1024
+			P: "TransparencyFactor", "double", "Number", "",0
+			P: "EmissiveColor", "ColorRGB", "Color", "",0,0,0
+			P: "EmissiveFactor", "double", "Number", "",0
+			P: "3dsMax", "Compound", "", ""
+			P: "3dsMax|ClassIDa", "int", "Integer", "",-804315648
+			P: "3dsMax|ClassIDb", "int", "Integer", "",-1099438848
+			P: "3dsMax|SuperClassID", "int", "Integer", "",3072
+			P: "3dsMax|settings", "Compound", "", ""
+			P: "3dsMax|settings|ao_affects_diffuse", "Bool", "", "A",1
+			P: "3dsMax|settings|ao_affects_reflection", "Bool", "", "A",1
+			P: "3dsMax|settings|normal_flip_red", "Bool", "", "A",0
+			P: "3dsMax|settings|normal_flip_green", "Bool", "", "A",0
+			P: "3dsMax|main", "Compound", "", ""
+			P: "3dsMax|main|baseColor", "ColorAndAlpha", "", "A",1,1,1,1
+			P: "3dsMax|main|base_color_map", "Reference", "", "A"
+			P: "3dsMax|main|metalness", "Float", "", "A",0
+			P: "3dsMax|main|metalness_map", "Reference", "", "A"
+			P: "3dsMax|main|roughness", "Float", "", "A",0
+			P: "3dsMax|main|Roughness_Map", "Reference", "", "A"
+			P: "3dsMax|main|useGlossiness", "Integer", "", "A",2
+			P: "3dsMax|main|ao_map", "Reference", "", "A"
+			P: "3dsMax|main|bump_map_amt", "Float", "", "A",1
+			P: "3dsMax|main|norm_map", "Reference", "", "A"
+			P: "3dsMax|main|emit_color", "ColorAndAlpha", "", "A",0,0,0,1
+			P: "3dsMax|main|emit_color_map", "Reference", "", "A"
+			P: "3dsMax|main|opacity_map", "Reference", "", "A"
+			P: "3dsMax|main|displacement_amt", "Float", "", "A",1
+			P: "3dsMax|main|displacement_map", "Reference", "", "A"
+		}
+	}
+	Material: 2429729511856, "Material::Front_Handle_2", "" {
+		Version: 102
+		ShadingModel: "unknown"
+		MultiLayer: 0
+		Properties70:  {
+			P: "ShadingModel", "KString", "", "", "unknown"
+			P: "AmbientColor", "ColorRGB", "Color", "",1,1,1
+			P: "DiffuseColor", "ColorRGB", "Color", "",1,1,1
+			P: "SpecularColor", "ColorRGB", "Color", "",1,1,1
+			P: "SpecularFactor", "double", "Number", "",2
+			P: "ShininessExponent", "double", "Number", "",1024
+			P: "TransparencyFactor", "double", "Number", "",0
+			P: "EmissiveColor", "ColorRGB", "Color", "",0,0,0
+			P: "EmissiveFactor", "double", "Number", "",0
+			P: "3dsMax", "Compound", "", ""
+			P: "3dsMax|ClassIDa", "int", "Integer", "",-804315648
+			P: "3dsMax|ClassIDb", "int", "Integer", "",-1099438848
+			P: "3dsMax|SuperClassID", "int", "Integer", "",3072
+			P: "3dsMax|settings", "Compound", "", ""
+			P: "3dsMax|settings|ao_affects_diffuse", "Bool", "", "A",1
+			P: "3dsMax|settings|ao_affects_reflection", "Bool", "", "A",1
+			P: "3dsMax|settings|normal_flip_red", "Bool", "", "A",0
+			P: "3dsMax|settings|normal_flip_green", "Bool", "", "A",0
+			P: "3dsMax|main", "Compound", "", ""
+			P: "3dsMax|main|baseColor", "ColorAndAlpha", "", "A",1,1,1,1
+			P: "3dsMax|main|base_color_map", "Reference", "", "A"
+			P: "3dsMax|main|metalness", "Float", "", "A",0
+			P: "3dsMax|main|metalness_map", "Reference", "", "A"
+			P: "3dsMax|main|roughness", "Float", "", "A",0
+			P: "3dsMax|main|Roughness_Map", "Reference", "", "A"
+			P: "3dsMax|main|useGlossiness", "Integer", "", "A",2
+			P: "3dsMax|main|ao_map", "Reference", "", "A"
+			P: "3dsMax|main|bump_map_amt", "Float", "", "A",1
+			P: "3dsMax|main|norm_map", "Reference", "", "A"
+			P: "3dsMax|main|emit_color", "ColorAndAlpha", "", "A",0,0,0,1
+			P: "3dsMax|main|emit_color_map", "Reference", "", "A"
+			P: "3dsMax|main|opacity_map", "Reference", "", "A"
+			P: "3dsMax|main|displacement_amt", "Float", "", "A",1
+			P: "3dsMax|main|displacement_map", "Reference", "", "A"
+		}
+	}
+	Material: 2429729512496, "Material::Front_Handle_1", "" {
+		Version: 102
+		ShadingModel: "unknown"
+		MultiLayer: 0
+		Properties70:  {
+			P: "ShadingModel", "KString", "", "", "unknown"
+			P: "AmbientColor", "ColorRGB", "Color", "",1,1,1
+			P: "DiffuseColor", "ColorRGB", "Color", "",1,1,1
+			P: "SpecularColor", "ColorRGB", "Color", "",1,1,1
+			P: "SpecularFactor", "double", "Number", "",2
+			P: "ShininessExponent", "double", "Number", "",1024
+			P: "TransparencyFactor", "double", "Number", "",0
+			P: "EmissiveColor", "ColorRGB", "Color", "",0,0,0
+			P: "EmissiveFactor", "double", "Number", "",0
+			P: "3dsMax", "Compound", "", ""
+			P: "3dsMax|ClassIDa", "int", "Integer", "",-804315648
+			P: "3dsMax|ClassIDb", "int", "Integer", "",-1099438848
+			P: "3dsMax|SuperClassID", "int", "Integer", "",3072
+			P: "3dsMax|settings", "Compound", "", ""
+			P: "3dsMax|settings|ao_affects_diffuse", "Bool", "", "A",1
+			P: "3dsMax|settings|ao_affects_reflection", "Bool", "", "A",1
+			P: "3dsMax|settings|normal_flip_red", "Bool", "", "A",0
+			P: "3dsMax|settings|normal_flip_green", "Bool", "", "A",0
+			P: "3dsMax|main", "Compound", "", ""
+			P: "3dsMax|main|baseColor", "ColorAndAlpha", "", "A",1,1,1,1
+			P: "3dsMax|main|base_color_map", "Reference", "", "A"
+			P: "3dsMax|main|metalness", "Float", "", "A",0
+			P: "3dsMax|main|metalness_map", "Reference", "", "A"
+			P: "3dsMax|main|roughness", "Float", "", "A",0
+			P: "3dsMax|main|Roughness_Map", "Reference", "", "A"
+			P: "3dsMax|main|useGlossiness", "Integer", "", "A",2
+			P: "3dsMax|main|ao_map", "Reference", "", "A"
+			P: "3dsMax|main|bump_map_amt", "Float", "", "A",1
+			P: "3dsMax|main|norm_map", "Reference", "", "A"
+			P: "3dsMax|main|emit_color", "ColorAndAlpha", "", "A",0,0,0,1
+			P: "3dsMax|main|emit_color_map", "Reference", "", "A"
+			P: "3dsMax|main|opacity_map", "Reference", "", "A"
+			P: "3dsMax|main|displacement_amt", "Float", "", "A",1
+			P: "3dsMax|main|displacement_map", "Reference", "", "A"
+		}
+	}
+	Material: 2429729512816, "Material::Shell", "" {
+		Version: 102
+		ShadingModel: "unknown"
+		MultiLayer: 0
+		Properties70:  {
+			P: "ShadingModel", "KString", "", "", "unknown"
+			P: "AmbientColor", "ColorRGB", "Color", "",1,1,1
+			P: "DiffuseColor", "ColorRGB", "Color", "",1,1,1
+			P: "SpecularColor", "ColorRGB", "Color", "",1,1,1
+			P: "SpecularFactor", "double", "Number", "",2
+			P: "ShininessExponent", "double", "Number", "",1024
+			P: "TransparencyFactor", "double", "Number", "",0
+			P: "EmissiveColor", "ColorRGB", "Color", "",0,0,0
+			P: "EmissiveFactor", "double", "Number", "",0
+			P: "3dsMax", "Compound", "", ""
+			P: "3dsMax|ClassIDa", "int", "Integer", "",-804315648
+			P: "3dsMax|ClassIDb", "int", "Integer", "",-1099438848
+			P: "3dsMax|SuperClassID", "int", "Integer", "",3072
+			P: "3dsMax|settings", "Compound", "", ""
+			P: "3dsMax|settings|ao_affects_diffuse", "Bool", "", "A",1
+			P: "3dsMax|settings|ao_affects_reflection", "Bool", "", "A",1
+			P: "3dsMax|settings|normal_flip_red", "Bool", "", "A",0
+			P: "3dsMax|settings|normal_flip_green", "Bool", "", "A",0
+			P: "3dsMax|main", "Compound", "", ""
+			P: "3dsMax|main|baseColor", "ColorAndAlpha", "", "A",1,1,1,1
+			P: "3dsMax|main|base_color_map", "Reference", "", "A"
+			P: "3dsMax|main|metalness", "Float", "", "A",0
+			P: "3dsMax|main|metalness_map", "Reference", "", "A"
+			P: "3dsMax|main|roughness", "Float", "", "A",0
+			P: "3dsMax|main|Roughness_Map", "Reference", "", "A"
+			P: "3dsMax|main|useGlossiness", "Integer", "", "A",2
+			P: "3dsMax|main|ao_map", "Reference", "", "A"
+			P: "3dsMax|main|bump_map_amt", "Float", "", "A",1
+			P: "3dsMax|main|norm_map", "Reference", "", "A"
+			P: "3dsMax|main|emit_color", "ColorAndAlpha", "", "A",0,0,0,1
+			P: "3dsMax|main|emit_color_map", "Reference", "", "A"
+			P: "3dsMax|main|opacity_map", "Reference", "", "A"
+			P: "3dsMax|main|displacement_amt", "Float", "", "A",1
+			P: "3dsMax|main|displacement_map", "Reference", "", "A"
+		}
+	}
+	Video: 2430115899888, "Video::Map #96", "Clip" {
+		Type: "Clip"
+		Properties70:  {
+			P: "Path", "KString", "XRefUrl", "", "C:\Users\yeonkyu\Desktop\Gun\Gun_Texture\프타게_메인총기_Magazine_BaseColor.png"
+			P: "RelPath", "KString", "XRefUrl", "", "..\..\..\Desktop\Gun\Gun_Texture\프타게_메인총기_Magazine_BaseColor.png"
+		}
+		UseMipMap: 0
+		Filename: "C:\Users\yeonkyu\Desktop\Gun\Gun_Texture\프타게_메인총기_Magazine_BaseColor.png"
+		RelativeFilename: "..\..\..\Desktop\Gun\Gun_Texture\프타게_메인총기_Magazine_BaseColor.png"
+	}
+	Video: 2430115882128, "Video::Map #97", "Clip" {
+		Type: "Clip"
+		Properties70:  {
+			P: "Path", "KString", "XRefUrl", "", "C:\Users\yeonkyu\Desktop\Gun\Gun_Texture\프타게_메인총기_Magazine_Metallic.png"
+			P: "RelPath", "KString", "XRefUrl", "", "..\..\..\Desktop\Gun\Gun_Texture\프타게_메인총기_Magazine_Metallic.png"
+		}
+		UseMipMap: 0
+		Filename: "C:\Users\yeonkyu\Desktop\Gun\Gun_Texture\프타게_메인총기_Magazine_Metallic.png"
+		RelativeFilename: "..\..\..\Desktop\Gun\Gun_Texture\프타게_메인총기_Magazine_Metallic.png"
+	}
+	Video: 2430115900848, "Video::Map #98", "Clip" {
+		Type: "Clip"
+		Properties70:  {
+			P: "Path", "KString", "XRefUrl", "", "C:\Users\yeonkyu\Desktop\Gun\Gun_Texture\프타게_메인총기_Magazine_Roughness.png"
+			P: "RelPath", "KString", "XRefUrl", "", "..\..\..\Desktop\Gun\Gun_Texture\프타게_메인총기_Magazine_Roughness.png"
+		}
+		UseMipMap: 0
+		Filename: "C:\Users\yeonkyu\Desktop\Gun\Gun_Texture\프타게_메인총기_Magazine_Roughness.png"
+		RelativeFilename: "..\..\..\Desktop\Gun\Gun_Texture\프타게_메인총기_Magazine_Roughness.png"
+	}
+	Video: 2430115903248, "Video::Map #99", "Clip" {
+		Type: "Clip"
+		Properties70:  {
+			P: "Path", "KString", "XRefUrl", "", "C:\Users\yeonkyu\Desktop\Gun\Gun_Texture\프타게_메인총기_Magazine_Normal.png"
+			P: "RelPath", "KString", "XRefUrl", "", "..\..\..\Desktop\Gun\Gun_Texture\프타게_메인총기_Magazine_Normal.png"
+		}
+		UseMipMap: 0
+		Filename: "C:\Users\yeonkyu\Desktop\Gun\Gun_Texture\프타게_메인총기_Magazine_Normal.png"
+		RelativeFilename: "..\..\..\Desktop\Gun\Gun_Texture\프타게_메인총기_Magazine_Normal.png"
+	}
+	Video: 2430115888848, "Video::Map #116", "Clip" {
+		Type: "Clip"
+		Properties70:  {
+			P: "Path", "KString", "XRefUrl", "", "C:\Users\yeonkyu\Desktop\Gun\Gun_Texture\프타게_메인총기_Handle_2_BaseColor.png"
+			P: "RelPath", "KString", "XRefUrl", "", "..\..\..\Desktop\Gun\Gun_Texture\프타게_메인총기_Handle_2_BaseColor.png"
+		}
+		UseMipMap: 0
+		Filename: "C:\Users\yeonkyu\Desktop\Gun\Gun_Texture\프타게_메인총기_Handle_2_BaseColor.png"
+		RelativeFilename: "..\..\..\Desktop\Gun\Gun_Texture\프타게_메인총기_Handle_2_BaseColor.png"
+	}
+	Video: 2430115884528, "Video::Map #117", "Clip" {
+		Type: "Clip"
+		Properties70:  {
+			P: "Path", "KString", "XRefUrl", "", "C:\Users\yeonkyu\Desktop\Gun\Gun_Texture\프타게_메인총기_Handle_2_Metallic.png"
+			P: "RelPath", "KString", "XRefUrl", "", "..\..\..\Desktop\Gun\Gun_Texture\프타게_메인총기_Handle_2_Metallic.png"
+		}
+		UseMipMap: 0
+		Filename: "C:\Users\yeonkyu\Desktop\Gun\Gun_Texture\프타게_메인총기_Handle_2_Metallic.png"
+		RelativeFilename: "..\..\..\Desktop\Gun\Gun_Texture\프타게_메인총기_Handle_2_Metallic.png"
+	}
+	Video: 2430115888368, "Video::Map #118", "Clip" {
+		Type: "Clip"
+		Properties70:  {
+			P: "Path", "KString", "XRefUrl", "", "C:\Users\yeonkyu\Desktop\Gun\Gun_Texture\프타게_메인총기_Handle_2_Roughness.png"
+			P: "RelPath", "KString", "XRefUrl", "", "..\..\..\Desktop\Gun\Gun_Texture\프타게_메인총기_Handle_2_Roughness.png"
+		}
+		UseMipMap: 0
+		Filename: "C:\Users\yeonkyu\Desktop\Gun\Gun_Texture\프타게_메인총기_Handle_2_Roughness.png"
+		RelativeFilename: "..\..\..\Desktop\Gun\Gun_Texture\프타게_메인총기_Handle_2_Roughness.png"
+	}
+	Video: 2430115893648, "Video::Map #119", "Clip" {
+		Type: "Clip"
+		Properties70:  {
+			P: "Path", "KString", "XRefUrl", "", "C:\Users\yeonkyu\Desktop\Gun\Gun_Texture\프타게_메인총기_Handle_2_Normal.png"
+			P: "RelPath", "KString", "XRefUrl", "", "..\..\..\Desktop\Gun\Gun_Texture\프타게_메인총기_Handle_2_Normal.png"
+		}
+		UseMipMap: 0
+		Filename: "C:\Users\yeonkyu\Desktop\Gun\Gun_Texture\프타게_메인총기_Handle_2_Normal.png"
+		RelativeFilename: "..\..\..\Desktop\Gun\Gun_Texture\프타게_메인총기_Handle_2_Normal.png"
+	}
+	Video: 2430115909008, "Video::Map #60", "Clip" {
+		Type: "Clip"
+		Properties70:  {
+			P: "Path", "KString", "XRefUrl", "", "C:\Users\yeonkyu\Desktop\Gun\Gun_Texture\프타게_메인총기_Engine_1_BaseColor.png"
+			P: "RelPath", "KString", "XRefUrl", "", "..\..\..\Desktop\Gun\Gun_Texture\프타게_메인총기_Engine_1_BaseColor.png"
+		}
+		UseMipMap: 0
+		Filename: "C:\Users\yeonkyu\Desktop\Gun\Gun_Texture\프타게_메인총기_Engine_1_BaseColor.png"
+		RelativeFilename: "..\..\..\Desktop\Gun\Gun_Texture\프타게_메인총기_Engine_1_BaseColor.png"
+	}
+	Video: 2430115883088, "Video::Map #61", "Clip" {
+		Type: "Clip"
+		Properties70:  {
+			P: "Path", "KString", "XRefUrl", "", "C:\Users\yeonkyu\Desktop\Gun\Gun_Texture\프타게_메인총기_Engine_1_Metallic.png"
+			P: "RelPath", "KString", "XRefUrl", "", "..\..\..\Desktop\Gun\Gun_Texture\프타게_메인총기_Engine_1_Metallic.png"
+		}
+		UseMipMap: 0
+		Filename: "C:\Users\yeonkyu\Desktop\Gun\Gun_Texture\프타게_메인총기_Engine_1_Metallic.png"
+		RelativeFilename: "..\..\..\Desktop\Gun\Gun_Texture\프타게_메인총기_Engine_1_Metallic.png"
+	}
+	Video: 2430115878768, "Video::Map #62", "Clip" {
+		Type: "Clip"
+		Properties70:  {
+			P: "Path", "KString", "XRefUrl", "", "C:\Users\yeonkyu\Desktop\Gun\Gun_Texture\프타게_메인총기_Engine_1_Roughness.png"
+			P: "RelPath", "KString", "XRefUrl", "", "..\..\..\Desktop\Gun\Gun_Texture\프타게_메인총기_Engine_1_Roughness.png"
+		}
+		UseMipMap: 0
+		Filename: "C:\Users\yeonkyu\Desktop\Gun\Gun_Texture\프타게_메인총기_Engine_1_Roughness.png"
+		RelativeFilename: "..\..\..\Desktop\Gun\Gun_Texture\프타게_메인총기_Engine_1_Roughness.png"
+	}
+	Video: 2430115879248, "Video::Map #63", "Clip" {
+		Type: "Clip"
+		Properties70:  {
+			P: "Path", "KString", "XRefUrl", "", "C:\Users\yeonkyu\Desktop\Gun\Gun_Texture\프타게_메인총기_Engine_1_Normal.png"
+			P: "RelPath", "KString", "XRefUrl", "", "..\..\..\Desktop\Gun\Gun_Texture\프타게_메인총기_Engine_1_Normal.png"
+		}
+		UseMipMap: 0
+		Filename: "C:\Users\yeonkyu\Desktop\Gun\Gun_Texture\프타게_메인총기_Engine_1_Normal.png"
+		RelativeFilename: "..\..\..\Desktop\Gun\Gun_Texture\프타게_메인총기_Engine_1_Normal.png"
+	}
+	Video: 2430115901328, "Video::Map #69", "Clip" {
+		Type: "Clip"
+		Properties70:  {
+			P: "Path", "KString", "XRefUrl", "", "C:\Users\yeonkyu\Desktop\Gun\Gun_Texture\프타게_메인총기_Engine_3_BaseColor.png"
+			P: "RelPath", "KString", "XRefUrl", "", "..\..\..\Desktop\Gun\Gun_Texture\프타게_메인총기_Engine_3_BaseColor.png"
+		}
+		UseMipMap: 0
+		Filename: "C:\Users\yeonkyu\Desktop\Gun\Gun_Texture\프타게_메인총기_Engine_3_BaseColor.png"
+		RelativeFilename: "..\..\..\Desktop\Gun\Gun_Texture\프타게_메인총기_Engine_3_BaseColor.png"
+	}
+	Video: 2430115879728, "Video::Map #70", "Clip" {
+		Type: "Clip"
+		Properties70:  {
+			P: "Path", "KString", "XRefUrl", "", "C:\Users\yeonkyu\Desktop\Gun\Gun_Texture\프타게_메인총기_Engine_3_Metallic.png"
+			P: "RelPath", "KString", "XRefUrl", "", "..\..\..\Desktop\Gun\Gun_Texture\프타게_메인총기_Engine_3_Metallic.png"
+		}
+		UseMipMap: 0
+		Filename: "C:\Users\yeonkyu\Desktop\Gun\Gun_Texture\프타게_메인총기_Engine_3_Metallic.png"
+		RelativeFilename: "..\..\..\Desktop\Gun\Gun_Texture\프타게_메인총기_Engine_3_Metallic.png"
+	}
+	Video: 2430115892208, "Video::Map #71", "Clip" {
+		Type: "Clip"
+		Properties70:  {
+			P: "Path", "KString", "XRefUrl", "", "C:\Users\yeonkyu\Desktop\Gun\Gun_Texture\프타게_메인총기_Engine_3_Roughness.png"
+			P: "RelPath", "KString", "XRefUrl", "", "..\..\..\Desktop\Gun\Gun_Texture\프타게_메인총기_Engine_3_Roughness.png"
+		}
+		UseMipMap: 0
+		Filename: "C:\Users\yeonkyu\Desktop\Gun\Gun_Texture\프타게_메인총기_Engine_3_Roughness.png"
+		RelativeFilename: "..\..\..\Desktop\Gun\Gun_Texture\프타게_메인총기_Engine_3_Roughness.png"
+	}
+	Video: 2430115895088, "Video::Map #72", "Clip" {
+		Type: "Clip"
+		Properties70:  {
+			P: "Path", "KString", "XRefUrl", "", "C:\Users\yeonkyu\Desktop\Gun\Gun_Texture\프타게_메인총기_Engine_3_Normal.png"
+			P: "RelPath", "KString", "XRefUrl", "", "..\..\..\Desktop\Gun\Gun_Texture\프타게_메인총기_Engine_3_Normal.png"
+		}
+		UseMipMap: 0
+		Filename: "C:\Users\yeonkyu\Desktop\Gun\Gun_Texture\프타게_메인총기_Engine_3_Normal.png"
+		RelativeFilename: "..\..\..\Desktop\Gun\Gun_Texture\프타게_메인총기_Engine_3_Normal.png"
+	}
+	Video: 2430115887888, "Video::Map #64", "Clip" {
+		Type: "Clip"
+		Properties70:  {
+			P: "Path", "KString", "XRefUrl", "", "C:\Users\yeonkyu\Desktop\Gun\Gun_Texture\프타게_메인총기_Engine_2_BaseColor.png"
+			P: "RelPath", "KString", "XRefUrl", "", "..\..\..\Desktop\Gun\Gun_Texture\프타게_메인총기_Engine_2_BaseColor.png"
+		}
+		UseMipMap: 0
+		Filename: "C:\Users\yeonkyu\Desktop\Gun\Gun_Texture\프타게_메인총기_Engine_2_BaseColor.png"
+		RelativeFilename: "..\..\..\Desktop\Gun\Gun_Texture\프타게_메인총기_Engine_2_BaseColor.png"
+	}
+	Video: 2430115890768, "Video::Map #65", "Clip" {
+		Type: "Clip"
+		Properties70:  {
+			P: "Path", "KString", "XRefUrl", "", "C:\Users\yeonkyu\Desktop\Gun\Gun_Texture\프타게_메인총기_Engine_2_Metallic.png"
+			P: "RelPath", "KString", "XRefUrl", "", "..\..\..\Desktop\Gun\Gun_Texture\프타게_메인총기_Engine_2_Metallic.png"
+		}
+		UseMipMap: 0
+		Filename: "C:\Users\yeonkyu\Desktop\Gun\Gun_Texture\프타게_메인총기_Engine_2_Metallic.png"
+		RelativeFilename: "..\..\..\Desktop\Gun\Gun_Texture\프타게_메인총기_Engine_2_Metallic.png"
+	}
+	Video: 2430115903728, "Video::Map #66", "Clip" {
+		Type: "Clip"
+		Properties70:  {
+			P: "Path", "KString", "XRefUrl", "", "C:\Users\yeonkyu\Desktop\Gun\Gun_Texture\프타게_메인총기_Engine_2_Roughness.png"
+			P: "RelPath", "KString", "XRefUrl", "", "..\..\..\Desktop\Gun\Gun_Texture\프타게_메인총기_Engine_2_Roughness.png"
+		}
+		UseMipMap: 0
+		Filename: "C:\Users\yeonkyu\Desktop\Gun\Gun_Texture\프타게_메인총기_Engine_2_Roughness.png"
+		RelativeFilename: "..\..\..\Desktop\Gun\Gun_Texture\프타게_메인총기_Engine_2_Roughness.png"
+	}
+	Video: 2430115883568, "Video::Map #67", "Clip" {
+		Type: "Clip"
+		Properties70:  {
+			P: "Path", "KString", "XRefUrl", "", "C:\Users\yeonkyu\Desktop\Gun\Gun_Texture\프타게_메인총기_Engine_2_Normal.png"
+			P: "RelPath", "KString", "XRefUrl", "", "..\..\..\Desktop\Gun\Gun_Texture\프타게_메인총기_Engine_2_Normal.png"
+		}
+		UseMipMap: 0
+		Filename: "C:\Users\yeonkyu\Desktop\Gun\Gun_Texture\프타게_메인총기_Engine_2_Normal.png"
+		RelativeFilename: "..\..\..\Desktop\Gun\Gun_Texture\프타게_메인총기_Engine_2_Normal.png"
+	}
+	Video: 2430115889328, "Video::Map #82", "Clip" {
+		Type: "Clip"
+		Properties70:  {
+			P: "Path", "KString", "XRefUrl", "", "C:\Users\yeonkyu\Desktop\Gun\Gun_Texture\프타게_메인총기_Gun_Part_BaseColor.png"
+			P: "RelPath", "KString", "XRefUrl", "", "..\..\..\Desktop\Gun\Gun_Texture\프타게_메인총기_Gun_Part_BaseColor.png"
+		}
+		UseMipMap: 0
+		Filename: "C:\Users\yeonkyu\Desktop\Gun\Gun_Texture\프타게_메인총기_Gun_Part_BaseColor.png"
+		RelativeFilename: "..\..\..\Desktop\Gun\Gun_Texture\프타게_메인총기_Gun_Part_BaseColor.png"
+	}
+	Video: 2430115884048, "Video::Map #83", "Clip" {
+		Type: "Clip"
+		Properties70:  {
+			P: "Path", "KString", "XRefUrl", "", "C:\Users\yeonkyu\Desktop\Gun\Gun_Texture\프타게_메인총기_Gun_Part_Metallic.png"
+			P: "RelPath", "KString", "XRefUrl", "", "..\..\..\Desktop\Gun\Gun_Texture\프타게_메인총기_Gun_Part_Metallic.png"
+		}
+		UseMipMap: 0
+		Filename: "C:\Users\yeonkyu\Desktop\Gun\Gun_Texture\프타게_메인총기_Gun_Part_Metallic.png"
+		RelativeFilename: "..\..\..\Desktop\Gun\Gun_Texture\프타게_메인총기_Gun_Part_Metallic.png"
+	}
+	Video: 2430115898448, "Video::Map #84", "Clip" {
+		Type: "Clip"
+		Properties70:  {
+			P: "Path", "KString", "XRefUrl", "", "C:\Users\yeonkyu\Desktop\Gun\Gun_Texture\프타게_메인총기_Gun_Part_Roughness.png"
+			P: "RelPath", "KString", "XRefUrl", "", "..\..\..\Desktop\Gun\Gun_Texture\프타게_메인총기_Gun_Part_Roughness.png"
+		}
+		UseMipMap: 0
+		Filename: "C:\Users\yeonkyu\Desktop\Gun\Gun_Texture\프타게_메인총기_Gun_Part_Roughness.png"
+		RelativeFilename: "..\..\..\Desktop\Gun\Gun_Texture\프타게_메인총기_Gun_Part_Roughness.png"
+	}
+	Video: 2430115885488, "Video::Map #85", "Clip" {
+		Type: "Clip"
+		Properties70:  {
+			P: "Path", "KString", "XRefUrl", "", "C:\Users\yeonkyu\Desktop\Gun\Gun_Texture\프타게_메인총기_Gun_Part_Normal.png"
+			P: "RelPath", "KString", "XRefUrl", "", "..\..\..\Desktop\Gun\Gun_Texture\프타게_메인총기_Gun_Part_Normal.png"
+		}
+		UseMipMap: 0
+		Filename: "C:\Users\yeonkyu\Desktop\Gun\Gun_Texture\프타게_메인총기_Gun_Part_Normal.png"
+		RelativeFilename: "..\..\..\Desktop\Gun\Gun_Texture\프타게_메인총기_Gun_Part_Normal.png"
+	}
+	Video: 2430115901808, "Video::Map #104", "Clip" {
+		Type: "Clip"
+		Properties70:  {
+			P: "Path", "KString", "XRefUrl", "", "C:\Users\yeonkyu\Desktop\Gun\Gun_Texture\프타게_메인총기_Muzzle_BaseColor.png"
+			P: "RelPath", "KString", "XRefUrl", "", "..\..\..\Desktop\Gun\Gun_Texture\프타게_메인총기_Muzzle_BaseColor.png"
+		}
+		UseMipMap: 0
+		Filename: "C:\Users\yeonkyu\Desktop\Gun\Gun_Texture\프타게_메인총기_Muzzle_BaseColor.png"
+		RelativeFilename: "..\..\..\Desktop\Gun\Gun_Texture\프타게_메인총기_Muzzle_BaseColor.png"
+	}
+	Video: 2430115902768, "Video::Map #105", "Clip" {
+		Type: "Clip"
+		Properties70:  {
+			P: "Path", "KString", "XRefUrl", "", "C:\Users\yeonkyu\Desktop\Gun\Gun_Texture\프타게_메인총기_Muzzle_Metallic.png"
+			P: "RelPath", "KString", "XRefUrl", "", "..\..\..\Desktop\Gun\Gun_Texture\프타게_메인총기_Muzzle_Metallic.png"
+		}
+		UseMipMap: 0
+		Filename: "C:\Users\yeonkyu\Desktop\Gun\Gun_Texture\프타게_메인총기_Muzzle_Metallic.png"
+		RelativeFilename: "..\..\..\Desktop\Gun\Gun_Texture\프타게_메인총기_Muzzle_Metallic.png"
+	}
+	Video: 2430115885968, "Video::Map #106", "Clip" {
+		Type: "Clip"
+		Properties70:  {
+			P: "Path", "KString", "XRefUrl", "", "C:\Users\yeonkyu\Desktop\Gun\Gun_Texture\프타게_메인총기_Muzzle_Roughness.png"
+			P: "RelPath", "KString", "XRefUrl", "", "..\..\..\Desktop\Gun\Gun_Texture\프타게_메인총기_Muzzle_Roughness.png"
+		}
+		UseMipMap: 0
+		Filename: "C:\Users\yeonkyu\Desktop\Gun\Gun_Texture\프타게_메인총기_Muzzle_Roughness.png"
+		RelativeFilename: "..\..\..\Desktop\Gun\Gun_Texture\프타게_메인총기_Muzzle_Roughness.png"
+	}
+	Video: 2430115904688, "Video::Map #107", "Clip" {
+		Type: "Clip"
+		Properties70:  {
+			P: "Path", "KString", "XRefUrl", "", "C:\Users\yeonkyu\Desktop\Gun\Gun_Texture\프타게_메인총기_Muzzle_Normal.png"
+			P: "RelPath", "KString", "XRefUrl", "", "..\..\..\Desktop\Gun\Gun_Texture\프타게_메인총기_Muzzle_Normal.png"
+		}
+		UseMipMap: 0
+		Filename: "C:\Users\yeonkyu\Desktop\Gun\Gun_Texture\프타게_메인총기_Muzzle_Normal.png"
+		RelativeFilename: "..\..\..\Desktop\Gun\Gun_Texture\프타게_메인총기_Muzzle_Normal.png"
+	}
+	Video: 2430115905648, "Video::Map #92", "Clip" {
+		Type: "Clip"
+		Properties70:  {
+			P: "Path", "KString", "XRefUrl", "", "C:\Users\yeonkyu\Desktop\Gun\Gun_Texture\프타게_메인총기_Handle_1_BaseColor.png"
+			P: "RelPath", "KString", "XRefUrl", "", "..\..\..\Desktop\Gun\Gun_Texture\프타게_메인총기_Handle_1_BaseColor.png"
+		}
+		UseMipMap: 0
+		Filename: "C:\Users\yeonkyu\Desktop\Gun\Gun_Texture\프타게_메인총기_Handle_1_BaseColor.png"
+		RelativeFilename: "..\..\..\Desktop\Gun\Gun_Texture\프타게_메인총기_Handle_1_BaseColor.png"
+	}
+	Video: 2430115905168, "Video::Map #93", "Clip" {
+		Type: "Clip"
+		Properties70:  {
+			P: "Path", "KString", "XRefUrl", "", "C:\Users\yeonkyu\Desktop\Gun\Gun_Texture\프타게_메인총기_Handle_1_Metallic.png"
+			P: "RelPath", "KString", "XRefUrl", "", "..\..\..\Desktop\Gun\Gun_Texture\프타게_메인총기_Handle_1_Metallic.png"
+		}
+		UseMipMap: 0
+		Filename: "C:\Users\yeonkyu\Desktop\Gun\Gun_Texture\프타게_메인총기_Handle_1_Metallic.png"
+		RelativeFilename: "..\..\..\Desktop\Gun\Gun_Texture\프타게_메인총기_Handle_1_Metallic.png"
+	}
+	Video: 2430115896048, "Video::Map #94", "Clip" {
+		Type: "Clip"
+		Properties70:  {
+			P: "Path", "KString", "XRefUrl", "", "C:\Users\yeonkyu\Desktop\Gun\Gun_Texture\프타게_메인총기_Handle_1_Roughness.png"
+			P: "RelPath", "KString", "XRefUrl", "", "..\..\..\Desktop\Gun\Gun_Texture\프타게_메인총기_Handle_1_Roughness.png"
+		}
+		UseMipMap: 0
+		Filename: "C:\Users\yeonkyu\Desktop\Gun\Gun_Texture\프타게_메인총기_Handle_1_Roughness.png"
+		RelativeFilename: "..\..\..\Desktop\Gun\Gun_Texture\프타게_메인총기_Handle_1_Roughness.png"
+	}
+	Video: 2430115889808, "Video::Map #95", "Clip" {
+		Type: "Clip"
+		Properties70:  {
+			P: "Path", "KString", "XRefUrl", "", "C:\Users\yeonkyu\Desktop\Gun\Gun_Texture\프타게_메인총기_Handle_1_Normal.png"
+			P: "RelPath", "KString", "XRefUrl", "", "..\..\..\Desktop\Gun\Gun_Texture\프타게_메인총기_Handle_1_Normal.png"
+		}
+		UseMipMap: 0
+		Filename: "C:\Users\yeonkyu\Desktop\Gun\Gun_Texture\프타게_메인총기_Handle_1_Normal.png"
+		RelativeFilename: "..\..\..\Desktop\Gun\Gun_Texture\프타게_메인총기_Handle_1_Normal.png"
+	}
+	Video: 2430115890288, "Video::Map #100", "Clip" {
+		Type: "Clip"
+		Properties70:  {
+			P: "Path", "KString", "XRefUrl", "", "C:\Users\yeonkyu\Desktop\Gun\Gun_Texture\프타게_메인총기_Trigger_BaseColor.png"
+			P: "RelPath", "KString", "XRefUrl", "", "..\..\..\Desktop\Gun\Gun_Texture\프타게_메인총기_Trigger_BaseColor.png"
+		}
+		UseMipMap: 0
+		Filename: "C:\Users\yeonkyu\Desktop\Gun\Gun_Texture\프타게_메인총기_Trigger_BaseColor.png"
+		RelativeFilename: "..\..\..\Desktop\Gun\Gun_Texture\프타게_메인총기_Trigger_BaseColor.png"
+	}
+	Video: 2430115897488, "Video::Map #101", "Clip" {
+		Type: "Clip"
+		Properties70:  {
+			P: "Path", "KString", "XRefUrl", "", "C:\Users\yeonkyu\Desktop\Gun\Gun_Texture\프타게_메인총기_Trigger_Metallic.png"
+			P: "RelPath", "KString", "XRefUrl", "", "..\..\..\Desktop\Gun\Gun_Texture\프타게_메인총기_Trigger_Metallic.png"
+		}
+		UseMipMap: 0
+		Filename: "C:\Users\yeonkyu\Desktop\Gun\Gun_Texture\프타게_메인총기_Trigger_Metallic.png"
+		RelativeFilename: "..\..\..\Desktop\Gun\Gun_Texture\프타게_메인총기_Trigger_Metallic.png"
+	}
+	Video: 2430115906128, "Video::Map #102", "Clip" {
+		Type: "Clip"
+		Properties70:  {
+			P: "Path", "KString", "XRefUrl", "", "C:\Users\yeonkyu\Desktop\Gun\Gun_Texture\프타게_메인총기_Trigger_Roughness.png"
+			P: "RelPath", "KString", "XRefUrl", "", "..\..\..\Desktop\Gun\Gun_Texture\프타게_메인총기_Trigger_Roughness.png"
+		}
+		UseMipMap: 0
+		Filename: "C:\Users\yeonkyu\Desktop\Gun\Gun_Texture\프타게_메인총기_Trigger_Roughness.png"
+		RelativeFilename: "..\..\..\Desktop\Gun\Gun_Texture\프타게_메인총기_Trigger_Roughness.png"
+	}
+	Video: 2430115906608, "Video::Map #103", "Clip" {
+		Type: "Clip"
+		Properties70:  {
+			P: "Path", "KString", "XRefUrl", "", "C:\Users\yeonkyu\Desktop\Gun\Gun_Texture\프타게_메인총기_Trigger_Normal.png"
+			P: "RelPath", "KString", "XRefUrl", "", "..\..\..\Desktop\Gun\Gun_Texture\프타게_메인총기_Trigger_Normal.png"
+		}
+		UseMipMap: 0
+		Filename: "C:\Users\yeonkyu\Desktop\Gun\Gun_Texture\프타게_메인총기_Trigger_Normal.png"
+		RelativeFilename: "..\..\..\Desktop\Gun\Gun_Texture\프타게_메인총기_Trigger_Normal.png"
+	}
+	Video: 2430115886928, "Video::Map #112", "Clip" {
+		Type: "Clip"
+		Properties70:  {
+			P: "Path", "KString", "XRefUrl", "", "C:\Users\yeonkyu\Desktop\Gun\Gun_Texture\프타게_메인총기_Pipe_2_BaseColor.png"
+			P: "RelPath", "KString", "XRefUrl", "", "..\..\..\Desktop\Gun\Gun_Texture\프타게_메인총기_Pipe_2_BaseColor.png"
+		}
+		UseMipMap: 0
+		Filename: "C:\Users\yeonkyu\Desktop\Gun\Gun_Texture\프타게_메인총기_Pipe_2_BaseColor.png"
+		RelativeFilename: "..\..\..\Desktop\Gun\Gun_Texture\프타게_메인총기_Pipe_2_BaseColor.png"
+	}
+	Video: 2430115894608, "Video::Map #113", "Clip" {
+		Type: "Clip"
+		Properties70:  {
+			P: "Path", "KString", "XRefUrl", "", "C:\Users\yeonkyu\Desktop\Gun\Gun_Texture\프타게_메인총기_Pipe_2_Metallic.png"
+			P: "RelPath", "KString", "XRefUrl", "", "..\..\..\Desktop\Gun\Gun_Texture\프타게_메인총기_Pipe_2_Metallic.png"
+		}
+		UseMipMap: 0
+		Filename: "C:\Users\yeonkyu\Desktop\Gun\Gun_Texture\프타게_메인총기_Pipe_2_Metallic.png"
+		RelativeFilename: "..\..\..\Desktop\Gun\Gun_Texture\프타게_메인총기_Pipe_2_Metallic.png"
+	}
+	Video: 2430115880208, "Video::Map #114", "Clip" {
+		Type: "Clip"
+		Properties70:  {
+			P: "Path", "KString", "XRefUrl", "", "C:\Users\yeonkyu\Desktop\Gun\Gun_Texture\프타게_메인총기_Pipe_2_Roughness.png"
+			P: "RelPath", "KString", "XRefUrl", "", "..\..\..\Desktop\Gun\Gun_Texture\프타게_메인총기_Pipe_2_Roughness.png"
+		}
+		UseMipMap: 0
+		Filename: "C:\Users\yeonkyu\Desktop\Gun\Gun_Texture\프타게_메인총기_Pipe_2_Roughness.png"
+		RelativeFilename: "..\..\..\Desktop\Gun\Gun_Texture\프타게_메인총기_Pipe_2_Roughness.png"
+	}
+	Video: 2430115907088, "Video::Map #115", "Clip" {
+		Type: "Clip"
+		Properties70:  {
+			P: "Path", "KString", "XRefUrl", "", "C:\Users\yeonkyu\Desktop\Gun\Gun_Texture\프타게_메인총기_Pipe_2_Normal.png"
+			P: "RelPath", "KString", "XRefUrl", "", "..\..\..\Desktop\Gun\Gun_Texture\프타게_메인총기_Pipe_2_Normal.png"
+		}
+		UseMipMap: 0
+		Filename: "C:\Users\yeonkyu\Desktop\Gun\Gun_Texture\프타게_메인총기_Pipe_2_Normal.png"
+		RelativeFilename: "..\..\..\Desktop\Gun\Gun_Texture\프타게_메인총기_Pipe_2_Normal.png"
+	}
+	Video: 2430115892688, "Video::Map #108", "Clip" {
+		Type: "Clip"
+		Properties70:  {
+			P: "Path", "KString", "XRefUrl", "", "C:\Users\yeonkyu\Desktop\Gun\Gun_Texture\프타게_메인총기_Pipe_1_BaseColor.png"
+			P: "RelPath", "KString", "XRefUrl", "", "..\..\..\Desktop\Gun\Gun_Texture\프타게_메인총기_Pipe_1_BaseColor.png"
+		}
+		UseMipMap: 0
+		Filename: "C:\Users\yeonkyu\Desktop\Gun\Gun_Texture\프타게_메인총기_Pipe_1_BaseColor.png"
+		RelativeFilename: "..\..\..\Desktop\Gun\Gun_Texture\프타게_메인총기_Pipe_1_BaseColor.png"
+	}
+	Video: 2430115893168, "Video::Map #109", "Clip" {
+		Type: "Clip"
+		Properties70:  {
+			P: "Path", "KString", "XRefUrl", "", "C:\Users\yeonkyu\Desktop\Gun\Gun_Texture\프타게_메인총기_Pipe_1_Metallic.png"
+			P: "RelPath", "KString", "XRefUrl", "", "..\..\..\Desktop\Gun\Gun_Texture\프타게_메인총기_Pipe_1_Metallic.png"
+		}
+		UseMipMap: 0
+		Filename: "C:\Users\yeonkyu\Desktop\Gun\Gun_Texture\프타게_메인총기_Pipe_1_Metallic.png"
+		RelativeFilename: "..\..\..\Desktop\Gun\Gun_Texture\프타게_메인총기_Pipe_1_Metallic.png"
+	}
+	Video: 2430115895568, "Video::Map #110", "Clip" {
+		Type: "Clip"
+		Properties70:  {
+			P: "Path", "KString", "XRefUrl", "", "C:\Users\yeonkyu\Desktop\Gun\Gun_Texture\프타게_메인총기_Pipe_1_Roughness.png"
+			P: "RelPath", "KString", "XRefUrl", "", "..\..\..\Desktop\Gun\Gun_Texture\프타게_메인총기_Pipe_1_Roughness.png"
+		}
+		UseMipMap: 0
+		Filename: "C:\Users\yeonkyu\Desktop\Gun\Gun_Texture\프타게_메인총기_Pipe_1_Roughness.png"
+		RelativeFilename: "..\..\..\Desktop\Gun\Gun_Texture\프타게_메인총기_Pipe_1_Roughness.png"
+	}
+	Video: 2430115897008, "Video::Map #111", "Clip" {
+		Type: "Clip"
+		Properties70:  {
+			P: "Path", "KString", "XRefUrl", "", "C:\Users\yeonkyu\Desktop\Gun\Gun_Texture\프타게_메인총기_Pipe_1_Normal.png"
+			P: "RelPath", "KString", "XRefUrl", "", "..\..\..\Desktop\Gun\Gun_Texture\프타게_메인총기_Pipe_1_Normal.png"
+		}
+		UseMipMap: 0
+		Filename: "C:\Users\yeonkyu\Desktop\Gun\Gun_Texture\프타게_메인총기_Pipe_1_Normal.png"
+		RelativeFilename: "..\..\..\Desktop\Gun\Gun_Texture\프타게_메인총기_Pipe_1_Normal.png"
+	}
+	Video: 2430115898928, "Video::Map #78", "Clip" {
+		Type: "Clip"
+		Properties70:  {
+			P: "Path", "KString", "XRefUrl", "", "C:\Users\yeonkyu\Desktop\Gun\Gun_Texture\프타게_메인총기_Front_Handle_2_BaseColor.png"
+			P: "RelPath", "KString", "XRefUrl", "", "..\..\..\Desktop\Gun\Gun_Texture\프타게_메인총기_Front_Handle_2_BaseColor.png"
+		}
+		UseMipMap: 0
+		Filename: "C:\Users\yeonkyu\Desktop\Gun\Gun_Texture\프타게_메인총기_Front_Handle_2_BaseColor.png"
+		RelativeFilename: "..\..\..\Desktop\Gun\Gun_Texture\프타게_메인총기_Front_Handle_2_BaseColor.png"
+	}
+	Video: 2430115880688, "Video::Map #79", "Clip" {
+		Type: "Clip"
+		Properties70:  {
+			P: "Path", "KString", "XRefUrl", "", "C:\Users\yeonkyu\Desktop\Gun\Gun_Texture\프타게_메인총기_Front_Handle_2_Metallic.png"
+			P: "RelPath", "KString", "XRefUrl", "", "..\..\..\Desktop\Gun\Gun_Texture\프타게_메인총기_Front_Handle_2_Metallic.png"
+		}
+		UseMipMap: 0
+		Filename: "C:\Users\yeonkyu\Desktop\Gun\Gun_Texture\프타게_메인총기_Front_Handle_2_Metallic.png"
+		RelativeFilename: "..\..\..\Desktop\Gun\Gun_Texture\프타게_메인총기_Front_Handle_2_Metallic.png"
+	}
+	Video: 2430115909488, "Video::Map #80", "Clip" {
+		Type: "Clip"
+		Properties70:  {
+			P: "Path", "KString", "XRefUrl", "", "C:\Users\yeonkyu\Desktop\Gun\Gun_Texture\프타게_메인총기_Front_Handle_2_Roughness.png"
+			P: "RelPath", "KString", "XRefUrl", "", "..\..\..\Desktop\Gun\Gun_Texture\프타게_메인총기_Front_Handle_2_Roughness.png"
+		}
+		UseMipMap: 0
+		Filename: "C:\Users\yeonkyu\Desktop\Gun\Gun_Texture\프타게_메인총기_Front_Handle_2_Roughness.png"
+		RelativeFilename: "..\..\..\Desktop\Gun\Gun_Texture\프타게_메인총기_Front_Handle_2_Roughness.png"
+	}
+	Video: 2430115911408, "Video::Map #81", "Clip" {
+		Type: "Clip"
+		Properties70:  {
+			P: "Path", "KString", "XRefUrl", "", "C:\Users\yeonkyu\Desktop\Gun\Gun_Texture\프타게_메인총기_Handle_2_Normal.png"
+			P: "RelPath", "KString", "XRefUrl", "", "..\..\..\Desktop\Gun\Gun_Texture\프타게_메인총기_Handle_2_Normal.png"
+		}
+		UseMipMap: 0
+		Filename: "C:\Users\yeonkyu\Desktop\Gun\Gun_Texture\프타게_메인총기_Handle_2_Normal.png"
+		RelativeFilename: "..\..\..\Desktop\Gun\Gun_Texture\프타게_메인총기_Handle_2_Normal.png"
+	}
+	Video: 2430115910448, "Video::Map #73", "Clip" {
+		Type: "Clip"
+		Properties70:  {
+			P: "Path", "KString", "XRefUrl", "", "C:\Users\yeonkyu\Desktop\Gun\Gun_Texture\프타게_메인총기_Front_Handle_1_BaseColor.png"
+			P: "RelPath", "KString", "XRefUrl", "", "..\..\..\Desktop\Gun\Gun_Texture\프타게_메인총기_Front_Handle_1_BaseColor.png"
+		}
+		UseMipMap: 0
+		Filename: "C:\Users\yeonkyu\Desktop\Gun\Gun_Texture\프타게_메인총기_Front_Handle_1_BaseColor.png"
+		RelativeFilename: "..\..\..\Desktop\Gun\Gun_Texture\프타게_메인총기_Front_Handle_1_BaseColor.png"
+	}
+	Video: 2430115911888, "Video::Map #74", "Clip" {
+		Type: "Clip"
+		Properties70:  {
+			P: "Path", "KString", "XRefUrl", "", "C:\Users\yeonkyu\Desktop\Gun\Gun_Texture\프타게_메인총기_Front_Handle_1_Metallic.png"
+			P: "RelPath", "KString", "XRefUrl", "", "..\..\..\Desktop\Gun\Gun_Texture\프타게_메인총기_Front_Handle_1_Metallic.png"
+		}
+		UseMipMap: 0
+		Filename: "C:\Users\yeonkyu\Desktop\Gun\Gun_Texture\프타게_메인총기_Front_Handle_1_Metallic.png"
+		RelativeFilename: "..\..\..\Desktop\Gun\Gun_Texture\프타게_메인총기_Front_Handle_1_Metallic.png"
+	}
+	Video: 2430115912368, "Video::Map #76", "Clip" {
+		Type: "Clip"
+		Properties70:  {
+			P: "Path", "KString", "XRefUrl", "", "C:\Users\yeonkyu\Desktop\Gun\Gun_Texture\프타게_메인총기_Front_Handle_1_Roughness.png"
+			P: "RelPath", "KString", "XRefUrl", "", "..\..\..\Desktop\Gun\Gun_Texture\프타게_메인총기_Front_Handle_1_Roughness.png"
+		}
+		UseMipMap: 0
+		Filename: "C:\Users\yeonkyu\Desktop\Gun\Gun_Texture\프타게_메인총기_Front_Handle_1_Roughness.png"
+		RelativeFilename: "..\..\..\Desktop\Gun\Gun_Texture\프타게_메인총기_Front_Handle_1_Roughness.png"
+	}
+	Video: 2430115909968, "Video::Map #77", "Clip" {
+		Type: "Clip"
+		Properties70:  {
+			P: "Path", "KString", "XRefUrl", "", "C:\Users\yeonkyu\Desktop\Gun\Gun_Texture\프타게_메인총기_Front_Handle_1_Normal.png"
+			P: "RelPath", "KString", "XRefUrl", "", "..\..\..\Desktop\Gun\Gun_Texture\프타게_메인총기_Front_Handle_1_Normal.png"
+		}
+		UseMipMap: 0
+		Filename: "C:\Users\yeonkyu\Desktop\Gun\Gun_Texture\프타게_메인총기_Front_Handle_1_Normal.png"
+		RelativeFilename: "..\..\..\Desktop\Gun\Gun_Texture\프타게_메인총기_Front_Handle_1_Normal.png"
+	}
+	Video: 2430115912848, "Video::Map #87", "Clip" {
+		Type: "Clip"
+		Properties70:  {
+			P: "Path", "KString", "XRefUrl", "", "C:\Users\yeonkyu\Desktop\Gun\Gun_Texture\프타게_메인총기_Shell_BaseColor.png"
+			P: "RelPath", "KString", "XRefUrl", "", "..\..\..\Desktop\Gun\Gun_Texture\프타게_메인총기_Shell_BaseColor.png"
+		}
+		UseMipMap: 0
+		Filename: "C:\Users\yeonkyu\Desktop\Gun\Gun_Texture\프타게_메인총기_Shell_BaseColor.png"
+		RelativeFilename: "..\..\..\Desktop\Gun\Gun_Texture\프타게_메인총기_Shell_BaseColor.png"
+	}
+	Video: 2430115910928, "Video::Map #88", "Clip" {
+		Type: "Clip"
+		Properties70:  {
+			P: "Path", "KString", "XRefUrl", "", "C:\Users\yeonkyu\Desktop\Gun\Gun_Texture\프타게_메인총기_Shell_Metallic.png"
+			P: "RelPath", "KString", "XRefUrl", "", "..\..\..\Desktop\Gun\Gun_Texture\프타게_메인총기_Shell_Metallic.png"
+		}
+		UseMipMap: 0
+		Filename: "C:\Users\yeonkyu\Desktop\Gun\Gun_Texture\프타게_메인총기_Shell_Metallic.png"
+		RelativeFilename: "..\..\..\Desktop\Gun\Gun_Texture\프타게_메인총기_Shell_Metallic.png"
+	}
+	Video: 2428062585056, "Video::Map #89", "Clip" {
+		Type: "Clip"
+		Properties70:  {
+			P: "Path", "KString", "XRefUrl", "", "C:\Users\yeonkyu\Desktop\Gun\Gun_Texture\프타게_메인총기_Shell_Roughness.png"
+			P: "RelPath", "KString", "XRefUrl", "", "..\..\..\Desktop\Gun\Gun_Texture\프타게_메인총기_Shell_Roughness.png"
+		}
+		UseMipMap: 0
+		Filename: "C:\Users\yeonkyu\Desktop\Gun\Gun_Texture\프타게_메인총기_Shell_Roughness.png"
+		RelativeFilename: "..\..\..\Desktop\Gun\Gun_Texture\프타게_메인총기_Shell_Roughness.png"
+	}
+	Video: 2427591179680, "Video::Map #90", "Clip" {
+		Type: "Clip"
+		Properties70:  {
+			P: "Path", "KString", "XRefUrl", "", "C:\Users\yeonkyu\Desktop\Gun\Gun_Texture\프타게_메인총기_Shell_Normal.png"
+			P: "RelPath", "KString", "XRefUrl", "", "..\..\..\Desktop\Gun\Gun_Texture\프타게_메인총기_Shell_Normal.png"
+		}
+		UseMipMap: 0
+		Filename: "C:\Users\yeonkyu\Desktop\Gun\Gun_Texture\프타게_메인총기_Shell_Normal.png"
+		RelativeFilename: "..\..\..\Desktop\Gun\Gun_Texture\프타게_메인총기_Shell_Normal.png"
+	}
+	Texture: 2430115852848, "Texture::Map #96", "" {
+		Type: "TextureVideoClip"
+		Version: 202
+		TextureName: "Texture::Map #96"
+		Properties70:  {
+			P: "UVSet", "KString", "", "", "UVChannel_1"
+			P: "UseMaterial", "bool", "", "",1
+		}
+		Media: "Video::Map #96"
+		FileName: "C:\Users\yeonkyu\Desktop\Gun\Gun_Texture\프타게_메인총기_Magazine_BaseColor.png"
+		RelativeFilename: "..\..\..\Desktop\Gun\Gun_Texture\프타게_메인총기_Magazine_BaseColor.png"
+		ModelUVTranslation: 0,0
+		ModelUVScaling: 1,1
+		Texture_Alpha_Source: "None"
+		Cropping: 0,0,0,0
+	}
+	Texture: 2430115857168, "Texture::Map #97", "" {
+		Type: "TextureVideoClip"
+		Version: 202
+		TextureName: "Texture::Map #97"
+		Properties70:  {
+			P: "UVSet", "KString", "", "", "UVChannel_1"
+			P: "UseMaterial", "bool", "", "",1
+		}
+		Media: "Video::Map #97"
+		FileName: "C:\Users\yeonkyu\Desktop\Gun\Gun_Texture\프타게_메인총기_Magazine_Metallic.png"
+		RelativeFilename: "..\..\..\Desktop\Gun\Gun_Texture\프타게_메인총기_Magazine_Metallic.png"
+		ModelUVTranslation: 0,0
+		ModelUVScaling: 1,1
+		Texture_Alpha_Source: "None"
+		Cropping: 0,0,0,0
+	}
+	Texture: 2430115852368, "Texture::Map #98", "" {
+		Type: "TextureVideoClip"
+		Version: 202
+		TextureName: "Texture::Map #98"
+		Properties70:  {
+			P: "UVSet", "KString", "", "", "UVChannel_1"
+			P: "UseMaterial", "bool", "", "",1
+		}
+		Media: "Video::Map #98"
+		FileName: "C:\Users\yeonkyu\Desktop\Gun\Gun_Texture\프타게_메인총기_Magazine_Roughness.png"
+		RelativeFilename: "..\..\..\Desktop\Gun\Gun_Texture\프타게_메인총기_Magazine_Roughness.png"
+		ModelUVTranslation: 0,0
+		ModelUVScaling: 1,1
+		Texture_Alpha_Source: "None"
+		Cropping: 0,0,0,0
+	}
+	Texture: 2430115853808, "Texture::Map #99", "" {
+		Type: "TextureVideoClip"
+		Version: 202
+		TextureName: "Texture::Map #99"
+		Properties70:  {
+			P: "UVSet", "KString", "", "", "UVChannel_1"
+			P: "UseMaterial", "bool", "", "",1
+		}
+		Media: "Video::Map #99"
+		FileName: "C:\Users\yeonkyu\Desktop\Gun\Gun_Texture\프타게_메인총기_Magazine_Normal.png"
+		RelativeFilename: "..\..\..\Desktop\Gun\Gun_Texture\프타게_메인총기_Magazine_Normal.png"
+		ModelUVTranslation: 0,0
+		ModelUVScaling: 1,1
+		Texture_Alpha_Source: "None"
+		Cropping: 0,0,0,0
+	}
+	Texture: 2430115874448, "Texture::Map #116", "" {
+		Type: "TextureVideoClip"
+		Version: 202
+		TextureName: "Texture::Map #116"
+		Properties70:  {
+			P: "UVSet", "KString", "", "", "UVChannel_1"
+			P: "UseMaterial", "bool", "", "",1
+		}
+		Media: "Video::Map #116"
+		FileName: "C:\Users\yeonkyu\Desktop\Gun\Gun_Texture\프타게_메인총기_Handle_2_BaseColor.png"
+		RelativeFilename: "..\..\..\Desktop\Gun\Gun_Texture\프타게_메인총기_Handle_2_BaseColor.png"
+		ModelUVTranslation: 0,0
+		ModelUVScaling: 1,1
+		Texture_Alpha_Source: "None"
+		Cropping: 0,0,0,0
+	}
+	Texture: 2430115873008, "Texture::Map #117", "" {
+		Type: "TextureVideoClip"
+		Version: 202
+		TextureName: "Texture::Map #117"
+		Properties70:  {
+			P: "UVSet", "KString", "", "", "UVChannel_1"
+			P: "UseMaterial", "bool", "", "",1
+		}
+		Media: "Video::Map #117"
+		FileName: "C:\Users\yeonkyu\Desktop\Gun\Gun_Texture\프타게_메인총기_Handle_2_Metallic.png"
+		RelativeFilename: "..\..\..\Desktop\Gun\Gun_Texture\프타게_메인총기_Handle_2_Metallic.png"
+		ModelUVTranslation: 0,0
+		ModelUVScaling: 1,1
+		Texture_Alpha_Source: "None"
+		Cropping: 0,0,0,0
+	}
+	Texture: 2430115851408, "Texture::Map #118", "" {
+		Type: "TextureVideoClip"
+		Version: 202
+		TextureName: "Texture::Map #118"
+		Properties70:  {
+			P: "UVSet", "KString", "", "", "UVChannel_1"
+			P: "UseMaterial", "bool", "", "",1
+		}
+		Media: "Video::Map #118"
+		FileName: "C:\Users\yeonkyu\Desktop\Gun\Gun_Texture\프타게_메인총기_Handle_2_Roughness.png"
+		RelativeFilename: "..\..\..\Desktop\Gun\Gun_Texture\프타게_메인총기_Handle_2_Roughness.png"
+		ModelUVTranslation: 0,0
+		ModelUVScaling: 1,1
+		Texture_Alpha_Source: "None"
+		Cropping: 0,0,0,0
+	}
+	Texture: 2430115854768, "Texture::Map #119", "" {
+		Type: "TextureVideoClip"
+		Version: 202
+		TextureName: "Texture::Map #119"
+		Properties70:  {
+			P: "UVSet", "KString", "", "", "UVChannel_1"
+			P: "UseMaterial", "bool", "", "",1
+		}
+		Media: "Video::Map #119"
+		FileName: "C:\Users\yeonkyu\Desktop\Gun\Gun_Texture\프타게_메인총기_Handle_2_Normal.png"
+		RelativeFilename: "..\..\..\Desktop\Gun\Gun_Texture\프타게_메인총기_Handle_2_Normal.png"
+		ModelUVTranslation: 0,0
+		ModelUVScaling: 1,1
+		Texture_Alpha_Source: "None"
+		Cropping: 0,0,0,0
+	}
+	Texture: 2430115874928, "Texture::Map #60", "" {
+		Type: "TextureVideoClip"
+		Version: 202
+		TextureName: "Texture::Map #60"
+		Properties70:  {
+			P: "UVSet", "KString", "", "", "UVChannel_1"
+			P: "UseMaterial", "bool", "", "",1
+		}
+		Media: "Video::Map #60"
+		FileName: "C:\Users\yeonkyu\Desktop\Gun\Gun_Texture\프타게_메인총기_Engine_1_BaseColor.png"
+		RelativeFilename: "..\..\..\Desktop\Gun\Gun_Texture\프타게_메인총기_Engine_1_BaseColor.png"
+		ModelUVTranslation: 0,0
+		ModelUVScaling: 1,1
+		Texture_Alpha_Source: "None"
+		Cropping: 0,0,0,0
+	}
+	Texture: 2430115850448, "Texture::Map #61", "" {
+		Type: "TextureVideoClip"
+		Version: 202
+		TextureName: "Texture::Map #61"
+		Properties70:  {
+			P: "UVSet", "KString", "", "", "UVChannel_1"
+			P: "UseMaterial", "bool", "", "",1
+		}
+		Media: "Video::Map #61"
+		FileName: "C:\Users\yeonkyu\Desktop\Gun\Gun_Texture\프타게_메인총기_Engine_1_Metallic.png"
+		RelativeFilename: "..\..\..\Desktop\Gun\Gun_Texture\프타게_메인총기_Engine_1_Metallic.png"
+		ModelUVTranslation: 0,0
+		ModelUVScaling: 1,1
+		Texture_Alpha_Source: "None"
+		Cropping: 0,0,0,0
+	}
+	Texture: 2430115865808, "Texture::Map #62", "" {
+		Type: "TextureVideoClip"
+		Version: 202
+		TextureName: "Texture::Map #62"
+		Properties70:  {
+			P: "UVSet", "KString", "", "", "UVChannel_1"
+			P: "UseMaterial", "bool", "", "",1
+		}
+		Media: "Video::Map #62"
+		FileName: "C:\Users\yeonkyu\Desktop\Gun\Gun_Texture\프타게_메인총기_Engine_1_Roughness.png"
+		RelativeFilename: "..\..\..\Desktop\Gun\Gun_Texture\프타게_메인총기_Engine_1_Roughness.png"
+		ModelUVTranslation: 0,0
+		ModelUVScaling: 1,1
+		Texture_Alpha_Source: "None"
+		Cropping: 0,0,0,0
+	}
+	Texture: 2430115863408, "Texture::Map #63", "" {
+		Type: "TextureVideoClip"
+		Version: 202
+		TextureName: "Texture::Map #63"
+		Properties70:  {
+			P: "UVSet", "KString", "", "", "UVChannel_1"
+			P: "UseMaterial", "bool", "", "",1
+		}
+		Media: "Video::Map #63"
+		FileName: "C:\Users\yeonkyu\Desktop\Gun\Gun_Texture\프타게_메인총기_Engine_1_Normal.png"
+		RelativeFilename: "..\..\..\Desktop\Gun\Gun_Texture\프타게_메인총기_Engine_1_Normal.png"
+		ModelUVTranslation: 0,0
+		ModelUVScaling: 1,1
+		Texture_Alpha_Source: "None"
+		Cropping: 0,0,0,0
+	}
+	Texture: 2430115866768, "Texture::Map #69", "" {
+		Type: "TextureVideoClip"
+		Version: 202
+		TextureName: "Texture::Map #69"
+		Properties70:  {
+			P: "UVSet", "KString", "", "", "UVChannel_1"
+			P: "UseMaterial", "bool", "", "",1
+		}
+		Media: "Video::Map #69"
+		FileName: "C:\Users\yeonkyu\Desktop\Gun\Gun_Texture\프타게_메인총기_Engine_3_BaseColor.png"
+		RelativeFilename: "..\..\..\Desktop\Gun\Gun_Texture\프타게_메인총기_Engine_3_BaseColor.png"
+		ModelUVTranslation: 0,0
+		ModelUVScaling: 1,1
+		Texture_Alpha_Source: "None"
+		Cropping: 0,0,0,0
+	}
+	Texture: 2430115848528, "Texture::Map #70", "" {
+		Type: "TextureVideoClip"
+		Version: 202
+		TextureName: "Texture::Map #70"
+		Properties70:  {
+			P: "UVSet", "KString", "", "", "UVChannel_1"
+			P: "UseMaterial", "bool", "", "",1
+		}
+		Media: "Video::Map #70"
+		FileName: "C:\Users\yeonkyu\Desktop\Gun\Gun_Texture\프타게_메인총기_Engine_3_Metallic.png"
+		RelativeFilename: "..\..\..\Desktop\Gun\Gun_Texture\프타게_메인총기_Engine_3_Metallic.png"
+		ModelUVTranslation: 0,0
+		ModelUVScaling: 1,1
+		Texture_Alpha_Source: "None"
+		Cropping: 0,0,0,0
+	}
+	Texture: 2430115862928, "Texture::Map #71", "" {
+		Type: "TextureVideoClip"
+		Version: 202
+		TextureName: "Texture::Map #71"
+		Properties70:  {
+			P: "UVSet", "KString", "", "", "UVChannel_1"
+			P: "UseMaterial", "bool", "", "",1
+		}
+		Media: "Video::Map #71"
+		FileName: "C:\Users\yeonkyu\Desktop\Gun\Gun_Texture\프타게_메인총기_Engine_3_Roughness.png"
+		RelativeFilename: "..\..\..\Desktop\Gun\Gun_Texture\프타게_메인총기_Engine_3_Roughness.png"
+		ModelUVTranslation: 0,0
+		ModelUVScaling: 1,1
+		Texture_Alpha_Source: "None"
+		Cropping: 0,0,0,0
+	}
+	Texture: 2430115849008, "Texture::Map #72", "" {
+		Type: "TextureVideoClip"
+		Version: 202
+		TextureName: "Texture::Map #72"
+		Properties70:  {
+			P: "UVSet", "KString", "", "", "UVChannel_1"
+			P: "UseMaterial", "bool", "", "",1
+		}
+		Media: "Video::Map #72"
+		FileName: "C:\Users\yeonkyu\Desktop\Gun\Gun_Texture\프타게_메인총기_Engine_3_Normal.png"
+		RelativeFilename: "..\..\..\Desktop\Gun\Gun_Texture\프타게_메인총기_Engine_3_Normal.png"
+		ModelUVTranslation: 0,0
+		ModelUVScaling: 1,1
+		Texture_Alpha_Source: "None"
+		Cropping: 0,0,0,0
+	}
+	Texture: 2430115872528, "Texture::Map #64", "" {
+		Type: "TextureVideoClip"
+		Version: 202
+		TextureName: "Texture::Map #64"
+		Properties70:  {
+			P: "UVSet", "KString", "", "", "UVChannel_1"
+			P: "UseMaterial", "bool", "", "",1
+		}
+		Media: "Video::Map #64"
+		FileName: "C:\Users\yeonkyu\Desktop\Gun\Gun_Texture\프타게_메인총기_Engine_2_BaseColor.png"
+		RelativeFilename: "..\..\..\Desktop\Gun\Gun_Texture\프타게_메인총기_Engine_2_BaseColor.png"
+		ModelUVTranslation: 0,0
+		ModelUVScaling: 1,1
+		Texture_Alpha_Source: "None"
+		Cropping: 0,0,0,0
+	}
+	Texture: 2430115869648, "Texture::Map #65", "" {
+		Type: "TextureVideoClip"
+		Version: 202
+		TextureName: "Texture::Map #65"
+		Properties70:  {
+			P: "UVSet", "KString", "", "", "UVChannel_1"
+			P: "UseMaterial", "bool", "", "",1
+		}
+		Media: "Video::Map #65"
+		FileName: "C:\Users\yeonkyu\Desktop\Gun\Gun_Texture\프타게_메인총기_Engine_2_Metallic.png"
+		RelativeFilename: "..\..\..\Desktop\Gun\Gun_Texture\프타게_메인총기_Engine_2_Metallic.png"
+		ModelUVTranslation: 0,0
+		ModelUVScaling: 1,1
+		Texture_Alpha_Source: "None"
+		Cropping: 0,0,0,0
+	}
+	Texture: 2430115855248, "Texture::Map #66", "" {
+		Type: "TextureVideoClip"
+		Version: 202
+		TextureName: "Texture::Map #66"
+		Properties70:  {
+			P: "UVSet", "KString", "", "", "UVChannel_1"
+			P: "UseMaterial", "bool", "", "",1
+		}
+		Media: "Video::Map #66"
+		FileName: "C:\Users\yeonkyu\Desktop\Gun\Gun_Texture\프타게_메인총기_Engine_2_Roughness.png"
+		RelativeFilename: "..\..\..\Desktop\Gun\Gun_Texture\프타게_메인총기_Engine_2_Roughness.png"
+		ModelUVTranslation: 0,0
+		ModelUVScaling: 1,1
+		Texture_Alpha_Source: "None"
+		Cropping: 0,0,0,0
+	}
+	Texture: 2430115867248, "Texture::Map #67", "" {
+		Type: "TextureVideoClip"
+		Version: 202
+		TextureName: "Texture::Map #67"
+		Properties70:  {
+			P: "UVSet", "KString", "", "", "UVChannel_1"
+			P: "UseMaterial", "bool", "", "",1
+		}
+		Media: "Video::Map #67"
+		FileName: "C:\Users\yeonkyu\Desktop\Gun\Gun_Texture\프타게_메인총기_Engine_2_Normal.png"
+		RelativeFilename: "..\..\..\Desktop\Gun\Gun_Texture\프타게_메인총기_Engine_2_Normal.png"
+		ModelUVTranslation: 0,0
+		ModelUVScaling: 1,1
+		Texture_Alpha_Source: "None"
+		Cropping: 0,0,0,0
+	}
+	Texture: 2430115876848, "Texture::Map #82", "" {
+		Type: "TextureVideoClip"
+		Version: 202
+		TextureName: "Texture::Map #82"
+		Properties70:  {
+			P: "UVSet", "KString", "", "", "UVChannel_1"
+			P: "UseMaterial", "bool", "", "",1
+		}
+		Media: "Video::Map #82"
+		FileName: "C:\Users\yeonkyu\Desktop\Gun\Gun_Texture\프타게_메인총기_Gun_Part_BaseColor.png"
+		RelativeFilename: "..\..\..\Desktop\Gun\Gun_Texture\프타게_메인총기_Gun_Part_BaseColor.png"
+		ModelUVTranslation: 0,0
+		ModelUVScaling: 1,1
+		Texture_Alpha_Source: "None"
+		Cropping: 0,0,0,0
+	}
+	Texture: 2430115877808, "Texture::Map #83", "" {
+		Type: "TextureVideoClip"
+		Version: 202
+		TextureName: "Texture::Map #83"
+		Properties70:  {
+			P: "UVSet", "KString", "", "", "UVChannel_1"
+			P: "UseMaterial", "bool", "", "",1
+		}
+		Media: "Video::Map #83"
+		FileName: "C:\Users\yeonkyu\Desktop\Gun\Gun_Texture\프타게_메인총기_Gun_Part_Metallic.png"
+		RelativeFilename: "..\..\..\Desktop\Gun\Gun_Texture\프타게_메인총기_Gun_Part_Metallic.png"
+		ModelUVTranslation: 0,0
+		ModelUVScaling: 1,1
+		Texture_Alpha_Source: "None"
+		Cropping: 0,0,0,0
+	}
+	Texture: 2430115849488, "Texture::Map #84", "" {
+		Type: "TextureVideoClip"
+		Version: 202
+		TextureName: "Texture::Map #84"
+		Properties70:  {
+			P: "UVSet", "KString", "", "", "UVChannel_1"
+			P: "UseMaterial", "bool", "", "",1
+		}
+		Media: "Video::Map #84"
+		FileName: "C:\Users\yeonkyu\Desktop\Gun\Gun_Texture\프타게_메인총기_Gun_Part_Roughness.png"
+		RelativeFilename: "..\..\..\Desktop\Gun\Gun_Texture\프타게_메인총기_Gun_Part_Roughness.png"
+		ModelUVTranslation: 0,0
+		ModelUVScaling: 1,1
+		Texture_Alpha_Source: "None"
+		Cropping: 0,0,0,0
+	}
+	Texture: 2430115870128, "Texture::Map #85", "" {
+		Type: "TextureVideoClip"
+		Version: 202
+		TextureName: "Texture::Map #85"
+		Properties70:  {
+			P: "UVSet", "KString", "", "", "UVChannel_1"
+			P: "UseMaterial", "bool", "", "",1
+		}
+		Media: "Video::Map #85"
+		FileName: "C:\Users\yeonkyu\Desktop\Gun\Gun_Texture\프타게_메인총기_Gun_Part_Normal.png"
+		RelativeFilename: "..\..\..\Desktop\Gun\Gun_Texture\프타게_메인총기_Gun_Part_Normal.png"
+		ModelUVTranslation: 0,0
+		ModelUVScaling: 1,1
+		Texture_Alpha_Source: "None"
+		Cropping: 0,0,0,0
+	}
+	Texture: 2430115863888, "Texture::Map #104", "" {
+		Type: "TextureVideoClip"
+		Version: 202
+		TextureName: "Texture::Map #104"
+		Properties70:  {
+			P: "UVSet", "KString", "", "", "UVChannel_1"
+			P: "UseMaterial", "bool", "", "",1
+		}
+		Media: "Video::Map #104"
+		FileName: "C:\Users\yeonkyu\Desktop\Gun\Gun_Texture\프타게_메인총기_Muzzle_BaseColor.png"
+		RelativeFilename: "..\..\..\Desktop\Gun\Gun_Texture\프타게_메인총기_Muzzle_BaseColor.png"
+		ModelUVTranslation: 0,0
+		ModelUVScaling: 1,1
+		Texture_Alpha_Source: "None"
+		Cropping: 0,0,0,0
+	}
+	Texture: 2430115864368, "Texture::Map #105", "" {
+		Type: "TextureVideoClip"
+		Version: 202
+		TextureName: "Texture::Map #105"
+		Properties70:  {
+			P: "UVSet", "KString", "", "", "UVChannel_1"
+			P: "UseMaterial", "bool", "", "",1
+		}
+		Media: "Video::Map #105"
+		FileName: "C:\Users\yeonkyu\Desktop\Gun\Gun_Texture\프타게_메인총기_Muzzle_Metallic.png"
+		RelativeFilename: "..\..\..\Desktop\Gun\Gun_Texture\프타게_메인총기_Muzzle_Metallic.png"
+		ModelUVTranslation: 0,0
+		ModelUVScaling: 1,1
+		Texture_Alpha_Source: "None"
+		Cropping: 0,0,0,0
+	}
+	Texture: 2430115855728, "Texture::Map #106", "" {
+		Type: "TextureVideoClip"
+		Version: 202
+		TextureName: "Texture::Map #106"
+		Properties70:  {
+			P: "UVSet", "KString", "", "", "UVChannel_1"
+			P: "UseMaterial", "bool", "", "",1
+		}
+		Media: "Video::Map #106"
+		FileName: "C:\Users\yeonkyu\Desktop\Gun\Gun_Texture\프타게_메인총기_Muzzle_Roughness.png"
+		RelativeFilename: "..\..\..\Desktop\Gun\Gun_Texture\프타게_메인총기_Muzzle_Roughness.png"
+		ModelUVTranslation: 0,0
+		ModelUVScaling: 1,1
+		Texture_Alpha_Source: "None"
+		Cropping: 0,0,0,0
+	}
+	Texture: 2430115856208, "Texture::Map #107", "" {
+		Type: "TextureVideoClip"
+		Version: 202
+		TextureName: "Texture::Map #107"
+		Properties70:  {
+			P: "UVSet", "KString", "", "", "UVChannel_1"
+			P: "UseMaterial", "bool", "", "",1
+		}
+		Media: "Video::Map #107"
+		FileName: "C:\Users\yeonkyu\Desktop\Gun\Gun_Texture\프타게_메인총기_Muzzle_Normal.png"
+		RelativeFilename: "..\..\..\Desktop\Gun\Gun_Texture\프타게_메인총기_Muzzle_Normal.png"
+		ModelUVTranslation: 0,0
+		ModelUVScaling: 1,1
+		Texture_Alpha_Source: "None"
+		Cropping: 0,0,0,0
+	}
+	Texture: 2430115857648, "Texture::Map #92", "" {
+		Type: "TextureVideoClip"
+		Version: 202
+		TextureName: "Texture::Map #92"
+		Properties70:  {
+			P: "UVSet", "KString", "", "", "UVChannel_1"
+			P: "UseMaterial", "bool", "", "",1
+		}
+		Media: "Video::Map #92"
+		FileName: "C:\Users\yeonkyu\Desktop\Gun\Gun_Texture\프타게_메인총기_Handle_1_BaseColor.png"
+		RelativeFilename: "..\..\..\Desktop\Gun\Gun_Texture\프타게_메인총기_Handle_1_BaseColor.png"
+		ModelUVTranslation: 0,0
+		ModelUVScaling: 1,1
+		Texture_Alpha_Source: "None"
+		Cropping: 0,0,0,0
+	}
+	Texture: 2430115858608, "Texture::Map #93", "" {
+		Type: "TextureVideoClip"
+		Version: 202
+		TextureName: "Texture::Map #93"
+		Properties70:  {
+			P: "UVSet", "KString", "", "", "UVChannel_1"
+			P: "UseMaterial", "bool", "", "",1
+		}
+		Media: "Video::Map #93"
+		FileName: "C:\Users\yeonkyu\Desktop\Gun\Gun_Texture\프타게_메인총기_Handle_1_Metallic.png"
+		RelativeFilename: "..\..\..\Desktop\Gun\Gun_Texture\프타게_메인총기_Handle_1_Metallic.png"
+		ModelUVTranslation: 0,0
+		ModelUVScaling: 1,1
+		Texture_Alpha_Source: "None"
+		Cropping: 0,0,0,0
+	}
+	Texture: 2430115859088, "Texture::Map #94", "" {
+		Type: "TextureVideoClip"
+		Version: 202
+		TextureName: "Texture::Map #94"
+		Properties70:  {
+			P: "UVSet", "KString", "", "", "UVChannel_1"
+			P: "UseMaterial", "bool", "", "",1
+		}
+		Media: "Video::Map #94"
+		FileName: "C:\Users\yeonkyu\Desktop\Gun\Gun_Texture\프타게_메인총기_Handle_1_Roughness.png"
+		RelativeFilename: "..\..\..\Desktop\Gun\Gun_Texture\프타게_메인총기_Handle_1_Roughness.png"
+		ModelUVTranslation: 0,0
+		ModelUVScaling: 1,1
+		Texture_Alpha_Source: "None"
+		Cropping: 0,0,0,0
+	}
+	Texture: 2430115868208, "Texture::Map #95", "" {
+		Type: "TextureVideoClip"
+		Version: 202
+		TextureName: "Texture::Map #95"
+		Properties70:  {
+			P: "UVSet", "KString", "", "", "UVChannel_1"
+			P: "UseMaterial", "bool", "", "",1
+		}
+		Media: "Video::Map #95"
+		FileName: "C:\Users\yeonkyu\Desktop\Gun\Gun_Texture\프타게_메인총기_Handle_1_Normal.png"
+		RelativeFilename: "..\..\..\Desktop\Gun\Gun_Texture\프타게_메인총기_Handle_1_Normal.png"
+		ModelUVTranslation: 0,0
+		ModelUVScaling: 1,1
+		Texture_Alpha_Source: "None"
+		Cropping: 0,0,0,0
+	}
+	Texture: 2430115864848, "Texture::Map #100", "" {
+		Type: "TextureVideoClip"
+		Version: 202
+		TextureName: "Texture::Map #100"
+		Properties70:  {
+			P: "UVSet", "KString", "", "", "UVChannel_1"
+			P: "UseMaterial", "bool", "", "",1
+		}
+		Media: "Video::Map #100"
+		FileName: "C:\Users\yeonkyu\Desktop\Gun\Gun_Texture\프타게_메인총기_Trigger_BaseColor.png"
+		RelativeFilename: "..\..\..\Desktop\Gun\Gun_Texture\프타게_메인총기_Trigger_BaseColor.png"
+		ModelUVTranslation: 0,0
+		ModelUVScaling: 1,1
+		Texture_Alpha_Source: "None"
+		Cropping: 0,0,0,0
+	}
+	Texture: 2430115860048, "Texture::Map #101", "" {
+		Type: "TextureVideoClip"
+		Version: 202
+		TextureName: "Texture::Map #101"
+		Properties70:  {
+			P: "UVSet", "KString", "", "", "UVChannel_1"
+			P: "UseMaterial", "bool", "", "",1
+		}
+		Media: "Video::Map #101"
+		FileName: "C:\Users\yeonkyu\Desktop\Gun\Gun_Texture\프타게_메인총기_Trigger_Metallic.png"
+		RelativeFilename: "..\..\..\Desktop\Gun\Gun_Texture\프타게_메인총기_Trigger_Metallic.png"
+		ModelUVTranslation: 0,0
+		ModelUVScaling: 1,1
+		Texture_Alpha_Source: "None"
+		Cropping: 0,0,0,0
+	}
+	Texture: 2430115875408, "Texture::Map #102", "" {
+		Type: "TextureVideoClip"
+		Version: 202
+		TextureName: "Texture::Map #102"
+		Properties70:  {
+			P: "UVSet", "KString", "", "", "UVChannel_1"
+			P: "UseMaterial", "bool", "", "",1
+		}
+		Media: "Video::Map #102"
+		FileName: "C:\Users\yeonkyu\Desktop\Gun\Gun_Texture\프타게_메인총기_Trigger_Roughness.png"
+		RelativeFilename: "..\..\..\Desktop\Gun\Gun_Texture\프타게_메인총기_Trigger_Roughness.png"
+		ModelUVTranslation: 0,0
+		ModelUVScaling: 1,1
+		Texture_Alpha_Source: "None"
+		Cropping: 0,0,0,0
+	}
+	Texture: 2430115860528, "Texture::Map #103", "" {
+		Type: "TextureVideoClip"
+		Version: 202
+		TextureName: "Texture::Map #103"
+		Properties70:  {
+			P: "UVSet", "KString", "", "", "UVChannel_1"
+			P: "UseMaterial", "bool", "", "",1
+		}
+		Media: "Video::Map #103"
+		FileName: "C:\Users\yeonkyu\Desktop\Gun\Gun_Texture\프타게_메인총기_Trigger_Normal.png"
+		RelativeFilename: "..\..\..\Desktop\Gun\Gun_Texture\프타게_메인총기_Trigger_Normal.png"
+		ModelUVTranslation: 0,0
+		ModelUVScaling: 1,1
+		Texture_Alpha_Source: "None"
+		Cropping: 0,0,0,0
+	}
+	Texture: 2430115861008, "Texture::Map #112", "" {
+		Type: "TextureVideoClip"
+		Version: 202
+		TextureName: "Texture::Map #112"
+		Properties70:  {
+			P: "UVSet", "KString", "", "", "UVChannel_1"
+			P: "UseMaterial", "bool", "", "",1
+		}
+		Media: "Video::Map #112"
+		FileName: "C:\Users\yeonkyu\Desktop\Gun\Gun_Texture\프타게_메인총기_Pipe_2_BaseColor.png"
+		RelativeFilename: "..\..\..\Desktop\Gun\Gun_Texture\프타게_메인총기_Pipe_2_BaseColor.png"
+		ModelUVTranslation: 0,0
+		ModelUVScaling: 1,1
+		Texture_Alpha_Source: "None"
+		Cropping: 0,0,0,0
+	}
+	Texture: 2430115865328, "Texture::Map #113", "" {
+		Type: "TextureVideoClip"
+		Version: 202
+		TextureName: "Texture::Map #113"
+		Properties70:  {
+			P: "UVSet", "KString", "", "", "UVChannel_1"
+			P: "UseMaterial", "bool", "", "",1
+		}
+		Media: "Video::Map #113"
+		FileName: "C:\Users\yeonkyu\Desktop\Gun\Gun_Texture\프타게_메인총기_Pipe_2_Metallic.png"
+		RelativeFilename: "..\..\..\Desktop\Gun\Gun_Texture\프타게_메인총기_Pipe_2_Metallic.png"
+		ModelUVTranslation: 0,0
+		ModelUVScaling: 1,1
+		Texture_Alpha_Source: "None"
+		Cropping: 0,0,0,0
+	}
+	Texture: 2430115861488, "Texture::Map #114", "" {
+		Type: "TextureVideoClip"
+		Version: 202
+		TextureName: "Texture::Map #114"
+		Properties70:  {
+			P: "UVSet", "KString", "", "", "UVChannel_1"
+			P: "UseMaterial", "bool", "", "",1
+		}
+		Media: "Video::Map #114"
+		FileName: "C:\Users\yeonkyu\Desktop\Gun\Gun_Texture\프타게_메인총기_Pipe_2_Roughness.png"
+		RelativeFilename: "..\..\..\Desktop\Gun\Gun_Texture\프타게_메인총기_Pipe_2_Roughness.png"
+		ModelUVTranslation: 0,0
+		ModelUVScaling: 1,1
+		Texture_Alpha_Source: "None"
+		Cropping: 0,0,0,0
+	}
+	Texture: 2430115861968, "Texture::Map #115", "" {
+		Type: "TextureVideoClip"
+		Version: 202
+		TextureName: "Texture::Map #115"
+		Properties70:  {
+			P: "UVSet", "KString", "", "", "UVChannel_1"
+			P: "UseMaterial", "bool", "", "",1
+		}
+		Media: "Video::Map #115"
+		FileName: "C:\Users\yeonkyu\Desktop\Gun\Gun_Texture\프타게_메인총기_Pipe_2_Normal.png"
+		RelativeFilename: "..\..\..\Desktop\Gun\Gun_Texture\프타게_메인총기_Pipe_2_Normal.png"
+		ModelUVTranslation: 0,0
+		ModelUVScaling: 1,1
+		Texture_Alpha_Source: "None"
+		Cropping: 0,0,0,0
+	}
+	Texture: 2430115871088, "Texture::Map #108", "" {
+		Type: "TextureVideoClip"
+		Version: 202
+		TextureName: "Texture::Map #108"
+		Properties70:  {
+			P: "UVSet", "KString", "", "", "UVChannel_1"
+			P: "UseMaterial", "bool", "", "",1
+		}
+		Media: "Video::Map #108"
+		FileName: "C:\Users\yeonkyu\Desktop\Gun\Gun_Texture\프타게_메인총기_Pipe_1_BaseColor.png"
+		RelativeFilename: "..\..\..\Desktop\Gun\Gun_Texture\프타게_메인총기_Pipe_1_BaseColor.png"
+		ModelUVTranslation: 0,0
+		ModelUVScaling: 1,1
+		Texture_Alpha_Source: "None"
+		Cropping: 0,0,0,0
+	}
+	Texture: 2430115902288, "Texture::Map #109", "" {
+		Type: "TextureVideoClip"
+		Version: 202
+		TextureName: "Texture::Map #109"
+		Properties70:  {
+			P: "UVSet", "KString", "", "", "UVChannel_1"
+			P: "UseMaterial", "bool", "", "",1
+		}
+		Media: "Video::Map #109"
+		FileName: "C:\Users\yeonkyu\Desktop\Gun\Gun_Texture\프타게_메인총기_Pipe_1_Metallic.png"
+		RelativeFilename: "..\..\..\Desktop\Gun\Gun_Texture\프타게_메인총기_Pipe_1_Metallic.png"
+		ModelUVTranslation: 0,0
+		ModelUVScaling: 1,1
+		Texture_Alpha_Source: "None"
+		Cropping: 0,0,0,0
+	}
+	Texture: 2430115904208, "Texture::Map #110", "" {
+		Type: "TextureVideoClip"
+		Version: 202
+		TextureName: "Texture::Map #110"
+		Properties70:  {
+			P: "UVSet", "KString", "", "", "UVChannel_1"
+			P: "UseMaterial", "bool", "", "",1
+		}
+		Media: "Video::Map #110"
+		FileName: "C:\Users\yeonkyu\Desktop\Gun\Gun_Texture\프타게_메인총기_Pipe_1_Roughness.png"
+		RelativeFilename: "..\..\..\Desktop\Gun\Gun_Texture\프타게_메인총기_Pipe_1_Roughness.png"
+		ModelUVTranslation: 0,0
+		ModelUVScaling: 1,1
+		Texture_Alpha_Source: "None"
+		Cropping: 0,0,0,0
+	}
+	Texture: 2430115907568, "Texture::Map #111", "" {
+		Type: "TextureVideoClip"
+		Version: 202
+		TextureName: "Texture::Map #111"
+		Properties70:  {
+			P: "UVSet", "KString", "", "", "UVChannel_1"
+			P: "UseMaterial", "bool", "", "",1
+		}
+		Media: "Video::Map #111"
+		FileName: "C:\Users\yeonkyu\Desktop\Gun\Gun_Texture\프타게_메인총기_Pipe_1_Normal.png"
+		RelativeFilename: "..\..\..\Desktop\Gun\Gun_Texture\프타게_메인총기_Pipe_1_Normal.png"
+		ModelUVTranslation: 0,0
+		ModelUVScaling: 1,1
+		Texture_Alpha_Source: "None"
+		Cropping: 0,0,0,0
+	}
+	Texture: 2430115908048, "Texture::Map #78", "" {
+		Type: "TextureVideoClip"
+		Version: 202
+		TextureName: "Texture::Map #78"
+		Properties70:  {
+			P: "UVSet", "KString", "", "", "UVChannel_1"
+			P: "UseMaterial", "bool", "", "",1
+		}
+		Media: "Video::Map #78"
+		FileName: "C:\Users\yeonkyu\Desktop\Gun\Gun_Texture\프타게_메인총기_Front_Handle_2_BaseColor.png"
+		RelativeFilename: "..\..\..\Desktop\Gun\Gun_Texture\프타게_메인총기_Front_Handle_2_BaseColor.png"
+		ModelUVTranslation: 0,0
+		ModelUVScaling: 1,1
+		Texture_Alpha_Source: "None"
+		Cropping: 0,0,0,0
+	}
+	Texture: 2430115881648, "Texture::Map #79", "" {
+		Type: "TextureVideoClip"
+		Version: 202
+		TextureName: "Texture::Map #79"
+		Properties70:  {
+			P: "UVSet", "KString", "", "", "UVChannel_1"
+			P: "UseMaterial", "bool", "", "",1
+		}
+		Media: "Video::Map #79"
+		FileName: "C:\Users\yeonkyu\Desktop\Gun\Gun_Texture\프타게_메인총기_Front_Handle_2_Metallic.png"
+		RelativeFilename: "..\..\..\Desktop\Gun\Gun_Texture\프타게_메인총기_Front_Handle_2_Metallic.png"
+		ModelUVTranslation: 0,0
+		ModelUVScaling: 1,1
+		Texture_Alpha_Source: "None"
+		Cropping: 0,0,0,0
+	}
+	Texture: 2430115896528, "Texture::Map #80", "" {
+		Type: "TextureVideoClip"
+		Version: 202
+		TextureName: "Texture::Map #80"
+		Properties70:  {
+			P: "UVSet", "KString", "", "", "UVChannel_1"
+			P: "UseMaterial", "bool", "", "",1
+		}
+		Media: "Video::Map #80"
+		FileName: "C:\Users\yeonkyu\Desktop\Gun\Gun_Texture\프타게_메인총기_Front_Handle_2_Roughness.png"
+		RelativeFilename: "..\..\..\Desktop\Gun\Gun_Texture\프타게_메인총기_Front_Handle_2_Roughness.png"
+		ModelUVTranslation: 0,0
+		ModelUVScaling: 1,1
+		Texture_Alpha_Source: "None"
+		Cropping: 0,0,0,0
+	}
+	Texture: 2430115885008, "Texture::Map #81", "" {
+		Type: "TextureVideoClip"
+		Version: 202
+		TextureName: "Texture::Map #81"
+		Properties70:  {
+			P: "UVSet", "KString", "", "", "UVChannel_1"
+			P: "UseMaterial", "bool", "", "",1
+		}
+		Media: "Video::Map #81"
+		FileName: "C:\Users\yeonkyu\Desktop\Gun\Gun_Texture\프타게_메인총기_Handle_2_Normal.png"
+		RelativeFilename: "..\..\..\Desktop\Gun\Gun_Texture\프타게_메인총기_Handle_2_Normal.png"
+		ModelUVTranslation: 0,0
+		ModelUVScaling: 1,1
+		Texture_Alpha_Source: "None"
+		Cropping: 0,0,0,0
+	}
+	Texture: 2430115899408, "Texture::Map #73", "" {
+		Type: "TextureVideoClip"
+		Version: 202
+		TextureName: "Texture::Map #73"
+		Properties70:  {
+			P: "UVSet", "KString", "", "", "UVChannel_1"
+			P: "UseMaterial", "bool", "", "",1
+		}
+		Media: "Video::Map #73"
+		FileName: "C:\Users\yeonkyu\Desktop\Gun\Gun_Texture\프타게_메인총기_Front_Handle_1_BaseColor.png"
+		RelativeFilename: "..\..\..\Desktop\Gun\Gun_Texture\프타게_메인총기_Front_Handle_1_BaseColor.png"
+		ModelUVTranslation: 0,0
+		ModelUVScaling: 1,1
+		Texture_Alpha_Source: "None"
+		Cropping: 0,0,0,0
+	}
+	Texture: 2430115882608, "Texture::Map #74", "" {
+		Type: "TextureVideoClip"
+		Version: 202
+		TextureName: "Texture::Map #74"
+		Properties70:  {
+			P: "UVSet", "KString", "", "", "UVChannel_1"
+			P: "UseMaterial", "bool", "", "",1
+		}
+		Media: "Video::Map #74"
+		FileName: "C:\Users\yeonkyu\Desktop\Gun\Gun_Texture\프타게_메인총기_Front_Handle_1_Metallic.png"
+		RelativeFilename: "..\..\..\Desktop\Gun\Gun_Texture\프타게_메인총기_Front_Handle_1_Metallic.png"
+		ModelUVTranslation: 0,0
+		ModelUVScaling: 1,1
+		Texture_Alpha_Source: "None"
+		Cropping: 0,0,0,0
+	}
+	Texture: 2430115887408, "Texture::Map #76", "" {
+		Type: "TextureVideoClip"
+		Version: 202
+		TextureName: "Texture::Map #76"
+		Properties70:  {
+			P: "UVSet", "KString", "", "", "UVChannel_1"
+			P: "UseMaterial", "bool", "", "",1
+		}
+		Media: "Video::Map #76"
+		FileName: "C:\Users\yeonkyu\Desktop\Gun\Gun_Texture\프타게_메인총기_Front_Handle_1_Roughness.png"
+		RelativeFilename: "..\..\..\Desktop\Gun\Gun_Texture\프타게_메인총기_Front_Handle_1_Roughness.png"
+		ModelUVTranslation: 0,0
+		ModelUVScaling: 1,1
+		Texture_Alpha_Source: "None"
+		Cropping: 0,0,0,0
+	}
+	Texture: 2430115908528, "Texture::Map #77", "" {
+		Type: "TextureVideoClip"
+		Version: 202
+		TextureName: "Texture::Map #77"
+		Properties70:  {
+			P: "UVSet", "KString", "", "", "UVChannel_1"
+			P: "UseMaterial", "bool", "", "",1
+		}
+		Media: "Video::Map #77"
+		FileName: "C:\Users\yeonkyu\Desktop\Gun\Gun_Texture\프타게_메인총기_Front_Handle_1_Normal.png"
+		RelativeFilename: "..\..\..\Desktop\Gun\Gun_Texture\프타게_메인총기_Front_Handle_1_Normal.png"
+		ModelUVTranslation: 0,0
+		ModelUVScaling: 1,1
+		Texture_Alpha_Source: "None"
+		Cropping: 0,0,0,0
+	}
+	Texture: 2430115897968, "Texture::Map #87", "" {
+		Type: "TextureVideoClip"
+		Version: 202
+		TextureName: "Texture::Map #87"
+		Properties70:  {
+			P: "UVSet", "KString", "", "", "UVChannel_1"
+			P: "UseMaterial", "bool", "", "",1
+		}
+		Media: "Video::Map #87"
+		FileName: "C:\Users\yeonkyu\Desktop\Gun\Gun_Texture\프타게_메인총기_Shell_BaseColor.png"
+		RelativeFilename: "..\..\..\Desktop\Gun\Gun_Texture\프타게_메인총기_Shell_BaseColor.png"
+		ModelUVTranslation: 0,0
+		ModelUVScaling: 1,1
+		Texture_Alpha_Source: "None"
+		Cropping: 0,0,0,0
+	}
+	Texture: 2430115891728, "Texture::Map #88", "" {
+		Type: "TextureVideoClip"
+		Version: 202
+		TextureName: "Texture::Map #88"
+		Properties70:  {
+			P: "UVSet", "KString", "", "", "UVChannel_1"
+			P: "UseMaterial", "bool", "", "",1
+		}
+		Media: "Video::Map #88"
+		FileName: "C:\Users\yeonkyu\Desktop\Gun\Gun_Texture\프타게_메인총기_Shell_Metallic.png"
+		RelativeFilename: "..\..\..\Desktop\Gun\Gun_Texture\프타게_메인총기_Shell_Metallic.png"
+		ModelUVTranslation: 0,0
+		ModelUVScaling: 1,1
+		Texture_Alpha_Source: "None"
+		Cropping: 0,0,0,0
+	}
+	Texture: 2430115886448, "Texture::Map #89", "" {
+		Type: "TextureVideoClip"
+		Version: 202
+		TextureName: "Texture::Map #89"
+		Properties70:  {
+			P: "UVSet", "KString", "", "", "UVChannel_1"
+			P: "UseMaterial", "bool", "", "",1
+		}
+		Media: "Video::Map #89"
+		FileName: "C:\Users\yeonkyu\Desktop\Gun\Gun_Texture\프타게_메인총기_Shell_Roughness.png"
+		RelativeFilename: "..\..\..\Desktop\Gun\Gun_Texture\프타게_메인총기_Shell_Roughness.png"
+		ModelUVTranslation: 0,0
+		ModelUVScaling: 1,1
+		Texture_Alpha_Source: "None"
+		Cropping: 0,0,0,0
+	}
+	Texture: 2430115894128, "Texture::Map #90", "" {
+		Type: "TextureVideoClip"
+		Version: 202
+		TextureName: "Texture::Map #90"
+		Properties70:  {
+			P: "UVSet", "KString", "", "", "UVChannel_1"
+			P: "UseMaterial", "bool", "", "",1
+		}
+		Media: "Video::Map #90"
+		FileName: "C:\Users\yeonkyu\Desktop\Gun\Gun_Texture\프타게_메인총기_Shell_Normal.png"
+		RelativeFilename: "..\..\..\Desktop\Gun\Gun_Texture\프타게_메인총기_Shell_Normal.png"
+		ModelUVTranslation: 0,0
+		ModelUVScaling: 1,1
+		Texture_Alpha_Source: "None"
+		Cropping: 0,0,0,0
+	}
+	AnimationStack: 2426760511392, "AnimStack::Take 001", "" {
+		Properties70:  {
+			P: "LocalStop", "KTime", "Time", "",153953860000
+			P: "ReferenceStop", "KTime", "Time", "",153953860000
+		}
+	}
+	AnimationCurve: 2429729512976, "AnimCurve::", "" {
+		Default: 0
+		KeyVer: 4009
+		KeyTime: *101 {
+			a: 0,1539538600,3079077200,4618615800,6158154400,7697693000,9237231600,10776770200,12316308800,13855847400,15395386000,16934924600,18474463200,20014001800,21553540400,23093079000,24632617600,26172156200,27711694800,29251233400,30790772000,32330310600,33869849200,35409387800,36948926400,38488465000,40028003600,41567542200,43107080800,44646619400,46186158000,47725696600,49265235200,50804773800,52344312400,53883851000,55423389600,56962928200,58502466800,60042005400,61581544000,63121082600,64660621200,66200159800,67739698400,69279237000,70818775600,72358314200,73897852800,75437391400,76976930000,78516468600,80056007200,81595545800,83135084400,84674623000,86214161600,87753700200,89293238800,90832777400,92372316000,93911854600,95451393200,96990931800,98530470400,100070009000,101609547600,103149086200,104688624800,106228163400,107767702000,109307240600,110846779200,112386317800,113925856400,115465395000,117004933600,118544472200,120084010800,121623549400,123163088000,124702626600,126242165200,127781703800,129321242400,130860781000,132400319600,133939858200,135479396800,137018935400,138558474000,140098012600,141637551200,143177089800,144716628400,146256167000,147795705600,149335244200,150874782800,152414321400,153953860000
+		} 
+		KeyValueFloat: *101 {
+			a: -99.80555,-99.80555,-99.80555,-99.80555,-99.80555,-99.80555,-99.80555,-99.77741,-99.69749,-99.57257,-99.40935,-99.21454,-98.99487,-98.82619,-98.7183,-98.5788,-98.31536,-97.83559,-97.04697,-85.62041,-67.72896,-55.32417,-55.65639,-56.93946,-59.60305,-64.07742,-70.79409,-80.14536,-91.65392,-104.4493,-117.6619,-130.4227,-141.8619,-151.1092,-158.1879,-163.7663,-167.9404,-170.8051,-172.4549,-172.984,-110.1203,-47.2566,-50.37093,-58.57945,-70.18252,-83.48238,-96.78224,-108.3853,-116.5938,-119.7082,-114.9225,-106.0371,-101.2515,-101.3116,-101.462,-101.6574,-101.8529,-102.0032,-102.0634,-99.93454,-95.18413,-90.26282,-87.62112,-87.06488,-86.72751,-86.55421,-86.4903,-86.48115,-86.4931,-86.52797,-86.58425,-86.66045,-86.75505,-86.86658,-86.99355,-87.13444,-87.28777,-87.45206,-87.6258,-87.80751,-87.99569,-88.18885,-88.38551,-88.58416,-88.78333,-88.9815,-89.17721,-89.36893,-89.55521,-89.76738,-90.02917,-90.32758,-90.64963,-90.98236,-91.31281,-91.62801,-91.91502,-92.16084,-92.35252,-92.47705,-92.52146
+		} 
+		;KeyAttrFlags: Cubic|TangeantAuto|GenericTimeIndependent|GenericClampProgressive
+		KeyAttrFlags: *1 {
+			a: 24840
+		} 
+		;KeyAttrDataFloat: RightAuto:0, NextLeftAuto:0
+		KeyAttrDataFloat: *4 {
+			a: 0,0,218434821,0
+		} 
+		KeyAttrRefCount: *1 {
+			a: 101
+		} 
+	}
+	AnimationCurve: 2429729513456, "AnimCurve::", "" {
+		Default: 0
+		KeyVer: 4009
+		KeyTime: *101 {
+			a: 0,1539538600,3079077200,4618615800,6158154400,7697693000,9237231600,10776770200,12316308800,13855847400,15395386000,16934924600,18474463200,20014001800,21553540400,23093079000,24632617600,26172156200,27711694800,29251233400,30790772000,32330310600,33869849200,35409387800,36948926400,38488465000,40028003600,41567542200,43107080800,44646619400,46186158000,47725696600,49265235200,50804773800,52344312400,53883851000,55423389600,56962928200,58502466800,60042005400,61581544000,63121082600,64660621200,66200159800,67739698400,69279237000,70818775600,72358314200,73897852800,75437391400,76976930000,78516468600,80056007200,81595545800,83135084400,84674623000,86214161600,87753700200,89293238800,90832777400,92372316000,93911854600,95451393200,96990931800,98530470400,100070009000,101609547600,103149086200,104688624800,106228163400,107767702000,109307240600,110846779200,112386317800,113925856400,115465395000,117004933600,118544472200,120084010800,121623549400,123163088000,124702626600,126242165200,127781703800,129321242400,130860781000,132400319600,133939858200,135479396800,137018935400,138558474000,140098012600,141637551200,143177089800,144716628400,146256167000,147795705600,149335244200,150874782800,152414321400,153953860000
+		} 
+		KeyValueFloat: *101 {
+			a: 578.1113,578.0121,577.764,577.4415,577.1191,576.871,576.7718,578.2426,582.1042,587.5315,593.7007,599.7884,604.9703,609.9337,615.4753,620.9348,625.6523,628.9678,630.2202,627.3322,623.71,623.2205,623.6431,625.1191,627.9615,632.4838,639.0003,647.883,658.7537,670.8038,683.2257,695.2123,705.9559,714.6479,721.3027,726.5377,730.4468,733.124,734.6622,735.1544,732.6553,724.3993,711.1721,695.3934,678.3647,661.3864,645.7582,632.7802,623.7538,619.9819,619.6403,619.6139,619.2722,618.2189,616.591,614.5569,612.2845,609.9418,607.697,605.2227,602.4203,599.8002,597.8727,596.7765,596.1619,595.8081,595.4946,595.0007,594.3338,593.6498,592.9513,592.2408,591.5209,590.7941,590.0627,589.3297,588.5971,587.8677,587.1441,586.4286,585.7239,585.0324,584.3567,583.6992,583.0626,582.4493,581.8619,581.3028,580.7747,580.2923,579.8667,579.4951,579.1745,578.9023,578.6755,578.4915,578.347,578.2397,578.1665,578.1246,578.1113
+		} 
+		;KeyAttrFlags: Cubic|TangeantAuto|GenericTimeIndependent|GenericClampProgressive
+		KeyAttrFlags: *1 {
+			a: 24840
+		} 
+		;KeyAttrDataFloat: RightAuto:0, NextLeftAuto:0
+		KeyAttrDataFloat: *4 {
+			a: 0,0,218434821,0
+		} 
+		KeyAttrRefCount: *1 {
+			a: 101
+		} 
+	}
+	AnimationCurve: 2429729513616, "AnimCurve::", "" {
+		Default: 0
+		KeyVer: 4009
+		KeyTime: *101 {
+			a: 0,1539538600,3079077200,4618615800,6158154400,7697693000,9237231600,10776770200,12316308800,13855847400,15395386000,16934924600,18474463200,20014001800,21553540400,23093079000,24632617600,26172156200,27711694800,29251233400,30790772000,32330310600,33869849200,35409387800,36948926400,38488465000,40028003600,41567542200,43107080800,44646619400,46186158000,47725696600,49265235200,50804773800,52344312400,53883851000,55423389600,56962928200,58502466800,60042005400,61581544000,63121082600,64660621200,66200159800,67739698400,69279237000,70818775600,72358314200,73897852800,75437391400,76976930000,78516468600,80056007200,81595545800,83135084400,84674623000,86214161600,87753700200,89293238800,90832777400,92372316000,93911854600,95451393200,96990931800,98530470400,100070009000,101609547600,103149086200,104688624800,106228163400,107767702000,109307240600,110846779200,112386317800,113925856400,115465395000,117004933600,118544472200,120084010800,121623549400,123163088000,124702626600,126242165200,127781703800,129321242400,130860781000,132400319600,133939858200,135479396800,137018935400,138558474000,140098012600,141637551200,143177089800,144716628400,146256167000,147795705600,149335244200,150874782800,152414321400,153953860000
+		} 
+		KeyValueFloat: *101 {
+			a: -173.9166,-173.9166,-173.9166,-173.9166,-173.9166,-173.9166,-173.9166,-171.7337,-165.7942,-157.01,-146.2913,-134.5477,-122.6886,-108.0949,-89.51673,-69.91464,-52.24702,-39.47305,-34.55562,-34.91805,-37.45249,-64.36151,-74.57343,-82.72025,-90.0715,-97.89566,-107.4621,-118.4146,-129.6413,-141.2795,-153.4664,-166.3398,-180.0371,-194.6966,-210.7493,-228.2648,-246.8393,-266.0699,-285.5538,-304.8884,-331.074,-347.6999,-335.6893,-304.0328,-259.285,-207.9935,-156.7019,-111.9542,-80.29761,-68.28707,-69.34139,-71.4595,-73.07581,-73.80732,-74.35468,-74.77659,-75.13168,-75.47855,-75.87582,-76.1498,-76.29951,-76.64245,-77.49625,-78.95631,-80.9093,-83.36069,-86.31618,-89.78182,-93.71519,-98.03039,-102.6685,-107.5705,-112.6777,-117.9312,-123.2721,-128.6416,-133.9809,-139.2313,-144.3338,-149.2299,-153.8605,-158.1669,-162.0903,-165.5719,-168.5526,-170.9736,-172.776,-173.9008,-174.2888,-174.1819,-173.8864,-173.4401,-172.8807,-172.2459,-171.5735,-170.901,-170.2663,-169.7068,-169.2605,-168.965,-168.8581
+		} 
+		;KeyAttrFlags: Cubic|TangeantAuto|GenericTimeIndependent|GenericClampProgressive
+		KeyAttrFlags: *1 {
+			a: 24840
+		} 
+		;KeyAttrDataFloat: RightAuto:0, NextLeftAuto:0
+		KeyAttrDataFloat: *4 {
+			a: 0,0,218434821,0
+		} 
+		KeyAttrRefCount: *1 {
+			a: 101
+		} 
+	}
+	AnimationCurve: 2429729513776, "AnimCurve::", "" {
+		Default: 0
+		KeyVer: 4009
+		KeyTime: *101 {
+			a: 0,1539538600,3079077200,4618615800,6158154400,7697693000,9237231600,10776770200,12316308800,13855847400,15395386000,16934924600,18474463200,20014001800,21553540400,23093079000,24632617600,26172156200,27711694800,29251233400,30790772000,32330310600,33869849200,35409387800,36948926400,38488465000,40028003600,41567542200,43107080800,44646619400,46186158000,47725696600,49265235200,50804773800,52344312400,53883851000,55423389600,56962928200,58502466800,60042005400,61581544000,63121082600,64660621200,66200159800,67739698400,69279237000,70818775600,72358314200,73897852800,75437391400,76976930000,78516468600,80056007200,81595545800,83135084400,84674623000,86214161600,87753700200,89293238800,90832777400,92372316000,93911854600,95451393200,96990931800,98530470400,100070009000,101609547600,103149086200,104688624800,106228163400,107767702000,109307240600,110846779200,112386317800,113925856400,115465395000,117004933600,118544472200,120084010800,121623549400,123163088000,124702626600,126242165200,127781703800,129321242400,130860781000,132400319600,133939858200,135479396800,137018935400,138558474000,140098012600,141637551200,143177089800,144716628400,146256167000,147795705600,149335244200,150874782800,152414321400,153953860000
+		} 
+		KeyValueFloat: *101 {
+			a: 270.0002,270.0002,270.0002,270.0002,270.0002,270.0002,270.0002,270.7131,272.6839,275.6606,279.3915,283.6252,288.1101,292.595,296.8286,300.5595,303.5362,305.507,306.22,306.0293,305.6554,305.3956,305.2911,305.1855,305.0796,304.9742,304.8703,304.7688,304.6703,304.576,304.4865,304.4028,304.3257,304.2561,304.1948,304.1427,304.1007,304.0696,304.0503,304.0437,304.2871,304.9477,305.921,307.1028,308.3887,309.6747,310.8565,311.8298,312.4904,312.7338,310.8524,307.032,304.0047,302.5639,301.5366,300.7074,299.8616,298.7841,297.2596,294.7448,291.4191,288.1506,285.8076,284.5587,283.8547,283.4888,283.2544,282.9449,282.5188,282.0738,281.612,281.1354,280.646,280.1459,279.6371,279.1216,278.6014,278.0787,277.5554,277.0334,276.515,276.002,275.4966,275.0008,274.5165,274.0459,273.5908,273.1535,272.7358,272.3399,271.9677,271.6214,271.3029,271.0142,270.7574,270.5345,270.3475,270.1986,270.0897,270.0229,270.0002
+		} 
+		;KeyAttrFlags: Cubic|TangeantAuto|GenericTimeIndependent|GenericClampProgressive
+		KeyAttrFlags: *1 {
+			a: 24840
+		} 
+		;KeyAttrDataFloat: RightAuto:0, NextLeftAuto:0
+		KeyAttrDataFloat: *4 {
+			a: 0,0,218434821,0
+		} 
+		KeyAttrRefCount: *1 {
+			a: 101
+		} 
+	}
+	AnimationCurve: 2429729510896, "AnimCurve::", "" {
+		Default: 0
+		KeyVer: 4009
+		KeyTime: *101 {
+			a: 0,1539538600,3079077200,4618615800,6158154400,7697693000,9237231600,10776770200,12316308800,13855847400,15395386000,16934924600,18474463200,20014001800,21553540400,23093079000,24632617600,26172156200,27711694800,29251233400,30790772000,32330310600,33869849200,35409387800,36948926400,38488465000,40028003600,41567542200,43107080800,44646619400,46186158000,47725696600,49265235200,50804773800,52344312400,53883851000,55423389600,56962928200,58502466800,60042005400,61581544000,63121082600,64660621200,66200159800,67739698400,69279237000,70818775600,72358314200,73897852800,75437391400,76976930000,78516468600,80056007200,81595545800,83135084400,84674623000,86214161600,87753700200,89293238800,90832777400,92372316000,93911854600,95451393200,96990931800,98530470400,100070009000,101609547600,103149086200,104688624800,106228163400,107767702000,109307240600,110846779200,112386317800,113925856400,115465395000,117004933600,118544472200,120084010800,121623549400,123163088000,124702626600,126242165200,127781703800,129321242400,130860781000,132400319600,133939858200,135479396800,137018935400,138558474000,140098012600,141637551200,143177089800,144716628400,146256167000,147795705600,149335244200,150874782800,152414321400,153953860000
+		} 
+		KeyValueFloat: *101 {
+			a: -2.732076e-05,-2.732076e-05,-2.732076e-05,-2.732076e-05,-2.732076e-05,-2.732076e-05,-2.732076e-05,-0.2925957,-1.101315,-2.322801,-3.85377,-5.591019,-7.431396,-9.271772,-11.00902,-12.53999,-13.76148,-14.5702,-14.86277,-5.982544,10.50539,19.38561,19.15792,18.50116,17.45472,16.05796,14.35021,12.37077,10.15893,7.753945,5.19507,2.521539,-0.2274065,-3.012543,-5.794622,-8.534406,-11.19263,-13.73003,-16.1073,-18.28513,-20.52196,-23.02376,-25.6726,-28.35063,-30.94006,-33.32312,-35.38199,-36.99879,-38.05554,-38.43407,-33.1641,-23.37932,-18.10934,-18.2301,-18.53192,-18.92421,-19.31651,-19.61832,-19.73908,-17.83986,-13.51825,-8.8353,-5.851751,-4.717151,-4.086673,-3.782372,-3.62657,-3.441596,-3.178169,-2.906258,-2.626918,-2.341203,-2.050168,-1.754866,-1.456351,-1.155675,-0.8538927,-0.5520552,-0.2512166,0.04757242,0.3432576,0.6347876,0.9211093,1.201171,1.47392,1.738305,1.993272,2.237768,2.470742,2.691139,2.897905,3.089988,3.266334,3.425887,3.567592,3.690397,3.793242,3.875074,3.934835,3.971467,3.983913
+		} 
+		;KeyAttrFlags: Cubic|TangeantAuto|GenericTimeIndependent|GenericClampProgressive
+		KeyAttrFlags: *1 {
+			a: 24840
+		} 
+		;KeyAttrDataFloat: RightAuto:0, NextLeftAuto:0
+		KeyAttrDataFloat: *4 {
+			a: 0,0,218434821,0
+		} 
+		KeyAttrRefCount: *1 {
+			a: 101
+		} 
+	}
+	AnimationCurve: 2429729510096, "AnimCurve::", "" {
+		Default: 0
+		KeyVer: 4009
+		KeyTime: *101 {
+			a: 0,1539538600,3079077200,4618615800,6158154400,7697693000,9237231600,10776770200,12316308800,13855847400,15395386000,16934924600,18474463200,20014001800,21553540400,23093079000,24632617600,26172156200,27711694800,29251233400,30790772000,32330310600,33869849200,35409387800,36948926400,38488465000,40028003600,41567542200,43107080800,44646619400,46186158000,47725696600,49265235200,50804773800,52344312400,53883851000,55423389600,56962928200,58502466800,60042005400,61581544000,63121082600,64660621200,66200159800,67739698400,69279237000,70818775600,72358314200,73897852800,75437391400,76976930000,78516468600,80056007200,81595545800,83135084400,84674623000,86214161600,87753700200,89293238800,90832777400,92372316000,93911854600,95451393200,96990931800,98530470400,100070009000,101609547600,103149086200,104688624800,106228163400,107767702000,109307240600,110846779200,112386317800,113925856400,115465395000,117004933600,118544472200,120084010800,121623549400,123163088000,124702626600,126242165200,127781703800,129321242400,130860781000,132400319600,133939858200,135479396800,137018935400,138558474000,140098012600,141637551200,143177089800,144716628400,146256167000,147795705600,149335244200,150874782800,152414321400,153953860000
+		} 
+		KeyValueFloat: *101 {
+			a: -180.0001,-180.0001,-180.0001,-180.0001,-180.0001,-180.0001,-180.0001,-179.9976,-179.9803,-179.9332,-179.8416,-179.6907,-179.4657,-179.1518,-178.7341,-178.1978,-177.5281,-176.71,-175.7288,-168.6889,-156.7361,-150.408,-150.5535,-150.9743,-151.6467,-152.5468,-153.6512,-154.9359,-156.3775,-157.9523,-159.6365,-161.4067,-163.2391,-165.1102,-166.9963,-168.8738,-170.719,-172.5083,-174.2181,-175.8246,-177.579,-179.6665,-181.9651,-184.3529,-186.7079,-188.9084,-190.8323,-192.3578,-193.3627,-193.7249,-189.0512,-180.3734,-175.6997,-175.7864,-176.0032,-176.285,-176.5668,-176.7835,-176.8703,-176.0148,-174.1333,-172.2519,-171.3964,-171.899,-173.1111,-174.5896,-175.8922,-176.5759,-176.798,-177.0117,-177.217,-177.414,-177.6028,-177.7836,-177.9564,-178.1214,-178.2787,-178.4283,-178.5703,-178.705,-178.8323,-178.9524,-179.0653,-179.1713,-179.2704,-179.3626,-179.4481,-179.5271,-179.5995,-179.6656,-179.7254,-179.779,-179.8265,-179.868,-179.9037,-179.9336,-179.9578,-179.9765,-179.9897,-179.9975,-180.0001
+		} 
+		;KeyAttrFlags: Cubic|TangeantAuto|GenericTimeIndependent|GenericClampProgressive
+		KeyAttrFlags: *1 {
+			a: 24840
+		} 
+		;KeyAttrDataFloat: RightAuto:0, NextLeftAuto:0
+		KeyAttrDataFloat: *4 {
+			a: 0,0,218434821,0
+		} 
+		KeyAttrRefCount: *1 {
+			a: 101
+		} 
+	}
+	AnimationCurve: 2430114173888, "AnimCurve::", "" {
+		Default: 0
+		KeyVer: 4009
+		KeyTime: *101 {
+			a: 0,1539538600,3079077200,4618615800,6158154400,7697693000,9237231600,10776770200,12316308800,13855847400,15395386000,16934924600,18474463200,20014001800,21553540400,23093079000,24632617600,26172156200,27711694800,29251233400,30790772000,32330310600,33869849200,35409387800,36948926400,38488465000,40028003600,41567542200,43107080800,44646619400,46186158000,47725696600,49265235200,50804773800,52344312400,53883851000,55423389600,56962928200,58502466800,60042005400,61581544000,63121082600,64660621200,66200159800,67739698400,69279237000,70818775600,72358314200,73897852800,75437391400,76976930000,78516468600,80056007200,81595545800,83135084400,84674623000,86214161600,87753700200,89293238800,90832777400,92372316000,93911854600,95451393200,96990931800,98530470400,100070009000,101609547600,103149086200,104688624800,106228163400,107767702000,109307240600,110846779200,112386317800,113925856400,115465395000,117004933600,118544472200,120084010800,121623549400,123163088000,124702626600,126242165200,127781703800,129321242400,130860781000,132400319600,133939858200,135479396800,137018935400,138558474000,140098012600,141637551200,143177089800,144716628400,146256167000,147795705600,149335244200,150874782800,152414321400,153953860000
+		} 
+		KeyValueFloat: *101 {
+			a: -127.6778,-127.6778,-127.6778,-127.6778,-127.6778,-127.6778,-127.6778,-127.267,-126.1311,-124.4156,-122.2654,-119.8255,-117.2408,-114.6561,-112.2162,-110.066,-108.3504,-107.2146,-106.8037,-106.8508,-106.9539,-107.0773,-107.2156,-107.358,-107.4937,-107.6116,-107.701,-107.7635,-107.8097,-107.8422,-107.8632,-107.8753,-107.8807,-107.882,-107.8798,-107.8732,-107.8627,-107.8486,-107.8314,-107.8113,-107.7889,-107.7643,-107.7381,-107.7106,-107.6822,-107.6531,-107.624,-107.5949,-107.5665,-107.539,-107.5128,-107.4882,-107.4658,-107.4457,-107.4285,-107.4144,-107.4039,-107.3973,-107.3951,-107.3951,-107.3951,-107.3951,-107.432,-107.5401,-107.7151,-107.9529,-108.2494,-108.6004,-109.0017,-109.4492,-109.9387,-110.4662,-111.0274,-111.6182,-112.2344,-112.872,-113.5268,-114.1946,-114.8713,-115.5527,-116.2348,-116.9133,-117.5842,-118.2432,-118.8863,-119.5092,-120.108,-120.6783,-121.216,-121.7801,-122.417,-123.1032,-123.8158,-124.5313,-125.2268,-125.8789,-126.4646,-126.9605,-127.3435,-127.5904,-127.6778
+		} 
+		;KeyAttrFlags: Cubic|TangeantAuto|GenericTimeIndependent|GenericClampProgressive
+		KeyAttrFlags: *1 {
+			a: 24840
+		} 
+		;KeyAttrDataFloat: RightAuto:0, NextLeftAuto:0
+		KeyAttrDataFloat: *4 {
+			a: 0,0,218434821,0
+		} 
+		KeyAttrRefCount: *1 {
+			a: 101
+		} 
+	}
+	AnimationCurve: 2429729510256, "AnimCurve::", "" {
+		Default: 0
+		KeyVer: 4009
+		KeyTime: *101 {
+			a: 0,1539538600,3079077200,4618615800,6158154400,7697693000,9237231600,10776770200,12316308800,13855847400,15395386000,16934924600,18474463200,20014001800,21553540400,23093079000,24632617600,26172156200,27711694800,29251233400,30790772000,32330310600,33869849200,35409387800,36948926400,38488465000,40028003600,41567542200,43107080800,44646619400,46186158000,47725696600,49265235200,50804773800,52344312400,53883851000,55423389600,56962928200,58502466800,60042005400,61581544000,63121082600,64660621200,66200159800,67739698400,69279237000,70818775600,72358314200,73897852800,75437391400,76976930000,78516468600,80056007200,81595545800,83135084400,84674623000,86214161600,87753700200,89293238800,90832777400,92372316000,93911854600,95451393200,96990931800,98530470400,100070009000,101609547600,103149086200,104688624800,106228163400,107767702000,109307240600,110846779200,112386317800,113925856400,115465395000,117004933600,118544472200,120084010800,121623549400,123163088000,124702626600,126242165200,127781703800,129321242400,130860781000,132400319600,133939858200,135479396800,137018935400,138558474000,140098012600,141637551200,143177089800,144716628400,146256167000,147795705600,149335244200,150874782800,152414321400,153953860000
+		} 
+		KeyValueFloat: *101 {
+			a: 578.1595,578.1595,578.1595,578.1595,578.1595,578.1595,578.1595,578.0186,577.6292,577.041,576.3037,575.4672,574.5809,573.6948,572.8582,572.121,571.5327,571.1434,571.0024,571.5411,572.0798,572.0769,572.0695,572.0599,572.0504,572.043,572.04,572.1352,572.3806,572.7159,573.0814,573.4168,573.6622,573.7573,573.75,573.7287,573.6948,573.6492,573.5935,573.5287,573.4561,573.3768,573.292,573.2029,573.111,573.0172,572.9228,572.8289,572.7369,572.6479,572.5632,572.4839,572.4113,572.3464,572.2907,572.2452,572.2112,572.1899,572.1826,572.1826,572.1826,572.1826,572.2039,572.2656,572.3647,572.4981,572.6627,572.8554,573.0732,573.313,573.5716,573.846,574.1331,574.4299,574.7333,575.0402,575.3475,575.6521,575.951,576.2411,576.5193,576.7827,577.0278,577.2519,577.4518,577.6245,577.7667,577.8755,577.9477,577.9963,578.0369,578.0701,578.0967,578.1174,578.1329,578.1442,578.1516,578.1562,578.1585,578.1594,578.1595
+		} 
+		;KeyAttrFlags: Cubic|TangeantAuto|GenericTimeIndependent|GenericClampProgressive
+		KeyAttrFlags: *1 {
+			a: 24840
+		} 
+		;KeyAttrDataFloat: RightAuto:0, NextLeftAuto:0
+		KeyAttrDataFloat: *4 {
+			a: 0,0,218434821,0
+		} 
+		KeyAttrRefCount: *1 {
+			a: 101
+		} 
+	}
+	AnimationCurve: 2429729510736, "AnimCurve::", "" {
+		Default: 0
+		KeyVer: 4009
+		KeyTime: *101 {
+			a: 0,1539538600,3079077200,4618615800,6158154400,7697693000,9237231600,10776770200,12316308800,13855847400,15395386000,16934924600,18474463200,20014001800,21553540400,23093079000,24632617600,26172156200,27711694800,29251233400,30790772000,32330310600,33869849200,35409387800,36948926400,38488465000,40028003600,41567542200,43107080800,44646619400,46186158000,47725696600,49265235200,50804773800,52344312400,53883851000,55423389600,56962928200,58502466800,60042005400,61581544000,63121082600,64660621200,66200159800,67739698400,69279237000,70818775600,72358314200,73897852800,75437391400,76976930000,78516468600,80056007200,81595545800,83135084400,84674623000,86214161600,87753700200,89293238800,90832777400,92372316000,93911854600,95451393200,96990931800,98530470400,100070009000,101609547600,103149086200,104688624800,106228163400,107767702000,109307240600,110846779200,112386317800,113925856400,115465395000,117004933600,118544472200,120084010800,121623549400,123163088000,124702626600,126242165200,127781703800,129321242400,130860781000,132400319600,133939858200,135479396800,137018935400,138558474000,140098012600,141637551200,143177089800,144716628400,146256167000,147795705600,149335244200,150874782800,152414321400,153953860000
+		} 
+		KeyValueFloat: *101 {
+			a: -71.97817,-71.97817,-71.97817,-71.97817,-71.97817,-71.97817,-71.97817,-70.28812,-65.52363,-58.1427,-48.60284,-37.3611,-24.87421,-11.59875,2.008821,15.49194,28.39399,40.25804,50.62675,57.72543,60.58089,61.40609,61.95921,62.29475,62.46714,62.53073,62.53984,62.20657,61.30733,59.99282,58.41346,56.71959,55.06154,53.58976,52.20866,50.73095,49.16966,47.53784,45.84851,44.1147,42.34941,40.56569,38.77653,36.99494,35.23394,33.50653,31.82572,30.20453,28.65595,27.19301,25.82872,24.57611,23.44819,22.458,21.61858,20.94296,20.44421,20.13537,20.02952,20.72947,22.02907,22.72903,22.33296,21.18498,19.34538,16.8744,13.83228,10.2792,6.275353,1.880878,-2.844107,-7.839476,-13.04513,-18.40099,-23.84696,-29.32296,-34.76893,-40.12478,-45.33043,-50.32581,-55.05078,-59.44526,-63.44911,-67.00218,-70.04431,-72.51528,-74.35489,-75.50288,-75.89893,-75.82175,-75.60841,-75.28619,-74.88232,-74.42404,-73.93855,-73.45306,-72.99478,-72.59091,-72.26869,-72.05535,-71.97817
+		} 
+		;KeyAttrFlags: Cubic|TangeantAuto|GenericTimeIndependent|GenericClampProgressive
+		KeyAttrFlags: *1 {
+			a: 24840
+		} 
+		;KeyAttrDataFloat: RightAuto:0, NextLeftAuto:0
+		KeyAttrDataFloat: *4 {
+			a: 0,0,218434821,0
+		} 
+		KeyAttrRefCount: *1 {
+			a: 101
+		} 
+	}
+	AnimationCurve: 2429729511056, "AnimCurve::", "" {
+		Default: 0
+		KeyVer: 4009
+		KeyTime: *101 {
+			a: 0,1539538600,3079077200,4618615800,6158154400,7697693000,9237231600,10776770200,12316308800,13855847400,15395386000,16934924600,18474463200,20014001800,21553540400,23093079000,24632617600,26172156200,27711694800,29251233400,30790772000,32330310600,33869849200,35409387800,36948926400,38488465000,40028003600,41567542200,43107080800,44646619400,46186158000,47725696600,49265235200,50804773800,52344312400,53883851000,55423389600,56962928200,58502466800,60042005400,61581544000,63121082600,64660621200,66200159800,67739698400,69279237000,70818775600,72358314200,73897852800,75437391400,76976930000,78516468600,80056007200,81595545800,83135084400,84674623000,86214161600,87753700200,89293238800,90832777400,92372316000,93911854600,95451393200,96990931800,98530470400,100070009000,101609547600,103149086200,104688624800,106228163400,107767702000,109307240600,110846779200,112386317800,113925856400,115465395000,117004933600,118544472200,120084010800,121623549400,123163088000,124702626600,126242165200,127781703800,129321242400,130860781000,132400319600,133939858200,135479396800,137018935400,138558474000,140098012600,141637551200,143177089800,144716628400,146256167000,147795705600,149335244200,150874782800,152414321400,153953860000
+		} 
+		KeyValueFloat: *101 {
+			a: -0.4290383,-0.4290383,-0.4290383,-0.4290383,-0.4290383,-0.4290383,-0.4290383,-1.145932,-3.127576,-6.120639,-9.872046,-14.12891,-18.63847,-23.14803,-27.4049,-31.15631,-34.14937,-36.13102,-36.84791,-35.81303,-34.47253,-33.86556,-33.26826,-32.68184,-32.10746,-31.54633,-30.99961,-30.46852,-29.95423,-29.45794,-28.98084,-28.52413,-28.089,-27.67665,-27.29967,-26.96508,-26.66572,-26.39445,-26.14413,-25.90764,-25.67784,-25.4476,-25.2098,-24.95729,-24.68296,-24.37967,-24.04025,-23.65759,-23.24161,-22.80771,-22.35689,-21.89016,-21.40852,-20.91298,-20.40453,-19.8842,-19.35298,-18.81187,-18.26189,-17.70402,-17.13929,-16.56868,-15.99321,-15.41387,-14.83167,-14.24761,-13.6627,-13.07794,-12.49433,-11.91288,-11.33458,-10.76044,-10.19146,-9.628644,-9.072996,-8.525519,-7.987215,-7.459087,-6.942135,-6.437368,-5.945785,-5.468388,-5.006183,-4.560173,-4.131361,-3.72075,-3.329345,-2.958151,-2.608171,-2.280411,-1.975873,-1.695564,-1.440489,-1.211655,-1.010064,-0.8367257,-0.6926448,-0.5788285,-0.4962836,-0.4460177,-0.4290383
+		} 
+		;KeyAttrFlags: Cubic|TangeantAuto|GenericTimeIndependent|GenericClampProgressive
+		KeyAttrFlags: *1 {
+			a: 24840
+		} 
+		;KeyAttrDataFloat: RightAuto:0, NextLeftAuto:0
+		KeyAttrDataFloat: *4 {
+			a: 0,0,218434821,0
+		} 
+		KeyAttrRefCount: *1 {
+			a: 101
+		} 
+	}
+	AnimationCurve: 2431005305872, "AnimCurve::", "" {
+		Default: 0
+		KeyVer: 4009
+		KeyTime: *101 {
+			a: 0,1539538600,3079077200,4618615800,6158154400,7697693000,9237231600,10776770200,12316308800,13855847400,15395386000,16934924600,18474463200,20014001800,21553540400,23093079000,24632617600,26172156200,27711694800,29251233400,30790772000,32330310600,33869849200,35409387800,36948926400,38488465000,40028003600,41567542200,43107080800,44646619400,46186158000,47725696600,49265235200,50804773800,52344312400,53883851000,55423389600,56962928200,58502466800,60042005400,61581544000,63121082600,64660621200,66200159800,67739698400,69279237000,70818775600,72358314200,73897852800,75437391400,76976930000,78516468600,80056007200,81595545800,83135084400,84674623000,86214161600,87753700200,89293238800,90832777400,92372316000,93911854600,95451393200,96990931800,98530470400,100070009000,101609547600,103149086200,104688624800,106228163400,107767702000,109307240600,110846779200,112386317800,113925856400,115465395000,117004933600,118544472200,120084010800,121623549400,123163088000,124702626600,126242165200,127781703800,129321242400,130860781000,132400319600,133939858200,135479396800,137018935400,138558474000,140098012600,141637551200,143177089800,144716628400,146256167000,147795705600,149335244200,150874782800,152414321400,153953860000
+		} 
+		KeyValueFloat: *101 {
+			a: -5.746592,-5.746592,-5.746592,-5.746592,-5.746592,-5.746592,-5.746592,-5.383706,-4.380615,-2.865551,-0.966621,1.188167,3.47087,5.753572,7.908362,9.807291,11.32235,12.32545,12.68833,12.61342,12.53851,12.53851,12.53851,12.53851,12.53851,12.53851,12.53851,12.53851,12.53851,12.53851,12.53851,12.53851,12.53851,12.53851,12.52327,12.47866,12.40633,12.30793,12.18511,12.03953,11.87281,11.68662,11.48258,11.26235,11.02755,10.77984,10.52084,10.25221,9.972621,9.680163,9.375542,9.059464,8.732636,8.395765,8.049562,7.694733,7.331983,6.962022,6.585553,6.203287,5.815927,5.424182,5.028758,4.63036,4.229695,3.827469,3.424387,3.02116,2.618488,2.21708,1.817642,1.420878,1.027497,0.6382017,0.2537,-0.1253022,-0.4980999,-0.8639851,-1.222255,-1.572199,-1.913114,-2.244293,-2.56503,-2.874618,-3.17235,-3.457519,-3.729421,-3.987346,-4.230587,-4.458438,-4.670192,-4.86514,-5.042575,-5.201789,-5.342074,-5.462722,-5.563024,-5.64227,-5.699754,-5.734764,-5.746592
+		} 
+		;KeyAttrFlags: Cubic|TangeantAuto|GenericTimeIndependent|GenericClampProgressive
+		KeyAttrFlags: *1 {
+			a: 24840
+		} 
+		;KeyAttrDataFloat: RightAuto:0, NextLeftAuto:0
+		KeyAttrDataFloat: *4 {
+			a: 0,0,218434821,0
+		} 
+		KeyAttrRefCount: *1 {
+			a: 101
+		} 
+	}
+	AnimationCurve: 2431005306352, "AnimCurve::", "" {
+		Default: 0
+		KeyVer: 4009
+		KeyTime: *101 {
+			a: 0,1539538600,3079077200,4618615800,6158154400,7697693000,9237231600,10776770200,12316308800,13855847400,15395386000,16934924600,18474463200,20014001800,21553540400,23093079000,24632617600,26172156200,27711694800,29251233400,30790772000,32330310600,33869849200,35409387800,36948926400,38488465000,40028003600,41567542200,43107080800,44646619400,46186158000,47725696600,49265235200,50804773800,52344312400,53883851000,55423389600,56962928200,58502466800,60042005400,61581544000,63121082600,64660621200,66200159800,67739698400,69279237000,70818775600,72358314200,73897852800,75437391400,76976930000,78516468600,80056007200,81595545800,83135084400,84674623000,86214161600,87753700200,89293238800,90832777400,92372316000,93911854600,95451393200,96990931800,98530470400,100070009000,101609547600,103149086200,104688624800,106228163400,107767702000,109307240600,110846779200,112386317800,113925856400,115465395000,117004933600,118544472200,120084010800,121623549400,123163088000,124702626600,126242165200,127781703800,129321242400,130860781000,132400319600,133939858200,135479396800,137018935400,138558474000,140098012600,141637551200,143177089800,144716628400,146256167000,147795705600,149335244200,150874782800,152414321400,153953860000
+		} 
+		KeyValueFloat: *101 {
+			a: -0.1141602,-0.1141602,-0.1141602,-0.1141602,-0.1141602,-0.1141602,-0.1141602,-0.06948312,0.05693806,0.2537003,0.5094146,0.8127027,1.152195,1.516527,1.894336,2.27426,2.644933,2.994984,3.313031,3.761723,4.061334,4.061334,4.061334,4.061334,4.061334,4.061334,4.061334,4.061334,4.061334,4.061334,4.061334,4.061334,4.061334,4.061334,4.073953,4.109278,4.16352,4.232891,4.313607,4.401884,4.493941,4.585999,4.674276,4.754992,4.824363,4.878605,4.91393,4.926549,4.921231,4.905546,4.879903,4.84471,4.800373,4.747301,4.685898,4.616575,4.539735,4.455788,4.365138,4.268193,4.165359,4.057044,3.943652,3.825591,3.703267,3.577085,3.447452,3.314775,3.179459,3.04191,2.902534,2.761737,2.619926,2.477506,2.334883,2.192462,2.050651,1.909855,1.770478,1.63293,1.497614,1.364936,1.235304,1.109122,0.9867976,0.8687366,0.7553446,0.6470289,0.5441957,0.447251,0.3566013,0.2726533,0.1958141,0.1264903,0.06508816,0.01201538,-0.03232126,-0.0675145,-0.09315708,-0.1088415,-0.1141602
+		} 
+		;KeyAttrFlags: Cubic|TangeantAuto|GenericTimeIndependent|GenericClampProgressive
+		KeyAttrFlags: *1 {
+			a: 24840
+		} 
+		;KeyAttrDataFloat: RightAuto:0, NextLeftAuto:0
+		KeyAttrDataFloat: *4 {
+			a: 0,0,218434821,0
+		} 
+		KeyAttrRefCount: *1 {
+			a: 101
+		} 
+	}
+	AnimationCurveNode: 2430617045200, "AnimCurveNode::T", "" {
+		Properties70:  {
+			P: "d|X", "Number", "", "A",-99.805549621582
+			P: "d|Y", "Number", "", "A",-173.916564941406
+			P: "d|Z", "Number", "", "A",578.111328125
+		}
+	}
+	AnimationCurveNode: 2430617042704, "AnimCurveNode::R", "" {
+		Properties70:  {
+			P: "d|X", "Number", "", "A",-89.9998513210169
+			P: "d|Y", "Number", "", "A",-2.42320857162715e-05
+			P: "d|Z", "Number", "", "A",179.999883969864
+		}
+	}
+	AnimationCurveNode: 2430617045616, "AnimCurveNode::T", "" {
+		Properties70:  {
+			P: "d|X", "Number", "", "A",-127.677848815918
+			P: "d|Y", "Number", "", "A",-71.9781723022461
+			P: "d|Z", "Number", "", "A",578.159484863281
+		}
+	}
+	AnimationCurveNode: 2430617041040, "AnimCurveNode::R", "" {
+		Properties70:  {
+			P: "d|X", "Number", "", "A",-0.429038318907965
+			P: "d|Y", "Number", "", "A",-5.74659152393121
+			P: "d|Z", "Number", "", "A",-0.114160206465303
+		}
+	}
+	AnimationLayer: 2430006649696, "AnimLayer::BaseLayer", "" {
+	}
+}
+
+; Object connections
+;------------------------------------------------------------------
+
+Connections:  {
+	
+	;Model::Object003, Model::RootNode
+	C: "OO",2430119027520,0
+	
+	;Model::Gun, Model::RootNode
+	C: "OO",2430119029712,0
+	
+	;AnimLayer::BaseLayer, AnimStack::Take 001
+	C: "OO",2430006649696,2426760511392
+	
+	;AnimCurveNode::T, AnimLayer::BaseLayer
+	C: "OO",2430617045200,2430006649696
+	
+	;AnimCurveNode::R, AnimLayer::BaseLayer
+	C: "OO",2430617042704,2430006649696
+	
+	;AnimCurveNode::T, AnimLayer::BaseLayer
+	C: "OO",2430617045616,2430006649696
+	
+	;AnimCurveNode::R, AnimLayer::BaseLayer
+	C: "OO",2430617041040,2430006649696
+	
+	;Material::Magazine, Model::Object003
+	C: "OO",2429729510416,2430119027520
+	
+	;AnimCurveNode::T, Model::Object003
+	C: "OP",2430617045200,2430119027520, "Lcl Translation"
+	
+	;AnimCurveNode::R, Model::Object003
+	C: "OP",2430617042704,2430119027520, "Lcl Rotation"
+	
+	;Model::Box001, Model::Gun
+	C: "OO",2430119018752,2430119029712
+	
+	;Model::Cylinder001, Model::Gun
+	C: "OO",2430119020944,2430119029712
+	
+	;Model::Cylinder011, Model::Gun
+	C: "OO",2430113810752,2430119029712
+	
+	;Model::Cylinder014, Model::Gun
+	C: "OO",2430113808560,2430119029712
+	
+	;Model::Cylinder015, Model::Gun
+	C: "OO",2430113812944,2430119029712
+	
+	;Model::Cylinder017, Model::Gun
+	C: "OO",2430113815136,2430119029712
+	
+	;Model::Line013, Model::Gun
+	C: "OO",2430113817328,2430119029712
+	
+	;Model::Line015, Model::Gun
+	C: "OO",2430113819520,2430119029712
+	
+	;Model::Line017, Model::Gun
+	C: "OO",2430113821712,2430119029712
+	
+	;Model::Line018, Model::Gun
+	C: "OO",2430109030560,2430119029712
+	
+	;Model::Object005, Model::Gun
+	C: "OO",2430109019600,2430119029712
+	
+	;Model::Object007, Model::Gun
+	C: "OO",2430109028368,2430119029712
+	
+	;Model::Plane012, Model::Gun
+	C: "OO",2430109045904,2430119029712
+	
+	;AnimCurveNode::T, Model::Gun
+	C: "OP",2430617045616,2430119029712, "Lcl Translation"
+	
+	;AnimCurveNode::R, Model::Gun
+	C: "OP",2430617041040,2430119029712, "Lcl Rotation"
+	
+	;Material::Handle_2, Model::Box001
+	C: "OO",2429729511376,2430119018752
+	
+	;Material::Engine_1, Model::Cylinder001
+	C: "OO",2429729511536,2430119020944
+	
+	;Material::Engine_3, Model::Cylinder011
+	C: "OO",2429729511696,2430113810752
+	
+	;Material::Engine_2, Model::Cylinder014
+	C: "OO",2429729510576,2430113808560
+	
+	;Material::Gun_Part, Model::Cylinder015
+	C: "OO",2429729511216,2430113812944
+	
+	;Material::Muzzle, Model::Cylinder017
+	C: "OO",2429729513296,2430113815136
+	
+	;Material::Handle_1, Model::Line013
+	C: "OO",2429729512016,2430113817328
+	
+	;Material::Trigger, Model::Line015
+	C: "OO",2429729512656,2430113819520
+	
+	;Material::Pipe_2, Model::Line017
+	C: "OO",2429729513936,2430113821712
+	
+	;Material::Pipe_1, Model::Line018
+	C: "OO",2429729512336,2430109030560
+	
+	;Material::Front_Handle_2, Model::Object005
+	C: "OO",2429729511856,2430109019600
+	
+	;Material::Front_Handle_1, Model::Object007
+	C: "OO",2429729512496,2430109028368
+	
+	;Material::Shell, Model::Plane012
+	C: "OO",2429729512816,2430109045904
+	
+	;Texture::Map #96, Material::Magazine
+	C: "OP",2430115852848,2429729510416, "3dsMax|main|base_color_map"
+	
+	;Texture::Map #97, Material::Magazine
+	C: "OP",2430115857168,2429729510416, "3dsMax|main|metalness_map"
+	
+	;Texture::Map #98, Material::Magazine
+	C: "OP",2430115852368,2429729510416, "3dsMax|main|Roughness_Map"
+	
+	;Texture::Map #99, Material::Magazine
+	C: "OP",2430115853808,2429729510416, "3dsMax|main|norm_map"
+	
+	;Video::Map #96, Texture::Map #96
+	C: "OO",2430115899888,2430115852848
+	
+	;Video::Map #97, Texture::Map #97
+	C: "OO",2430115882128,2430115857168
+	
+	;Video::Map #98, Texture::Map #98
+	C: "OO",2430115900848,2430115852368
+	
+	;Video::Map #99, Texture::Map #99
+	C: "OO",2430115903248,2430115853808
+	
+	;Texture::Map #116, Material::Handle_2
+	C: "OP",2430115874448,2429729511376, "3dsMax|main|base_color_map"
+	
+	;Texture::Map #117, Material::Handle_2
+	C: "OP",2430115873008,2429729511376, "3dsMax|main|metalness_map"
+	
+	;Texture::Map #118, Material::Handle_2
+	C: "OP",2430115851408,2429729511376, "3dsMax|main|Roughness_Map"
+	
+	;Texture::Map #119, Material::Handle_2
+	C: "OP",2430115854768,2429729511376, "3dsMax|main|norm_map"
+	
+	;Video::Map #116, Texture::Map #116
+	C: "OO",2430115888848,2430115874448
+	
+	;Video::Map #117, Texture::Map #117
+	C: "OO",2430115884528,2430115873008
+	
+	;Video::Map #118, Texture::Map #118
+	C: "OO",2430115888368,2430115851408
+	
+	;Video::Map #119, Texture::Map #119
+	C: "OO",2430115893648,2430115854768
+	
+	;Texture::Map #60, Material::Engine_1
+	C: "OP",2430115874928,2429729511536, "3dsMax|main|base_color_map"
+	
+	;Texture::Map #61, Material::Engine_1
+	C: "OP",2430115850448,2429729511536, "3dsMax|main|metalness_map"
+	
+	;Texture::Map #62, Material::Engine_1
+	C: "OP",2430115865808,2429729511536, "3dsMax|main|Roughness_Map"
+	
+	;Texture::Map #63, Material::Engine_1
+	C: "OP",2430115863408,2429729511536, "3dsMax|main|norm_map"
+	
+	;Video::Map #60, Texture::Map #60
+	C: "OO",2430115909008,2430115874928
+	
+	;Video::Map #61, Texture::Map #61
+	C: "OO",2430115883088,2430115850448
+	
+	;Video::Map #62, Texture::Map #62
+	C: "OO",2430115878768,2430115865808
+	
+	;Video::Map #63, Texture::Map #63
+	C: "OO",2430115879248,2430115863408
+	
+	;Texture::Map #69, Material::Engine_3
+	C: "OP",2430115866768,2429729511696, "3dsMax|main|base_color_map"
+	
+	;Texture::Map #70, Material::Engine_3
+	C: "OP",2430115848528,2429729511696, "3dsMax|main|metalness_map"
+	
+	;Texture::Map #71, Material::Engine_3
+	C: "OP",2430115862928,2429729511696, "3dsMax|main|Roughness_Map"
+	
+	;Texture::Map #72, Material::Engine_3
+	C: "OP",2430115849008,2429729511696, "3dsMax|main|norm_map"
+	
+	;Video::Map #69, Texture::Map #69
+	C: "OO",2430115901328,2430115866768
+	
+	;Video::Map #70, Texture::Map #70
+	C: "OO",2430115879728,2430115848528
+	
+	;Video::Map #71, Texture::Map #71
+	C: "OO",2430115892208,2430115862928
+	
+	;Video::Map #72, Texture::Map #72
+	C: "OO",2430115895088,2430115849008
+	
+	;Texture::Map #64, Material::Engine_2
+	C: "OP",2430115872528,2429729510576, "3dsMax|main|base_color_map"
+	
+	;Texture::Map #65, Material::Engine_2
+	C: "OP",2430115869648,2429729510576, "3dsMax|main|metalness_map"
+	
+	;Texture::Map #66, Material::Engine_2
+	C: "OP",2430115855248,2429729510576, "3dsMax|main|Roughness_Map"
+	
+	;Texture::Map #67, Material::Engine_2
+	C: "OP",2430115867248,2429729510576, "3dsMax|main|norm_map"
+	
+	;Video::Map #64, Texture::Map #64
+	C: "OO",2430115887888,2430115872528
+	
+	;Video::Map #65, Texture::Map #65
+	C: "OO",2430115890768,2430115869648
+	
+	;Video::Map #66, Texture::Map #66
+	C: "OO",2430115903728,2430115855248
+	
+	;Video::Map #67, Texture::Map #67
+	C: "OO",2430115883568,2430115867248
+	
+	;Texture::Map #82, Material::Gun_Part
+	C: "OP",2430115876848,2429729511216, "3dsMax|main|base_color_map"
+	
+	;Texture::Map #83, Material::Gun_Part
+	C: "OP",2430115877808,2429729511216, "3dsMax|main|metalness_map"
+	
+	;Texture::Map #84, Material::Gun_Part
+	C: "OP",2430115849488,2429729511216, "3dsMax|main|Roughness_Map"
+	
+	;Texture::Map #85, Material::Gun_Part
+	C: "OP",2430115870128,2429729511216, "3dsMax|main|norm_map"
+	
+	;Video::Map #82, Texture::Map #82
+	C: "OO",2430115889328,2430115876848
+	
+	;Video::Map #83, Texture::Map #83
+	C: "OO",2430115884048,2430115877808
+	
+	;Video::Map #84, Texture::Map #84
+	C: "OO",2430115898448,2430115849488
+	
+	;Video::Map #85, Texture::Map #85
+	C: "OO",2430115885488,2430115870128
+	
+	;Texture::Map #104, Material::Muzzle
+	C: "OP",2430115863888,2429729513296, "3dsMax|main|base_color_map"
+	
+	;Texture::Map #105, Material::Muzzle
+	C: "OP",2430115864368,2429729513296, "3dsMax|main|metalness_map"
+	
+	;Texture::Map #106, Material::Muzzle
+	C: "OP",2430115855728,2429729513296, "3dsMax|main|Roughness_Map"
+	
+	;Texture::Map #107, Material::Muzzle
+	C: "OP",2430115856208,2429729513296, "3dsMax|main|norm_map"
+	
+	;Video::Map #104, Texture::Map #104
+	C: "OO",2430115901808,2430115863888
+	
+	;Video::Map #105, Texture::Map #105
+	C: "OO",2430115902768,2430115864368
+	
+	;Video::Map #106, Texture::Map #106
+	C: "OO",2430115885968,2430115855728
+	
+	;Video::Map #107, Texture::Map #107
+	C: "OO",2430115904688,2430115856208
+	
+	;Texture::Map #92, Material::Handle_1
+	C: "OP",2430115857648,2429729512016, "3dsMax|main|base_color_map"
+	
+	;Texture::Map #93, Material::Handle_1
+	C: "OP",2430115858608,2429729512016, "3dsMax|main|metalness_map"
+	
+	;Texture::Map #94, Material::Handle_1
+	C: "OP",2430115859088,2429729512016, "3dsMax|main|Roughness_Map"
+	
+	;Texture::Map #95, Material::Handle_1
+	C: "OP",2430115868208,2429729512016, "3dsMax|main|norm_map"
+	
+	;Video::Map #92, Texture::Map #92
+	C: "OO",2430115905648,2430115857648
+	
+	;Video::Map #93, Texture::Map #93
+	C: "OO",2430115905168,2430115858608
+	
+	;Video::Map #94, Texture::Map #94
+	C: "OO",2430115896048,2430115859088
+	
+	;Video::Map #95, Texture::Map #95
+	C: "OO",2430115889808,2430115868208
+	
+	;Texture::Map #100, Material::Trigger
+	C: "OP",2430115864848,2429729512656, "3dsMax|main|base_color_map"
+	
+	;Texture::Map #101, Material::Trigger
+	C: "OP",2430115860048,2429729512656, "3dsMax|main|metalness_map"
+	
+	;Texture::Map #102, Material::Trigger
+	C: "OP",2430115875408,2429729512656, "3dsMax|main|Roughness_Map"
+	
+	;Texture::Map #103, Material::Trigger
+	C: "OP",2430115860528,2429729512656, "3dsMax|main|norm_map"
+	
+	;Video::Map #100, Texture::Map #100
+	C: "OO",2430115890288,2430115864848
+	
+	;Video::Map #101, Texture::Map #101
+	C: "OO",2430115897488,2430115860048
+	
+	;Video::Map #102, Texture::Map #102
+	C: "OO",2430115906128,2430115875408
+	
+	;Video::Map #103, Texture::Map #103
+	C: "OO",2430115906608,2430115860528
+	
+	;Texture::Map #112, Material::Pipe_2
+	C: "OP",2430115861008,2429729513936, "3dsMax|main|base_color_map"
+	
+	;Texture::Map #113, Material::Pipe_2
+	C: "OP",2430115865328,2429729513936, "3dsMax|main|metalness_map"
+	
+	;Texture::Map #114, Material::Pipe_2
+	C: "OP",2430115861488,2429729513936, "3dsMax|main|Roughness_Map"
+	
+	;Texture::Map #115, Material::Pipe_2
+	C: "OP",2430115861968,2429729513936, "3dsMax|main|norm_map"
+	
+	;Video::Map #112, Texture::Map #112
+	C: "OO",2430115886928,2430115861008
+	
+	;Video::Map #113, Texture::Map #113
+	C: "OO",2430115894608,2430115865328
+	
+	;Video::Map #114, Texture::Map #114
+	C: "OO",2430115880208,2430115861488
+	
+	;Video::Map #115, Texture::Map #115
+	C: "OO",2430115907088,2430115861968
+	
+	;Texture::Map #108, Material::Pipe_1
+	C: "OP",2430115871088,2429729512336, "3dsMax|main|base_color_map"
+	
+	;Texture::Map #109, Material::Pipe_1
+	C: "OP",2430115902288,2429729512336, "3dsMax|main|metalness_map"
+	
+	;Texture::Map #110, Material::Pipe_1
+	C: "OP",2430115904208,2429729512336, "3dsMax|main|Roughness_Map"
+	
+	;Texture::Map #111, Material::Pipe_1
+	C: "OP",2430115907568,2429729512336, "3dsMax|main|norm_map"
+	
+	;Video::Map #108, Texture::Map #108
+	C: "OO",2430115892688,2430115871088
+	
+	;Video::Map #109, Texture::Map #109
+	C: "OO",2430115893168,2430115902288
+	
+	;Video::Map #110, Texture::Map #110
+	C: "OO",2430115895568,2430115904208
+	
+	;Video::Map #111, Texture::Map #111
+	C: "OO",2430115897008,2430115907568
+	
+	;Texture::Map #78, Material::Front_Handle_2
+	C: "OP",2430115908048,2429729511856, "3dsMax|main|base_color_map"
+	
+	;Texture::Map #79, Material::Front_Handle_2
+	C: "OP",2430115881648,2429729511856, "3dsMax|main|metalness_map"
+	
+	;Texture::Map #80, Material::Front_Handle_2
+	C: "OP",2430115896528,2429729511856, "3dsMax|main|Roughness_Map"
+	
+	;Texture::Map #81, Material::Front_Handle_2
+	C: "OP",2430115885008,2429729511856, "3dsMax|main|norm_map"
+	
+	;Video::Map #78, Texture::Map #78
+	C: "OO",2430115898928,2430115908048
+	
+	;Video::Map #79, Texture::Map #79
+	C: "OO",2430115880688,2430115881648
+	
+	;Video::Map #80, Texture::Map #80
+	C: "OO",2430115909488,2430115896528
+	
+	;Video::Map #81, Texture::Map #81
+	C: "OO",2430115911408,2430115885008
+	
+	;Texture::Map #73, Material::Front_Handle_1
+	C: "OP",2430115899408,2429729512496, "3dsMax|main|base_color_map"
+	
+	;Texture::Map #74, Material::Front_Handle_1
+	C: "OP",2430115882608,2429729512496, "3dsMax|main|metalness_map"
+	
+	;Texture::Map #76, Material::Front_Handle_1
+	C: "OP",2430115887408,2429729512496, "3dsMax|main|Roughness_Map"
+	
+	;Texture::Map #77, Material::Front_Handle_1
+	C: "OP",2430115908528,2429729512496, "3dsMax|main|norm_map"
+	
+	;Video::Map #73, Texture::Map #73
+	C: "OO",2430115910448,2430115899408
+	
+	;Video::Map #74, Texture::Map #74
+	C: "OO",2430115911888,2430115882608
+	
+	;Video::Map #76, Texture::Map #76
+	C: "OO",2430115912368,2430115887408
+	
+	;Video::Map #77, Texture::Map #77
+	C: "OO",2430115909968,2430115908528
+	
+	;Texture::Map #87, Material::Shell
+	C: "OP",2430115897968,2429729512816, "3dsMax|main|base_color_map"
+	
+	;Texture::Map #88, Material::Shell
+	C: "OP",2430115891728,2429729512816, "3dsMax|main|metalness_map"
+	
+	;Texture::Map #89, Material::Shell
+	C: "OP",2430115886448,2429729512816, "3dsMax|main|Roughness_Map"
+	
+	;Texture::Map #90, Material::Shell
+	C: "OP",2430115894128,2429729512816, "3dsMax|main|norm_map"
+	
+	;Video::Map #87, Texture::Map #87
+	C: "OO",2430115912848,2430115897968
+	
+	;Video::Map #88, Texture::Map #88
+	C: "OO",2430115910928,2430115891728
+	
+	;Video::Map #89, Texture::Map #89
+	C: "OO",2428062585056,2430115886448
+	
+	;Video::Map #90, Texture::Map #90
+	C: "OO",2427591179680,2430115894128
+	
+	;AnimCurve::, AnimCurveNode::T
+	C: "OP",2429729512976,2430617045200, "d|X"
+	
+	;AnimCurve::, AnimCurveNode::T
+	C: "OP",2429729513616,2430617045200, "d|Y"
+	
+	;AnimCurve::, AnimCurveNode::T
+	C: "OP",2429729513456,2430617045200, "d|Z"
+	
+	;AnimCurve::, AnimCurveNode::R
+	C: "OP",2429729513776,2430617042704, "d|X"
+	
+	;AnimCurve::, AnimCurveNode::R
+	C: "OP",2429729510896,2430617042704, "d|Y"
+	
+	;AnimCurve::, AnimCurveNode::R
+	C: "OP",2429729510096,2430617042704, "d|Z"
+	
+	;AnimCurve::, AnimCurveNode::T
+	C: "OP",2430114173888,2430617045616, "d|X"
+	
+	;AnimCurve::, AnimCurveNode::T
+	C: "OP",2429729510736,2430617045616, "d|Y"
+	
+	;AnimCurve::, AnimCurveNode::T
+	C: "OP",2429729510256,2430617045616, "d|Z"
+	
+	;AnimCurve::, AnimCurveNode::R
+	C: "OP",2429729511056,2430617041040, "d|X"
+	
+	;AnimCurve::, AnimCurveNode::R
+	C: "OP",2431005305872,2430617041040, "d|Y"
+	
+	;AnimCurve::, AnimCurveNode::R
+	C: "OP",2431005306352,2430617041040, "d|Z"
+}
+;Takes section
+;----------------------------------------------------
+
+Takes:  {
+	Current: ""
+	Take: "Take 001" {
+		FileName: "Take_001.tak"
+		LocalTime: 0,153953860000
+		ReferenceTime: 0,153953860000
+	}
+}

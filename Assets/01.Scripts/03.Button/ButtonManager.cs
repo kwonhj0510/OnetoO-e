@@ -14,9 +14,16 @@ public class ButtonManager : MonoBehaviour
     [SerializeField]
     private GameObject creditsPopUp;     // 크레딧 창
     [SerializeField]
-    private GameObject escPopUp;     // 크레딧 창
+    private GameObject escPopUp;         // Esc 창
+
+    [SerializeField] PlayerController playerController;
+
 
     public Button[] buttons;
+
+    private void Awake()
+    {
+    }
 
     void Start()
     {
@@ -76,7 +83,12 @@ public class ButtonManager : MonoBehaviour
     }
     private void OpenSettings() // Settings 버튼을 누르면 설정 창으로 넘어간다.
     {
-        mainMenu.SetActive(false);
+        string currentSceneName = SceneManager.GetActiveScene().name;
+        if (currentSceneName == "00.MainMenu")
+        {
+            mainMenu.SetActive(false);
+        }
+        
         settingsPopUp.SetActive(true);
     }
     private void ShowCredits()  // Credits 버튼을 누르면 크레딧 창으로 넘어간다.
@@ -90,26 +102,24 @@ public class ButtonManager : MonoBehaviour
     }
     private void CloseWindow()  // Close 버튼을 ( X ) 누르면 창이 닫히고 메인 화면으로 돌아간다.
     {
+        string currentSceneName = SceneManager.GetActiveScene().name;
         if (settingsPopUp.activeSelf)
         {
-            settingsPopUp.SetActive(false);
-            mainMenu.SetActive(true);
-
-        }
-        if (creditsPopUp.activeSelf)
-        {
-            creditsPopUp.SetActive(false);
-            mainMenu.SetActive(true);
-
-        }
-        if (escPopUp.activeSelf)
-        {
-            Cursor.visible = false;
-            Cursor.lockState = CursorLockMode.Locked;
-            escPopUp.SetActive(false);
-            Time.timeScale = 1;
+            if (currentSceneName == "00.MainMenu")
+            {
+                mainMenu.SetActive(true);
+                settingsPopUp.SetActive(false);
+            }
         }
         
+        if (currentSceneName == "00.MainMenu")
+        {
+            if (creditsPopUp.activeSelf)
+            {
+                creditsPopUp.SetActive(false);
+                mainMenu.SetActive(true);
+            }
+        }
     }
     private void TutorialRestart()
     {
@@ -122,7 +132,15 @@ public class ButtonManager : MonoBehaviour
     {
         Cursor.visible = true;
         Cursor.lockState = CursorLockMode.None;
+        if(Time.timeScale == 0) Time.timeScale = 1;
         SceneManager.LoadScene("00.MainMenu");
         SoundManager.instance.musicSource.Play();
+    }
+    public void TimeScale()
+    {
+        playerController.isGameStart = true;
+        Time.timeScale = 1f;
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
     }
 }

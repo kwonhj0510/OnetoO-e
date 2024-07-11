@@ -12,7 +12,6 @@ public class EnemyProjectile : MonoBehaviour
     public void SetUp(Vector3 position)
     {
         movement = GetComponent<MovementTransfrom>();
-
         StartCoroutine("OnMove", position);
     }
 

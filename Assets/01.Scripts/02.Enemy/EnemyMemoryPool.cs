@@ -31,7 +31,8 @@ public class EnemyMemoryPool : MonoBehaviour
         spawnPointMemoryPool = new MemoryPool(enemySpawnPointPrefab);
         enemyMemoryPool = new MemoryPool(enemyPrefab);
 
-        StartCoroutine("SpawnTile");
+        
+        StartCoroutine(SpawnTile());
     }
 
     private IEnumerator SpawnTile()
@@ -39,7 +40,7 @@ public class EnemyMemoryPool : MonoBehaviour
         int curNumber = 0;
         int maxNumber = 1;       
         
-
+        yield return new WaitForSeconds(2f);
         while (true)
         {
             // 동시에 enemySpawnCount 숫자만큼 적이 생성되도록 반복문 사용

@@ -243,14 +243,7 @@ public class PlayerController : MonoBehaviour
                 Cursor.visible = true;
                 Cursor.lockState = CursorLockMode.None;
             }            
-            else
-            {
-                isGameStart = true;
-                Time.timeScale = 1f;
-                escPanel.SetActive(false);
-                Cursor.visible = false;
-                Cursor.lockState = CursorLockMode.Locked;
-            }
+            
         }
     }
 

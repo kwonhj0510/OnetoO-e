@@ -154,7 +154,7 @@ public class WeaponRifle : MonoBehaviour
             // 총구 이펙트 재생
             StartCoroutine("OnMuzzleFlashEffect");
             // 공격 사운드 재생
-            PlaySound(audioClipFire);
+            SoundManager.instance.PlaySFX("Shoot");
 
 
             // 광선을 발사해 원하는 위치 공격 (+Impact Effect)
@@ -180,7 +180,7 @@ public class WeaponRifle : MonoBehaviour
 
             // 재장전 애니메이션, 사운드
             animator.OnReload();
-            PlaySound(audioClipReload);
+            SoundManager.instance.PlaySFX("Reload");
 
             while (true)
             {

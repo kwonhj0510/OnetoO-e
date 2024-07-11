@@ -1,45 +1,25 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Audio;
 using UnityEngine.UI;
-
-[System.Serializable]
-public class SFX
-{
-    public string sfxName;
-    public AudioClip sfxClip;
-}
-
-[System.Serializable]
-public class Music
-{
-    public string musicName;
-    public AudioClip musicClip;
-}
 
 public class SoundManager : MonoBehaviour
 {
-    public static SoundManager instance;
+    public static SoundManager instance = null;
 
-    public AudioSource musicSource;
-    public AudioSource sfxSource;
+    public Sound[] musicSounds, sfxSounds;
+    public AudioSource musicSource, sfxSource;
 
-    [SerializeField] private bool BgmToggle;
-    [SerializeField] private bool SfxToggle;
-
-    public List<Music> musicList;
-    public List<SFX> sfxList;
-
-    public Slider musicVolumeSlider;
-    public Slider sfxVolumeSlider;
-
+    //싱글톤
     private void Awake()
     {
         if (instance == null)
         {
             instance = this;
             DontDestroyOnLoad(gameObject);
-            LoadSettings(); // Load settings when the game starts
         }
         else
         {
@@ -49,115 +29,104 @@ public class SoundManager : MonoBehaviour
 
     private void Start()
     {
-        // Set slider values and add listeners
-        if (musicVolumeSlider != null)
-        {
-            musicVolumeSlider.minValue = 0f;
-            musicVolumeSlider.maxValue = 1f;
-            // Set slider value to match AudioSource volume
-            musicVolumeSlider.value = musicSource.volume;
-            musicVolumeSlider.onValueChanged.AddListener(SetMusicVolume);
-        }
-
-        if (sfxVolumeSlider != null)
-        {
-            sfxVolumeSlider.minValue = 0f;
-            sfxVolumeSlider.maxValue = 1f;
-            // Set slider value to match AudioSource volume
-            sfxVolumeSlider.value = sfxSource.volume;
-            sfxVolumeSlider.onValueChanged.AddListener(SetSfxVolume);
-        }
+        PlayMusic("Music");
     }
 
-    private void LoadSettings()
-    {
-        // Load volume and toggle settings
-        float savedMusicVolume = PlayerPrefs.GetFloat("Slider", 1f); // Default volume 1.0f
-        float savedSfxVolume = PlayerPrefs.GetFloat("Slider", 1f); // Default volume 1.0f
-        bool savedBgmToggle = PlayerPrefs.GetInt("Toggle", 0) == 1; // Default false
-        bool savedSfxToggle = PlayerPrefs.GetInt("Toggle", 0) == 1; // Default false
-
-        // Apply saved settings
-        musicSource.volume = savedMusicVolume;
-        sfxSource.volume = savedSfxVolume;
-        BgmToggle = savedBgmToggle;
-        SfxToggle = savedSfxToggle;
-
-        musicSource.mute = BgmToggle;
-        sfxSource.mute = SfxToggle;
-
-        // Ensure sliders match the loaded settings
-        if (musicVolumeSlider != null)
-        {
-            musicVolumeSlider.value = savedMusicVolume;
-        }
-
-        if (sfxVolumeSlider != null)
-        {
-            sfxVolumeSlider.value = savedSfxVolume;
-        }
-    }
-
-    private void SaveSettings()
-    {
-        // Save volume and toggle settings
-        PlayerPrefs.SetFloat("MusicVolume", musicSource.volume);
-        PlayerPrefs.SetFloat("SfxVolume", sfxSource.volume);
-        PlayerPrefs.SetInt("BgmToggle", BgmToggle ? 1 : 0);
-        PlayerPrefs.SetInt("SfxToggle", SfxToggle ? 1 : 0);
-        PlayerPrefs.Save();
-    }
-
-    public void SetMusicVolume(float volume)
-    {
-        musicSource.volume = volume;
-        SaveSettings(); // Save volume when it's changed
-    }
-
-    public void SetSfxVolume(float volume)
-    {
-        sfxSource.volume = volume;
-        SaveSettings(); // Save volume when it's changed
-    }
-
-    public void ChangeBgmToggle()
-    {
-        BgmToggle = !BgmToggle;
-        musicSource.mute = BgmToggle;
-        SaveSettings(); // Save toggle setting when it's changed
-    }
-
-    public void ChangeSfxToggle()
-    {
-        SfxToggle = !SfxToggle;
-        sfxSource.mute = SfxToggle;
-        SaveSettings(); // Save toggle setting when it's changed
-    }
-
+    /// <summary>
+    /// 음악을 실행시키는 함수
+    /// </summary>
+    /// <param name="name">음악의 이름</param>
     public void PlayMusic(string name)
     {
-        foreach (Music music in musicList)
+        Sound s = Array.Find(musicSounds, x => x.name == name);
+
+        if (s == null)
         {
-            if (music.musicName == name)
-            {
-                musicSource.clip = music.musicClip;
-                musicSource.Play();
-                return;
-            }
+            Debug.Log("Music Not Found");
         }
-        Debug.LogWarning("Music not found: " + name);
+        else
+        {
+            musicSource.clip = s.clip;
+            musicSource.Play();
+        }
     }
 
-    public void PlaySfx(string name)
+    /// <summary>
+    /// 음악을 멈추는 함수
+    /// </summary>
+    public void StopMusic()
     {
-        foreach (SFX sfx in sfxList)
-        {
-            if (sfx.sfxName == name)
-            {
-                sfxSource.PlayOneShot(sfx.sfxClip);
-                return;
-            }
-        }
-        Debug.LogWarning("SFX not found: " + name);
+        musicSource.Stop();
     }
+
+    /// <summary>
+    /// 효과음을 실행시키는 함수
+    /// </summary>
+    /// <param name="name">효과음의 이름</param>
+    public void PlaySFX(string name)
+    {
+        Sound s = Array.Find(sfxSounds, x => x.name == name);
+
+        if (s == null)
+        {
+            Debug.Log("Sount Not Found");
+        }
+        else
+        {
+            sfxSource.PlayOneShot(s.clip);
+        }
+    }
+
+    /// <summary>
+    /// 음악의 소리를 조절하는 함수
+    /// </summary>
+    /// <param name="volume"></param>
+    /// <param name="audioMixer"></param>
+    public void SetMusicVolume(float volume, AudioMixer audioMixer)
+    {
+        if (volume == 0)
+        {
+            audioMixer.SetFloat("Music", -80f);
+        }
+        else
+        {
+            audioMixer.SetFloat("Music", Mathf.Log10(volume) * 20);
+        }
+        PlayerPrefs.SetFloat("musicVolume", volume);
+    }
+
+    /// <summary>
+    /// 효과음의 소리를 조절하는 함수
+    /// </summary>
+    /// <param name="volume"></param>
+    /// <param name="audioMixer"></param>
+    public void SetSFXVolume(float volume, AudioMixer audioMixer)
+    {
+        if (volume == 0)
+        {
+            audioMixer.SetFloat("SFX", -80f);
+        }
+        else
+        {
+            audioMixer.SetFloat("SFX", Mathf.Log10(volume) * 20);
+        }
+        PlayerPrefs.SetFloat("SFXVolume", volume);
+    }
+
+    /// <summary>
+    /// 소리를 조절한 값을 받아와서 설정해주는 함수
+    /// </summary>
+    /// <param name="musicVolume"></param>
+    /// <param name="sfxVolume"></param>
+    /// <param name="audioMixer"></param>
+    public void LoadVolume(float musicVolume, float sfxVolume, AudioMixer audioMixer)
+    {
+        musicVolume = PlayerPrefs.GetFloat("musicVolume");
+        sfxVolume = PlayerPrefs.GetFloat("SFXVolume");
+
+        SetMusicVolume(musicVolume, audioMixer);
+        SetSFXVolume(sfxVolume, audioMixer);
+    }
+
 }
+

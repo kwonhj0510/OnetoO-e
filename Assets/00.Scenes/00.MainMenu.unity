@@ -1975,6 +1975,8 @@ MonoBehaviour:
     sfxClip: {fileID: 8300000, guid: 0c58744c3b6fdd844b8348066c3f703e, type: 3}
   - sfxName: Reload
     sfxClip: {fileID: 8300000, guid: 5b907074256e36d41b92e89fb0790633, type: 3}
+  musicVolumeSlider: {fileID: 1231343752}
+  sfxVolumeSlider: {fileID: 359569078}
 --- !u!4 &466838754
 Transform:
   m_ObjectHideFlags: 0
@@ -2886,6 +2888,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sensitivitySlider: {fileID: 128570981}
+  sensitivityMin: 1
+  sensitivityMax: 3
   sensitivity: 3
 --- !u!4 &765850235
 Transform:
@@ -4172,6 +4176,8 @@ MonoBehaviour:
   mainMenu: {fileID: 1619856054}
   settingsPopUp: {fileID: 1343348787}
   creditsPopUp: {fileID: 2145858625}
+  escPopUp: {fileID: 0}
+  playerController: {fileID: 0}
   buttons:
   - {fileID: 760617790}
   - {fileID: 1994860714}

@@ -14,13 +14,7 @@ public class PlayerHUD : MonoBehaviour
 
     [Header("Weapon Base")]
     [SerializeField]
-    private TextMeshProUGUI     textWeaponName;             // 무기 이름
-    [SerializeField]
-    private Image               imageWeaponIcon;            // 무기 아이콘
-    [SerializeField]
     private Image               imageAmmoIcon;              // 총알 아이콘
-    [SerializeField]
-    private Sprite[]            spriteWeaponIcons;          // 무기 아이콘에 사용되는 sprite 배열
 
     [Header("Ammo")]
     [SerializeField]
@@ -44,7 +38,6 @@ public class PlayerHUD : MonoBehaviour
         }
         else
         {
-            SetupWeapon();
             weapon.onAmmoEvent.AddListener(UpdateAmmoHUD);
         }
 
@@ -58,16 +51,9 @@ public class PlayerHUD : MonoBehaviour
         }
     }
 
-
-    private void SetupWeapon()
-    {
-        textWeaponName.text = weapon.WeaponName.ToString();
-        imageWeaponIcon.sprite = spriteWeaponIcons[(int)weapon.WeaponName];
-    }
-
     private void UpdateAmmoHUD(int currentAmmo, int maxAmmo)
     {
-        textCurrentAmmo.text = $"<size=50>{currentAmmo}</size>";
+        textCurrentAmmo.text = $"<size=90>{currentAmmo}</size>";
         textMaxAmmo.text = $"{maxAmmo}";
     }
 

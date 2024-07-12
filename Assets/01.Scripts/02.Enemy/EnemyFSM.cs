@@ -220,7 +220,15 @@ public class EnemyFSM : MonoBehaviour
                 GameObject clone = Instantiate(projectilePrefab, projectileSpawnPoint.position, projectileSpawnPoint.rotation);
                 clone.GetComponent<EnemyProjectile>().SetUp(target.position);
 
-                PlaySound(audioClipFire);
+                if (gameObject.CompareTag("ImpactEnemy"))
+                {
+                    SoundManager.instance.PlaySFX("EnemyShoot");
+                }
+                else
+                {
+                    SoundManager.instance.PlaySFX("BossShoot");
+                }
+                
             }
 
             yield return null;

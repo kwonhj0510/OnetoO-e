@@ -139,7 +139,7 @@ public class Turret : MonoBehaviour
             // 총구 이펙트 재생
             StartCoroutine("OnMuzzleFlashEffect");
             // 발사 소리
-            PlaySound(audioClipFire);
+            SoundManager.instance.PlaySFX("TurretShoot");
         }
 
     }

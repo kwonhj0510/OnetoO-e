@@ -9,6 +9,9 @@ EditorBuildSettings:
     path: Assets/Infima Games/Low Poly Shooter Pack - Free Sample/Scenes/S_Content_Overview.unity
     guid: 63fdc04a097eb0b4ba4af78a98dac40d
   - enabled: 1
+    path: Assets/00.Scenes/08.Logo.unity
+    guid: 959e70ed954921940b863ace3d28406c
+  - enabled: 1
     path: Assets/00.Scenes/00.MainMenu.unity
     guid: ade479d87db974f42b0ff86e33a5f211
   - enabled: 1
@@ -38,9 +41,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/00.Scenes/07.GameOver.unity
     guid: e4c7351dbafd6ee41bf045e9a5edf296
-  - enabled: 1
-    path: Assets/00.Scenes/08.Logo.unity
-    guid: 959e70ed954921940b863ace3d28406c
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 9eb07e2d669e9c94e9d7d3c782a916f7,
       type: 2}
